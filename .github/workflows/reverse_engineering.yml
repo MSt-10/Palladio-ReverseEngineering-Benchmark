@@ -66,6 +66,9 @@ jobs:
           echo "repository=$(yq eval '.repository' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "current_version=$(yq eval '.current_version' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules=$(yq eval '.rules[]' $CONFIG_FILE | paste -sd ",")" >> $GITHUB_ENV
+          echo "benchmark=$(yq eval '.benchmark // "false"' $CONFIG_FILE)" >> $GITHUB_ENV
+          echo "rules_path=$(yq eval '.rules_path // "."' $CONFIG_FILE)" >> $GITHUB_ENV
+
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -79,6 +82,8 @@ jobs:
         with:
           source_path: repo/${{ matrix.directory }}
           rules: ${{ env.rules }}
+          benchmark: ${{ env.benchmark }}
+          rules_path: ${{ env.benchmark }}
 
       - name: Download results
         uses: actions/download-artifact@v3
@@ -90,10 +95,11 @@ jobs:
         run: |
           mkdir -p to_commit/${{ matrix.directory }}/model_re/pcm
           mkdir -p to_commit/${{ matrix.directory }}/model_re/uml
-          ls -la results/repo/${{ matrix.directory }}/
-          mv results/repo/${{ matrix.directory }}/*.puml to_commit/${{ matrix.directory }}/model_re/uml
-          mv results/repo/${{ matrix.directory }}/*.txt to_commit/${{ matrix.directory }}/model_re/
+          shopt -s nullglob
+          mv results/repo/${{ matrix.directory }}/*.puml to_commit/${{ matrix.directory }}/model_re/uml || true
+          mv results/repo/${{ matrix.directory }}/*.txt to_commit/${{ matrix.directory }}/model_re/ || true
           mv results/repo/${{ matrix.directory }}/* to_commit/${{ matrix.directory }}/model_re/pcm
+          shopt -u nullglob
 
       - name: Render UML diagrams
         run: |
