@@ -68,28 +68,24 @@ jobs:
           echo "rules=$(yq eval '.rules[]' $CONFIG_FILE | paste -sd ",")" >> $GITHUB_ENV
 
       - name: Checkout repository
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         uses: actions/checkout@v3
         with:
           path: repo/${{ matrix.directory }}
           repository: ${{ env.repository }}
 
       - name: Run Retriever
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         uses: PalladioSimulator/Palladio-ReverseEngineering-Retriever@main
         with:
           source_path: repo/${{ matrix.directory }}
           rules: ${{ env.rules }}
 
       - name: Download results
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         uses: actions/download-artifact@v3
         with:
           name: retriever
           path: results
 
       - name: Prepare upload
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         run: |
           mkdir -p to_commit/${{ matrix.directory }}/model_re/pcm
           mkdir -p to_commit/${{ matrix.directory }}/model_re/uml
@@ -98,7 +94,6 @@ jobs:
           mv results/repo/${{ matrix.directory }}/* to_commit/${{ matrix.directory }}/model_re/pcm
 
       - name: Render UML diagrams
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         run: |
           sudo apt-get install graphviz
           wget https://github.com/plantuml/plantuml/releases/download/v1.2023.13/plantuml-1.2023.13.jar -O plantuml.jar
@@ -109,13 +104,11 @@ jobs:
           done
 
       - name: Update version
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         run: |
           yq eval -i '.current_version = "${{ needs.collect_info.outputs.latest_version }}"' "benchmark/${{ matrix.directory }}/.retriever.yml"
           mv "benchmark/${{ matrix.directory }}/.retriever.yml" to_commit/${{ matrix.directory }}/.retriever.yml
 
       - name: Upload artifact
-        if: ${{ needs.collect_info.outputs.latest_version != env.current_version }}
         uses: actions/upload-artifact@v3
         with:
           name: to_commit
