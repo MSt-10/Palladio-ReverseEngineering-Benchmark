@@ -11,16 +11,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.009GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 676MiB / 15981MiB  |
+| Memory | 672MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.19 |
-| User CPU Time | 16.53 |
-| System CPU Time | 0.69 |
+| Real CPU Time | 5.22 |
+| User CPU Time | 15.50 |
+| System CPU Time | 0.67 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -29,9 +29,7 @@ Explainations:
 -->
 
 # Cloc analysis
-
-cloc|github.com/AlDanial/cloc v 1.90  T=0.09 s (797.6 files/s, 45673.6 lines/s)
---- | ---
+cloc v 1.90  T=0.09 s (796.9 files/s, 45632.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

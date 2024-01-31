@@ -13,14 +13,14 @@
 | Kernel | 6.2.0-1018-azure  |
 | CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 688MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 2269.54 |
-| User CPU Time | 2268.79 |
-| System CPU Time | 93.03 |
+| Real CPU Time | 2252.00 |
+| User CPU Time | 2248.46 |
+| System CPU Time | 91.95 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -29,9 +29,7 @@ Explainations:
 -->
 
 # Cloc analysis
-
-cloc|github.com/AlDanial/cloc v 1.90  T=22.50 s (307.5 files/s, 37462.5 lines/s)
---- | ---
+cloc v 1.90  T=22.86 s (302.6 files/s, 36865.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
