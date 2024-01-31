@@ -4,23 +4,24 @@
 | Repository URL | https://github.com/yidongnan/spring-cloud-netflix-example |
 | Branch         | master |
 | Commit         | 3b86bf0e20a7c7da8f4e3e7e2cb15bf4cd407743 |
+| Date           | Wed Jan 31 20:07:48 UTC 2024 |
 
 # System information
 | Attribute | Value |
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
-| Kernel | 6.2.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.247GHz  |
+| Kernel | 6.2.0-1019-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 679MiB / 15981MiB  |
+| Memory | 680MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.94 |
-| User CPU Time | 13.45 |
-| System CPU Time | 0.61 |
+| Real CPU Time | 4.38 |
+| User CPU Time | 12.83 |
+| System CPU Time | 0.55 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -29,7 +30,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.13 s (359.3 files/s, 12821.2 lines/s)
+cloc v 1.90  T=0.13 s (358.8 files/s, 12800.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
