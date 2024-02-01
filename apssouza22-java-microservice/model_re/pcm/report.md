@@ -4,23 +4,24 @@
 | Repository URL | https://github.com/apssouza22/java-microservice |
 | Branch         | master |
 | Commit         | 9172a9004dd92434fbec4712cb45650a611185c3 |
+| Date           | Thu Feb  1 02:11:48 UTC 2024 |
 
 # System information
 | Attribute | Value |
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
-| Kernel | 6.2.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.698GHz  |
+| Kernel | 6.2.0-1019-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.176GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
 | Memory | 677MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 10.26 |
-| User CPU Time | 20.02 |
-| System CPU Time | 0.95 |
+| Real CPU Time | 9.73 |
+| User CPU Time | 19.06 |
+| System CPU Time | 1.02 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -29,7 +30,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.19 s (896.8 files/s, 43008.0 lines/s)
+cloc v 1.90  T=0.18 s (919.5 files/s, 44099.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
