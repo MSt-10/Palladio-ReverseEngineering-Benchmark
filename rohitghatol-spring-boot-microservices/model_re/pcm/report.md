@@ -4,7 +4,7 @@
 | Repository URL | https://github.com/rohitghatol/spring-boot-microservices |
 | Branch         | master |
 | Commit         | a3c9df9350a07578df281949e6018d01ac37238e |
-| Date           | Thu Feb  1 02:12:30 UTC 2024 |
+| Date           | Fri Feb  2 02:09:28 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.155GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 662MiB / 15981MiB  |
+| Memory | 668MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.85 |
-| User CPU Time | 14.07 |
-| System CPU Time | 0.49 |
+| Real CPU Time | 4.66 |
+| User CPU Time | 14.54 |
+| System CPU Time | 0.57 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +30,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.25 s (366.3 files/s, 20876.4 lines/s)
+cloc v 1.90  T=0.27 s (350.8 files/s, 19997.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

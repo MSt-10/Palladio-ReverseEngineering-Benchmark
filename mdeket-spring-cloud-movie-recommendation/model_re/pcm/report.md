@@ -4,7 +4,7 @@
 | Repository URL | https://github.com/mdeket/spring-cloud-movie-recommendation |
 | Branch         | master |
 | Commit         | 5aa5ee9e2e64c33e294409e39cb9708591230e08 |
-| Date           | Thu Feb  1 02:11:46 UTC 2024 |
+| Date           | Fri Feb  2 02:08:45 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -14,14 +14,14 @@
 | Kernel | 6.2.0-1019-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 678MiB / 15981MiB  |
+| Memory | 684MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17.54 |
-| User CPU Time | 14.79 |
-| System CPU Time | 0.56 |
+| Real CPU Time | 12.42 |
+| User CPU Time | 15.93 |
+| System CPU Time | 0.58 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +30,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.10 s (536.4 files/s, 28407.8 lines/s)
+cloc v 1.90  T=0.10 s (531.8 files/s, 28166.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
