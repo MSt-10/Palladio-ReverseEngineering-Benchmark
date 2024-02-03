@@ -1,27 +1,27 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/webgoat/webgoat |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
-| Commit         | ad0286d5ba6652ad894e2c36043150b864778e65 |
-| Date           | Wed Jan 31 20:07:53 UTC 2024 |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:49 UTC 2024 |
 
 # System information
 | Attribute | Value |
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
-| Kernel | 6.2.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.226GHz  |
+| Kernel | 6.2.0-1019-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.268GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 659MiB / 15981MiB  |
+| Memory | 679MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19.90 |
-| User CPU Time | 44.42 |
-| System CPU Time | 3.91 |
+| Real CPU Time | 5.82 |
+| User CPU Time | 9.31 |
+| System CPU Time | 0.49 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,26 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.79 s (301.3 files/s, 38954.7 lines/s)
+cloc v 1.90  T=5.94 s (48.1 files/s, 25900.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-JavaScript|90|6708|3437|44099
-Java|355|3056|6627|18201
-CSS|25|1198|161|8393
-HTML|69|658|252|5637
-AsciiDoc|237|1488|19|3672
-SVG|10|0|1|1305
-Maven|1|15|10|852
-XML|5|11|23|582
-Markdown|10|190|0|448
-YAML|10|31|11|317
-Bourne Shell|3|35|62|233
-SQL|15|20|16|190
-JSON|5|0|0|181
-DOS Batch|1|35|0|147
-RobotFramework|1|12|10|107
-Dockerfile|1|6|0|29
-DTD|1|0|0|4
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|839|13463|10629|84397
+SUM:|286|137|3|153808

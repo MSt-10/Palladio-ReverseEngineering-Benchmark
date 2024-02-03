@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/shabbirdwd53/springboot-microservice |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
-| Commit         | e0faba5a247ebb0cbd2ee14a10f115d689aa9ed6 |
-| Date           | Fri Feb  2 02:09:32 UTC 2024 |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:44 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.204GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 683MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.65 |
-| User CPU Time | 13.52 |
-| System CPU Time | 0.65 |
+| Real CPU Time | 5.34 |
+| User CPU Time | 8.86 |
+| System CPU Time | 0.45 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,15 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.10 s (413.2 files/s, 16558.0 lines/s)
+cloc v 1.90  T=5.96 s (48.0 files/s, 25844.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Maven|6|42|0|424
-Java|24|108|31|408
-Bourne Shell|1|33|62|215
-DOS Batch|1|35|0|147
-YAML|7|14|0|82
-Markdown|1|0|0|2
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|40|232|93|1278
+SUM:|286|137|3|153808

@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/corona-warn-app/cwa-server |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
-| Commit         | c61d55f6f83b6d005cb6aca9e9b455afac572d72 |
-| Date           | Fri Feb  2 02:08:38 UTC 2024 |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:01 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -14,14 +14,14 @@
 | Kernel | 6.2.0-1019-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 683MiB / 15981MiB  |
+| Memory | 670MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19.26 |
-| User CPU Time | 36.87 |
-| System CPU Time | 6.10 |
+| Real CPU Time | 2.81 |
+| User CPU Time | 8.20 |
+| System CPU Time | 0.48 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,19 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.78 s (336.1 files/s, 130160.0 lines/s)
+cloc v 1.90  T=6.00 s (47.6 files/s, 25639.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-XML|31|98|55|273343
-Java|615|8656|5070|40602
-JSON|48|3|0|24554
-YAML|117|207|357|3638
-Markdown|25|614|0|1384
-Protocol Buffers|43|255|111|942
-SQL|40|95|43|551
-Bourne Shell|9|89|107|531
-Dockerfile|5|45|20|170
-DOS Batch|1|35|0|147
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|934|10097|5763|345862
+SUM:|286|137|3|153808

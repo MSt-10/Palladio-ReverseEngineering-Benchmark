@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/corona-warn-app/cwa-verification-server |
-| Branch         | master |
-| Commit         | bbc28be761c89bdda30f761f79f3a190e4c3a7c6 |
-| Date           | Fri Feb  2 02:08:38 UTC 2024 |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
+| Branch         | main |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:01 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.393GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 682MiB / 15981MiB  |
+| Memory | 694MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.29 |
-| User CPU Time | 17.23 |
-| System CPU Time | 0.63 |
+| Real CPU Time | 4.90 |
+| User CPU Time | 8.91 |
+| System CPU Time | 0.45 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,19 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.18 s (553.0 files/s, 50496.3 lines/s)
+cloc v 1.90  T=5.92 s (48.3 files/s, 26006.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|58|716|2115|3618
-Markdown|11|264|0|762
-YAML|22|2|0|610
-JSON|1|0|0|409
-XML|1|7|17|294
-Maven|1|16|0|142
-JavaScript|1|0|0|40
-Dockerfile|1|0|0|8
-Groovy|1|1|5|8
-SVG|2|0|0|6
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|99|1006|2137|5897
+SUM:|286|137|3|153808

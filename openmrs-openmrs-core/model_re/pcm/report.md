@@ -4,7 +4,7 @@
 | Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
 | Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
-| Date           | Sat Feb  3 02:07:03 UTC 2024 |
+| Date           | Sat Feb  3 02:07:02 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.034GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.934GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 679MiB / 15981MiB  |
+| Memory | 663MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.87 |
-| User CPU Time | 9.28 |
-| System CPU Time | 0.53 |
+| Real CPU Time | 2.99 |
+| User CPU Time | 8.55 |
+| System CPU Time | 0.47 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +30,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=5.94 s (48.1 files/s, 25914.5 lines/s)
+cloc v 1.90  T=5.99 s (47.8 files/s, 25715.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

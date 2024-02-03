@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
-| Branch         | master |
-| Commit         | 417b2775e1f4c0a11cf564bb3d7c5778337181b7 |
-| Date           | Fri Feb  2 02:08:41 UTC 2024 |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
+| Branch         | main |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:43 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 663MiB / 15981MiB  |
+| Memory | 664MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 18.26 |
-| User CPU Time | 44.73 |
-| System CPU Time | 6.02 |
+| Real CPU Time | 3.41 |
+| User CPU Time | 8.81 |
+| System CPU Time | 0.48 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,18 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.03 s (368.1 files/s, 43470.1 lines/s)
+cloc v 1.90  T=5.93 s (48.2 files/s, 25942.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|672|11686|16714|54025
-Maven|14|253|4|2253
-XML|43|184|157|1182
-JSP|7|180|68|921
-JSON|6|2|0|503
-JavaScript|3|0|62|79
-Markdown|2|39|0|77
-YAML|1|5|2|52
-CSS|1|0|1|1
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|749|12349|17008|59093
+SUM:|286|137|3|153808

@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/fernandoabcampos/spring-netflix-oss-microservices |
-| Branch         | master |
-| Commit         | 8668c4dffd9464b5d724f4d1a9547e029ee03d12 |
-| Date           | Fri Feb  2 02:08:46 UTC 2024 |
+| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
+| Branch         | main |
+| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
+| Date           | Sat Feb  3 02:07:01 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.221GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 693MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 9.92 |
-| User CPU Time | 13.75 |
-| System CPU Time | 0.59 |
+| Real CPU Time | 3.00 |
+| User CPU Time | 8.80 |
+| System CPU Time | 0.49 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,16 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.07 s (820.1 files/s, 32693.0 lines/s)
+cloc v 1.90  T=5.96 s (48.0 files/s, 25843.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Maven|9|87|0|692
-Java|26|154|0|560
-Bourne Shell|2|33|68|286
-YAML|11|18|2|243
-DOS Batch|1|32|0|113
-Dockerfile|9|0|5|56
-Markdown|1|0|0|3
+XML|139|0|0|152209
+Markdown|28|113|0|1223
+YAML|30|24|3|279
+SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|59|324|75|1953
+SUM:|286|137|3|153808
