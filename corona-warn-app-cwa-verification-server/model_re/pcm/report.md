@@ -3,8 +3,8 @@
 |--- | ---|
 | Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
-| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
-| Date           | Sat Feb  3 02:07:01 UTC 2024 |
+| Commit         | 4da2141905e474ada151a44af0f735612e4fe3f3 |
+| Date           | Sun Feb  4 02:11:38 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,15 +12,15 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 694MiB / 15981MiB  |
+| Memory | 666MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.90 |
-| User CPU Time | 8.91 |
+| Real CPU Time | 3.18 |
+| User CPU Time | 8.75 |
 | System CPU Time | 0.45 |
 <!--
 Explainations:
@@ -30,13 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=5.92 s (48.3 files/s, 26006.2 lines/s)
+cloc v 1.90  T=2.88 s (90.6 files/s, 663.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-XML|139|0|0|152209
-Markdown|28|113|0|1223
+Markdown|29|117|0|1081
+XML|113|0|0|310
 YAML|30|24|3|279
 SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|286|137|3|153808
+SUM:|261|141|3|1767

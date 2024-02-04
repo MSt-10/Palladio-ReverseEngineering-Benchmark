@@ -3,8 +3,8 @@
 |--- | ---|
 | Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
 | Branch         | main |
-| Commit         | a5f237bdb68478afa5f29d31e93b4c0c2977075a |
-| Date           | Sat Feb  3 02:07:01 UTC 2024 |
+| Commit         | 4da2141905e474ada151a44af0f735612e4fe3f3 |
+| Date           | Sun Feb  4 02:11:44 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.230GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 670MiB / 15981MiB  |
+| Memory | 682MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3.15 |
-| User CPU Time | 8.87 |
-| System CPU Time | 0.53 |
+| Real CPU Time | 3.04 |
+| User CPU Time | 8.66 |
+| System CPU Time | 0.50 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,13 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=6.18 s (46.3 files/s, 24920.9 lines/s)
+cloc v 1.90  T=2.91 s (89.7 files/s, 656.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-XML|139|0|0|152209
-Markdown|28|113|0|1223
+Markdown|29|117|0|1081
+XML|113|0|0|310
 YAML|30|24|3|279
 SVG|89|0|0|97
 --------|--------|--------|--------|--------
-SUM:|286|137|3|153808
+SUM:|261|141|3|1767
