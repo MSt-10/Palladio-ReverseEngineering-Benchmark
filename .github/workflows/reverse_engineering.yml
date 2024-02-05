@@ -68,7 +68,7 @@ jobs:
           CONFIG_FILE="benchmark/${{ matrix.directory }}/.retriever.yml"
           readarray repos < <(yq e '.repository' $CONFIG_FILE)
           repos_str=$(IFS=,; echo "${repos[*]}")
-          echo "repositories=$actions_str" >> $GITHUB_ENV
+          echo "repositories=$repos_str" >> $GITHUB_ENV
           echo "current_version=$(yq eval '.current_version' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules=$(yq eval '.rules[]' $CONFIG_FILE | paste -sd ",")" >> $GITHUB_ENV
           echo "benchmark=$(yq eval '.benchmark // "false"' $CONFIG_FILE)" >> $GITHUB_ENV
@@ -77,7 +77,7 @@ jobs:
       - name: Checkout repositories
         run: |
           # Assuming ACTIONS_STR is a comma-separated list
-          IFS=',' read -r -a repositories_array <<< "${{ env.repositories}}"
+          IFS=',' read -r -a repositories_array <<< "${{ env.repositories }}"
           for REPOSITORY in "${repositories_array[@]}"; do
             REPO_NAME=$(basename "$REPOSITORY")
             echo "Checking out $REPOSITORY to repo/${{ matrix.directory }}/$REPO_NAME"
