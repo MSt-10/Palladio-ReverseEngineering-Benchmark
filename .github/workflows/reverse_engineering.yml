@@ -66,19 +66,20 @@ jobs:
       - name: Parse .retriever.yml
         run: |
           CONFIG_FILE="benchmark/${{ matrix.directory }}/.retriever.yml"
-          echo "repository=$(yq e '.my_field | if type == "array" then .[] else . end | join(",")' -r $CONFIG_FILE)" >> $GITHUB_ENV
+          echo "repositories=$(yq e '.repository | if type=="array" then .[] else . end' $CONFIG_FILE)" >> $GITHUB_ENV    
           echo "current_version=$(yq eval '.current_version' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules=$(yq eval '.rules[]' $CONFIG_FILE | paste -sd ",")" >> $GITHUB_ENV
           echo "benchmark=$(yq eval '.benchmark // "false"' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules_path=$(yq eval '.rules_path // "."' $CONFIG_FILE)" >> $GITHUB_ENV
-
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          path: repo/${{ matrix.directory }}
-          repository: ${{ env.repository }}
-          submodules: false
+    
+      - name: Checkout repositories
+        run: |
+          IFS=$'\n' # Set IFS to newline to correctly iterate over lines in $REPOSITORIES
+          for REPOSITORY in ${{ env.repositories }}; do
+            REPO_NAME=$(basename "$REPOSITORY")
+            echo "Checking out $REPOSITORY to repo/${{ matrix.directory }}/$REPO_NAME"
+            git clone https://github.com/"$REPOSITORY" "repo/${{ matrix.directory }}/$REPO_NAME" --depth=1
+          done
 
       - name: Run Retriever
         #uses: PalladioSimulator/Palladio-ReverseEngineering-Retriever@main
