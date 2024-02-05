@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:49 UTC 2024 |
+| Repository URL | https://github.com/fudanselab/train-ticket |
+| Branch         | master |
+| Commit         | 313886e99befb94be6cd45f085c98e0019f59829 |
+| Date           | Mon Feb  5 13:22:47 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.262GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.077GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 699MiB / 15981MiB  |
+| Memory | 678MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.25 |
-| User CPU Time | 9.42 |
-| System CPU Time | 0.51 |
+| Real CPU Time | 38.09 |
+| User CPU Time | 62.31 |
+| System CPU Time | 14.18 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,32 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.88 s (90.6 files/s, 663.2 lines/s)
+cloc v 1.90  T=7.84 s (296.6 files/s, 62770.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+JavaScript|796|24743|48884|157966
+TypeScript|196|5208|40708|39903
+Java|635|7991|4877|37738
+JSON|170|8|0|33274
+Markdown|231|10943|2|30690
+YAML|114|1517|622|16619
+HTML|24|1041|316|11781
+CSS|12|424|106|9435
+Maven|45|331|40|2229
+Bourne Shell|20|156|160|883
+CoffeeScript|2|125|76|694
+diff|1|3|13|588
+DOS Batch|10|86|2|333
+Python|6|92|37|305
+SVG|1|0|0|288
+Dockerfile|46|146|3|249
+make|5|33|15|76
+Freemarker Template|4|0|0|31
+XML|1|1|0|30
+Go|2|9|26|23
+Handlebars|1|3|0|19
+Gradle|2|10|32|13
+SQL|1|0|0|13
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|2325|52870|95919|343180

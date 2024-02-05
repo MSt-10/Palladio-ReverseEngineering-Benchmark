@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:14:40 UTC 2024 |
+| Repository URL | https://github.com/sqshq/piggymetrics |
+| Branch         | master |
+| Commit         | 6bb2cf9ddbca980b664d3edbb6ff775d75369278 |
+| Date           | Mon Feb  5 13:23:32 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.929GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.806GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 677MiB / 15981MiB  |
+| Memory | 734MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.22 |
-| User CPU Time | 8.98 |
-| System CPU Time | 0.48 |
+| Real CPU Time | 5.96 |
+| User CPU Time | 19.14 |
+| System CPU Time | 0.94 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,19 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.87 s (91.0 files/s, 666.4 lines/s)
+cloc v 1.90  T=0.47 s (337.4 files/s, 46496.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+SVG|3|0|0|8188
+CSS|3|84|50|4744
+Java|97|1013|178|3292
+JavaScript|8|171|177|1664
+Maven|10|62|0|684
+YAML|23|70|11|588
+HTML|2|32|8|519
+Markdown|2|86|0|179
+Dockerfile|10|22|0|58
+Bourne Shell|1|5|2|26
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|159|1545|426|19942

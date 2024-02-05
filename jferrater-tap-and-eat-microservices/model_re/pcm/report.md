@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:47 UTC 2024 |
+| Repository URL | https://github.com/jferrater/tap-and-eat-microservices |
+| Branch         | master |
+| Commit         | 3ad20b8fa421dc837ef423270a9bf9ece1615a03 |
+| Date           | Mon Feb  5 13:22:44 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.266GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.082GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 694MiB / 15981MiB  |
+| Memory | 689MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 2.98 |
-| User CPU Time | 8.45 |
-| System CPU Time | 0.46 |
+| Real CPU Time | 4.45 |
+| User CPU Time | 13.21 |
+| System CPU Time | 0.62 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,18 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.84 s (91.9 files/s, 673.0 lines/s)
+cloc v 1.90  T=0.12 s (585.9 files/s, 19502.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Maven|9|83|0|657
+Java|35|203|119|624
+Bourne Shell|1|30|65|138
+DOS Batch|1|32|0|113
+YAML|13|20|1|111
+Markdown|1|4|0|61
+Dockerfile|8|0|0|48
+XML|1|0|0|17
+INI|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|70|372|185|1773

@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:46 UTC 2024 |
+| Repository URL | https://github.com/apssouza22/java-microservice |
+| Branch         | master |
+| Commit         | 9172a9004dd92434fbec4712cb45650a611185c3 |
+| Date           | Mon Feb  5 13:22:41 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.207GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 662MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3.21 |
-| User CPU Time | 8.97 |
-| System CPU Time | 0.45 |
+| Real CPU Time | 6.08 |
+| User CPU Time | 18.46 |
+| System CPU Time | 1.07 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,16 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.91 s (89.6 files/s, 656.1 lines/s)
+cloc v 1.90  T=0.19 s (861.7 files/s, 41324.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Java|116|937|741|3147
+Maven|11|122|99|1376
+YAML|19|77|16|743
+XML|9|0|12|233
+Markdown|1|65|0|145
+Dockerfile|4|41|18|97
+Bourne Shell|6|27|13|52
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|166|1269|899|5793

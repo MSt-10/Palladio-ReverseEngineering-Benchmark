@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
+| Repository URL | https://github.com/kit-recipe-app/recipebackendnew |
 | Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:48 UTC 2024 |
+| Commit         | c4754f0d7e6fc6396f87b6a0811a65c1f834d98d |
+| Date           | Mon Feb  5 13:22:44 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.809GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 674MiB / 15981MiB  |
+| Memory | 688MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.29 |
-| User CPU Time | 8.79 |
-| System CPU Time | 0.46 |
+| Real CPU Time | 8.26 |
+| User CPU Time | 15.83 |
+| System CPU Time | 0.59 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,17 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.83 s (92.2 files/s, 675.3 lines/s)
+cloc v 1.90  T=0.09 s (819.1 files/s, 46903.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Java|57|534|422|1977
+Bourne Shell|1|34|62|220
+Markdown|3|82|0|203
+YAML|7|39|65|183
+DOS Batch|1|35|0|153
+Maven|1|10|0|118
+XML|2|0|0|38
+Dockerfile|1|0|0|5
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|73|734|549|2897

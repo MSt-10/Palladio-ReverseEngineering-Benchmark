@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:48 UTC 2024 |
+| Repository URL | https://github.com/mdeket/spring-cloud-movie-recommendation |
+| Branch         | master |
+| Commit         | 5aa5ee9e2e64c33e294409e39cb9708591230e08 |
+| Date           | Mon Feb  5 13:22:44 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +12,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.199GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.232GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 702MiB / 15981MiB  |
+| Memory | 670MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.92 |
-| User CPU Time | 9.29 |
-| System CPU Time | 0.46 |
+| Real CPU Time | 5.03 |
+| User CPU Time | 14.56 |
+| System CPU Time | 0.71 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +30,17 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=3.03 s (86.0 files/s, 629.9 lines/s)
+cloc v 1.90  T=0.11 s (510.1 files/s, 27015.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Java|37|273|228|931
+Maven|6|65|2|467
+JSON|3|0|0|309
+Bourne Shell|1|30|65|138
+XML|5|0|0|128
+DOS Batch|1|32|0|113
+SQL|1|1|9|51
+Markdown|1|24|0|47
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|55|425|304|2184

@@ -1,10 +1,17 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:13:51 UTC 2024 |
+| Repository URL | https://github.com/openmrs/openmrs-core |
+| Branch         | master |
+| Commit         | a3dd168dc1fb35acdfe66f9888298dd1960fe27f |
+| Date           | Mon Feb  5 13:22:47 UTC 2024 |
+# Git repository information
+|    |    |
+|--- | ---|
+| Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
+| Branch         | master |
+| Commit         | 417b2775e1f4c0a11cf564bb3d7c5778337181b7 |
+| Date           | Mon Feb  5 13:22:47 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +19,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.237GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.174GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 658MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.63 |
-| User CPU Time | 9.61 |
-| System CPU Time | 0.49 |
+| Real CPU Time | 64.75 |
+| User CPU Time | 88.05 |
+| System CPU Time | 32.44 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,13 +37,26 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.86 s (91.2 files/s, 667.4 lines/s)
+cloc v 1.90  T=9.55 s (244.4 files/s, 52142.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Java|1874|47251|90819|190081
+XML|309|3219|2946|134519
+SQL|5|918|741|5464
+Maven|21|319|105|4566
+JavaScript|21|542|1178|4346
+CSS|13|290|678|2049
+Velocity Template Language|19|109|2|1213
+Markdown|12|352|0|1211
+JSP|7|180|68|921
+DTD|8|149|24|659
+YAML|10|69|64|612
+XSLT|1|30|48|555
+JSON|6|2|0|503
+Bourne Shell|7|76|131|387
+HTML|17|17|0|223
+Dockerfile|1|37|26|79
+CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|2333|53560|96830|347390

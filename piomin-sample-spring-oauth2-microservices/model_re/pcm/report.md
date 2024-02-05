@@ -1,10 +1,10 @@
 # Git repository information
 |    |    |
 |--- | ---|
-| Repository URL | https://github.com/MSt-10/Palladio-ReverseEngineering-Benchmark |
-| Branch         | main |
-| Commit         | 5df8e41d90d14b433feef47fcbed4cce3e5f2a05 |
-| Date           | Mon Feb  5 02:14:27 UTC 2024 |
+| Repository URL | https://github.com/piomin/sample-spring-oauth2-microservices |
+| Branch         | master |
+| Commit         | 05f390ee4351247a9c5803098059238424b58bae |
+| Date           | Mon Feb  5 13:23:22 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,15 +12,15 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.224GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 692MiB / 15981MiB  |
+| Memory | 669MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3.20 |
-| User CPU Time | 9.23 |
+| Real CPU Time | 14.39 |
+| User CPU Time | 12.26 |
 | System CPU Time | 0.50 |
 <!--
 Explainations:
@@ -30,13 +30,14 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.98 s (87.5 files/s, 641.0 lines/s)
+cloc v 1.90  T=0.02 s (910.4 files/s, 29257.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Markdown|29|117|0|1081
-XML|113|0|0|310
-YAML|30|24|3|279
-SVG|89|0|0|97
+Java|10|65|70|204
+Maven|5|17|0|167
+YAML|4|17|17|99
+HTML|2|0|1|45
+Markdown|1|3|0|2
 --------|--------|--------|--------|--------
-SUM:|261|141|3|1767
+SUM:|22|102|88|517
