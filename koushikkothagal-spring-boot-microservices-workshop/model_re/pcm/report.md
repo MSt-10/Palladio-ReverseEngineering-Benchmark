@@ -1,11 +1,11 @@
 # Git repository information
-Date of execution: Tue Feb  6 07:20:23 UTC 2024
+Date of execution: Tue Feb  6 13:39:25 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/koushikkothagal/spring-boot-microservices-workshop |
 | Branch         | master |
 | Commit         | 8b01c6d153f7b6aee49fa91a5b1c62c1a0c09408 |
-| Date           | Tue Feb  6 07:20:23 UTC 2024 |
+
 
 # System information
 | Attribute | Value |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 07:20:23 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.192GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.239GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 678MiB / 15981MiB  |
+| Memory | 683MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.62 |
+| Real CPU Time | 17.84 |
 | User CPU Time | 12.84 |
-| System CPU Time | 0.52 |
+| System CPU Time | 0.58 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.05 s (598.0 files/s, 32087.0 lines/s)
+cloc v 1.90  T=0.05 s (596.2 files/s, 31987.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

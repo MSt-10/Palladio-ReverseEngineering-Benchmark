@@ -1,11 +1,11 @@
 # Git repository information
-Date of execution: Tue Feb  6 07:20:21 UTC 2024
+Date of execution: Tue Feb  6 13:39:17 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/anilallewar/microservices-basics-spring-boot |
 | Branch         | master |
 | Commit         | ac0a249156471ad98fa5ba5508fda9deabba6975 |
-| Date           | Tue Feb  6 07:20:21 UTC 2024 |
+
 
 # System information
 | Attribute | Value |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 07:20:21 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.208GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.107GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 666MiB / 15981MiB  |
+| Memory | 661MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 10.82 |
-| User CPU Time | 17.27 |
-| System CPU Time | 0.76 |
+| Real CPU Time | 9.71 |
+| User CPU Time | 17.94 |
+| System CPU Time | 0.88 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=1.32 s (114.0 files/s, 5627.6 lines/s)
+cloc v 1.90  T=1.32 s (113.7 files/s, 5610.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
