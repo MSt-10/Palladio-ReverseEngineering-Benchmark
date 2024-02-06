@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb  6 16:48:03 UTC 2024
+Date of execution: Tue Feb  6 17:39:39 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/ewolff/microservice |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 16:48:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.894GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.233GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 799MiB / 15981MiB  |
+| Memory | 676MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 9.09 |
-| User CPU Time | 14.90 |
-| System CPU Time | 0.62 |
+| Real CPU Time | 4.95 |
+| User CPU Time | 15.23 |
+| System CPU Time | 0.63 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.10 s (967.2 files/s, 47241.4 lines/s)
+cloc v 1.90  T=0.10 s (949.1 files/s, 46356.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

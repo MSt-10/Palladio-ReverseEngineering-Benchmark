@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb  6 16:48:03 UTC 2024
+Date of execution: Tue Feb  6 17:39:40 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/fernandoabcampos/spring-netflix-oss-microservices |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 16:48:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.026GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 670MiB / 15981MiB  |
+| Memory | 679MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.63 |
-| User CPU Time | 13.84 |
-| System CPU Time | 0.57 |
+| Real CPU Time | 4.47 |
+| User CPU Time | 13.44 |
+| System CPU Time | 0.54 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.07 s (787.6 files/s, 31398.1 lines/s)
+cloc v 1.90  T=0.07 s (812.3 files/s, 32383.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
