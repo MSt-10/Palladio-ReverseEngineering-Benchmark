@@ -1,10 +1,11 @@
 # Git repository information
+Date of execution: Tue Feb  6 07:20:21 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/corona-warn-app/cwa-verification-server |
 | Branch         | master |
 | Commit         | bbc28be761c89bdda30f761f79f3a190e4c3a7c6 |
-| Date           | Mon Feb  5 13:22:41 UTC 2024 |
+| Date           | Tue Feb  6 07:20:21 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +13,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.229GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 667MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.24 |
-| User CPU Time | 16.52 |
-| System CPU Time | 0.63 |
+| Real CPU Time | 8.25 |
+| User CPU Time | 17.97 |
+| System CPU Time | 0.68 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.18 s (540.9 files/s, 49390.6 lines/s)
+cloc v 1.90  T=0.18 s (543.8 files/s, 49654.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

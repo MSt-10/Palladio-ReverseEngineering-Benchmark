@@ -1,10 +1,11 @@
 # Git repository information
+Date of execution: Tue Feb  6 07:20:20 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/corona-warn-app/cwa-server |
 | Branch         | main |
 | Commit         | c61d55f6f83b6d005cb6aca9e9b455afac572d72 |
-| Date           | Mon Feb  5 13:22:44 UTC 2024 |
+| Date           | Tue Feb  6 07:20:20 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +13,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.233GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 668MiB / 15981MiB  |
+| Memory | 666MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16.30 |
-| User CPU Time | 36.82 |
-| System CPU Time | 6.21 |
+| Real CPU Time | 23.08 |
+| User CPU Time | 37.97 |
+| System CPU Time | 6.17 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.92 s (320.1 files/s, 123962.0 lines/s)
+cloc v 1.90  T=2.72 s (343.8 files/s, 133136.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

@@ -1,10 +1,11 @@
 # Git repository information
+Date of execution: Tue Feb  6 07:20:26 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 0a94d799a10d8a042ad56fe5f6a1ba4b032a1d43 |
-| Date           | Mon Feb  5 13:22:56 UTC 2024 |
+| Commit         | ac6498b7a617401b203dfccfec7486818c446195 |
+| Date           | Tue Feb  6 07:20:26 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +13,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.217GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.245GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 680MiB / 15981MiB  |
+| Memory | 670MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 2189.37 |
-| User CPU Time | 2190.05 |
-| System CPU Time | 92.57 |
+| Real CPU Time | 2238.94 |
+| User CPU Time | 2240.90 |
+| System CPU Time | 92.53 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,14 +31,14 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=22.32 s (310.2 files/s, 37810.1 lines/s)
+cloc v 1.90  T=22.11 s (313.2 files/s, 38170.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2734|36664|25960|244361
+TypeScript|2734|36692|25977|244811
 Java|2042|54068|52981|219138
-JSON|487|15|0|88536
-HTML|685|230|650|53074
+JSON|487|15|0|88572
+HTML|685|230|626|52522
 Sass|316|2595|175|14326
 XML|147|214|268|8333
 reStructuredText|89|4228|2788|7310
@@ -70,4 +71,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|6925|101356|86608|656006
+SUM:|6925|101384|86601|655940

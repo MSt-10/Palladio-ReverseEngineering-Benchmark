@@ -1,10 +1,11 @@
 # Git repository information
+Date of execution: Tue Feb  6 07:21:01 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
 | Branch         | master |
 | Commit         | 417b2775e1f4c0a11cf564bb3d7c5778337181b7 |
-| Date           | Mon Feb  5 13:23:23 UTC 2024 |
+| Date           | Tue Feb  6 07:21:01 UTC 2024 |
 
 # System information
 | Attribute | Value |
@@ -12,16 +13,16 @@
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.628GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 666MiB / 15981MiB  |
+| Memory | 687MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20.63 |
-| User CPU Time | 47.30 |
-| System CPU Time | 6.56 |
+| Real CPU Time | 18.65 |
+| User CPU Time | 45.28 |
+| System CPU Time | 6.32 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -30,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.06 s (364.2 files/s, 43004.2 lines/s)
+cloc v 1.90  T=2.03 s (368.2 files/s, 43483.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
