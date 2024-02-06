@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb  6 13:40:14 UTC 2024
+Date of execution: Tue Feb  6 16:48:57 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/sqshq/piggymetrics |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 13:40:14 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 669MiB / 15981MiB  |
+| Memory | 741MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.13 |
-| User CPU Time | 19.23 |
-| System CPU Time | 0.99 |
+| Real CPU Time | 13.27 |
+| User CPU Time | 20.72 |
+| System CPU Time | 1.01 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.47 s (336.1 files/s, 46317.1 lines/s)
+cloc v 1.90  T=0.48 s (332.4 files/s, 45815.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

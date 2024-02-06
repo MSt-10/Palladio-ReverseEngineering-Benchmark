@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb  6 13:39:18 UTC 2024
+Date of execution: Tue Feb  6 16:48:00 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/kbastani/spring-cloud-event-sourcing-example |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb  6 13:39:18 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.974GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 674MiB / 15981MiB  |
+| Memory | 662MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.89 |
-| User CPU Time | 25.23 |
-| System CPU Time | 1.29 |
+| Real CPU Time | 11.19 |
+| User CPU Time | 26.09 |
+| System CPU Time | 1.51 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=3.34 s (157.7 files/s, 45747.5 lines/s)
+cloc v 1.90  T=3.12 s (168.6 files/s, 48915.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

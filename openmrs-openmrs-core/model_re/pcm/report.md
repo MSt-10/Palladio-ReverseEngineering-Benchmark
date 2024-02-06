@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb  6 13:39:17 UTC 2024
+Date of execution: Tue Feb  6 16:48:05 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/openmrs/openmrs-core |
@@ -19,16 +19,16 @@ Date of execution: Tue Feb  6 13:39:17 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.226GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.024GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 671MiB / 15981MiB  |
+| Memory | 659MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 61.67 |
-| User CPU Time | 89.44 |
-| System CPU Time | 34.27 |
+| Real CPU Time | 59.51 |
+| User CPU Time | 87.38 |
+| System CPU Time | 32.68 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -37,7 +37,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=10.10 s (231.0 files/s, 49285.4 lines/s)
+cloc v 1.90  T=9.89 s (235.9 files/s, 50327.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
