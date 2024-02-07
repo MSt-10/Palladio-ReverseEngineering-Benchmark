@@ -1,0 +1,63 @@
+name: Check Workflow Errors
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-errors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check workflow runs for errors
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          WORKFLOW_FILE: reverse_engineering.yml
+        shell: bash
+        run: |
+          WORKFLOW_ID=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPOSITORY/actions/workflows" | \
+            jq -r '.workflows[] | select(.path==".github/workflows/'$WORKFLOW_FILE'") | .id')
+          
+          if [ -z "$WORKFLOW_ID" ]; then
+            echo "Workflow not found."
+            exit 1
+          fi
+
+          echo "Workflow ID: $WORKFLOW_ID"
+
+          # List workflow runs
+          RUNS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPOSITORY/actions/workflows/$WORKFLOW_ID/runs" | \
+            jq -c '.workflow_runs[] | {id, status, conclusion}')
+
+          echo "Workflow Runs: $RUNS"
+
+          # Loop through runs and check for annotations (errors)
+          for row in $(echo "${RUNS}" | jq -r '. | @base64'); do
+            _jq() {
+             echo ${row} | base64 --decode | jq -r ${1}
+            }
+
+            RUN_ID=$(_jq '.id')
+            STATUS=$(_jq '.status')
+            CONCLUSION=$(_jq '.conclusion')
+
+            # Fetch annotations for each run
+            if [ "$STATUS" == "completed" ] && [ "$CONCLUSION" != "success" ]; then
+              ANNOTATIONS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+                "https://api.github.com/repos/$REPOSITORY/actions/runs/$RUN_ID/annotations")
+
+              # Check if there are any errors in annotations
+              ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.[] | select(.annotation_level=="failure")] | length')
+              
+              if [ "$ERROR_COUNT" -gt 0 ]; then
+                echo "Found $ERROR_COUNT error(s) in annotations for run ID: $RUN_ID"
+              else
+                echo "No errors found in annotations for run ID: $RUN_ID"
+              fi
+            fi
+          done
+
