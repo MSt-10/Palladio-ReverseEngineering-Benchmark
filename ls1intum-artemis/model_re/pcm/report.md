@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Wed Feb  7 02:08:26 UTC 2024
+Date of execution: Wed Feb  7 06:56:11 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/ls1intum/Artemis |
@@ -13,16 +13,16 @@ Date of execution: Wed Feb  7 02:08:26 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 673MiB / 15981MiB  |
+| Memory | 677MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 2151.19 |
-| User CPU Time | 2148.54 |
-| System CPU Time | 88.53 |
+| Real CPU Time | 2237.41 |
+| User CPU Time | 2232.17 |
+| System CPU Time | 92.66 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=21.64 s (320.0 files/s, 38994.1 lines/s)
+cloc v 1.90  T=22.57 s (306.8 files/s, 37383.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
