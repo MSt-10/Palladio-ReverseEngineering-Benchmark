@@ -51,6 +51,8 @@ jobs:
             ANNOTATIONS=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
               "https://api.github.com/repos/$REPOSITORY/actions/runs/$RUN_ID/annotations")
 
+            echo "$ANNOTATIONS"
+            
             if echo $ANNOTATIONS | jq empty; then
               ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.annotations[]? | select(.annotation_level=="failure")] | length')
               
