@@ -27,15 +27,16 @@ jobs:
           fi
 
           echo "Workflow ID: $WORKFLOW_ID"
+          echo "https://api.github.com/repos/$REPOSITORY/actions/workflows/$WORKFLOW_ID/runs"
 
           # List workflow runs
           RUNS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPOSITORY/actions/workflows/$WORKFLOW_ID/runs" | \
             jq -c '.workflow_runs[] | {id, status, conclusion}')
 
-          echo "Workflow Runs: $RUNS"
+          echo "Workflow Runs:"
+          echo "$RUNS"
 
-          # Loop through runs and check for annotations (errors)
           for row in $(echo "${RUNS}" | jq -r '. | @base64'); do
             _jq() {
              echo ${row} | base64 --decode | jq -r ${1}
@@ -47,16 +48,19 @@ jobs:
 
             # Fetch annotations for each run
             if [ "$STATUS" == "completed" ] && [ "$CONCLUSION" != "success" ]; then
-              ANNOTATIONS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              ANNOTATIONS=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
                 "https://api.github.com/repos/$REPOSITORY/actions/runs/$RUN_ID/annotations")
 
-              # Check if there are any errors in annotations
-              ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.[] | select(.annotation_level=="failure")] | length')
-              
-              if [ "$ERROR_COUNT" -gt 0 ]; then
-                echo "Found $ERROR_COUNT error(s) in annotations for run ID: $RUN_ID"
+              if echo $ANNOTATIONS | jq empty; then
+                ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.annotations[]? | select(.annotation_level=="failure")] | length')
+                
+                if [ "$ERROR_COUNT" -gt 0 ]; then
+                  echo "Found $ERROR_COUNT error(s) in annotations for run ID: $RUN_ID"
+                else
+                  echo "No errors found in annotations for run ID: $RUN_ID"
+                fi
               else
-                echo "No errors found in annotations for run ID: $RUN_ID"
+                echo "Failed to parse annotations for run ID: $RUN_ID"
               fi
             fi
           done
