@@ -47,21 +47,21 @@ jobs:
             CONCLUSION=$(_jq '.conclusion')
 
             # Fetch annotations for each run
-            if [ "$STATUS" == "completed" ] && [ "$CONCLUSION" != "success" ]; then
-              ANNOTATIONS=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
-                "https://api.github.com/repos/$REPOSITORY/actions/runs/$RUN_ID/annotations")
+            #if [ "$STATUS" == "completed" ] && [ "$CONCLUSION" != "success" ]; then
+            ANNOTATIONS=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$REPOSITORY/actions/runs/$RUN_ID/annotations")
 
-              if echo $ANNOTATIONS | jq empty; then
-                ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.annotations[]? | select(.annotation_level=="failure")] | length')
-                
-                if [ "$ERROR_COUNT" -gt 0 ]; then
-                  echo "Found $ERROR_COUNT error(s) in annotations for run ID: $RUN_ID"
-                else
-                  echo "No errors found in annotations for run ID: $RUN_ID"
-                fi
+            if echo $ANNOTATIONS | jq empty; then
+              ERROR_COUNT=$(echo $ANNOTATIONS | jq '[.annotations[]? | select(.annotation_level=="failure")] | length')
+              
+              if [ "$ERROR_COUNT" -gt 0 ]; then
+                echo "Found $ERROR_COUNT error(s) in annotations for run ID: $RUN_ID"
               else
-                echo "Failed to parse annotations for run ID: $RUN_ID"
+                echo "No errors found in annotations for run ID: $RUN_ID"
               fi
+            else
+              echo "Failed to parse annotations for run ID: $RUN_ID"
             fi
+            #fi
           done
 
