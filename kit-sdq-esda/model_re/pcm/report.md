@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Wed Feb  7 06:56:02 UTC 2024
+Date of execution: Thu Feb  8 02:08:14 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/kit-sdq/esda |
@@ -13,16 +13,16 @@ Date of execution: Wed Feb  7 06:56:02 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.255GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.084GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 677MiB / 15981MiB  |
+| Memory | 658MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.03 |
-| User CPU Time | 12.50 |
-| System CPU Time | 0.58 |
+| Real CPU Time | 8.30 |
+| User CPU Time | 11.96 |
+| System CPU Time | 0.47 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.05 s (811.7 files/s, 32982.3 lines/s)
+cloc v 1.90  T=0.04 s (860.1 files/s, 34947.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
