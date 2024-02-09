@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Thu Feb  8 02:08:15 UTC 2024
+Date of execution: Fri Feb  9 02:08:17 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/kit-recipe-app/recipebackendnew |
@@ -13,16 +13,16 @@ Date of execution: Thu Feb  8 02:08:15 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.617GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 660MiB / 15981MiB  |
+| Memory | 659MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.47 |
-| User CPU Time | 15.50 |
-| System CPU Time | 0.66 |
+| Real CPU Time | 7.21 |
+| User CPU Time | 15.49 |
+| System CPU Time | 0.59 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.09 s (790.5 files/s, 45262.6 lines/s)
+cloc v 1.90  T=0.09 s (802.5 files/s, 45948.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
