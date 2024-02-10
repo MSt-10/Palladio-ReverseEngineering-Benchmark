@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Fri Feb  9 02:09:03 UTC 2024
+Date of execution: Sat Feb 10 02:07:45 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
@@ -13,16 +13,16 @@ Date of execution: Fri Feb  9 02:09:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.012GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.204GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 682MiB / 15981MiB  |
+| Memory | 657MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.38 |
-| User CPU Time | 14.76 |
-| System CPU Time | 0.88 |
+| Real CPU Time | 7.57 |
+| User CPU Time | 15.70 |
+| System CPU Time | 0.81 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.35 s (429.5 files/s, 47373.6 lines/s)
+cloc v 1.90  T=0.35 s (427.5 files/s, 47150.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

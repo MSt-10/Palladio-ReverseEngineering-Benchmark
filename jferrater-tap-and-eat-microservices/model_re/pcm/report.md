@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Fri Feb  9 02:08:14 UTC 2024
+Date of execution: Sat Feb 10 02:07:07 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/jferrater/tap-and-eat-microservices |
@@ -13,16 +13,16 @@ Date of execution: Fri Feb  9 02:08:14 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 675MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 10.84 |
-| User CPU Time | 13.72 |
-| System CPU Time | 0.69 |
+| Real CPU Time | 4.66 |
+| User CPU Time | 13.91 |
+| System CPU Time | 0.67 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.12 s (595.5 files/s, 19822.9 lines/s)
+cloc v 1.90  T=0.12 s (582.5 files/s, 19390.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
