@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Sat Feb 10 02:07:04 UTC 2024
+Date of execution: Sun Feb 11 02:10:44 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/georgwittberger/apache-spring-boot-microservice-example |
@@ -13,16 +13,16 @@ Date of execution: Sat Feb 10 02:07:04 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.805GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 699MiB / 15981MiB  |
+| Memory | 678MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.86 |
-| User CPU Time | 13.12 |
-| System CPU Time | 0.50 |
+| Real CPU Time | 7.57 |
+| User CPU Time | 13.33 |
+| System CPU Time | 0.57 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.06 s (582.2 files/s, 17641.4 lines/s)
+cloc v 1.90  T=0.06 s (570.2 files/s, 17277.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

@@ -1,10 +1,10 @@
 # Git repository information
-Date of execution: Wed Feb  7 06:56:43 UTC 2024
+Date of execution: Sun Feb 11 02:11:34 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | dd0f135088b6f3e53bd2116121a0384fa58350e1 |
+| Commit         | 57d5b313b9a44acbd2f6c4b4e2bb4c132f645366 |
 
 
 # System information
@@ -20,9 +20,9 @@ Date of execution: Wed Feb  7 06:56:43 UTC 2024
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16.51 |
-| User CPU Time | 42.61 |
-| System CPU Time | 3.92 |
+| Real CPU Time | 18.20 |
+| User CPU Time | 45.37 |
+| System CPU Time | 3.77 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=2.80 s (299.6 files/s, 38742.6 lines/s)
+cloc v 1.90  T=2.72 s (308.6 files/s, 39903.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
