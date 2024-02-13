@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Mon Feb 12 02:09:54 UTC 2024
+Date of execution: Tue Feb 13 02:08:59 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/fudanselab/train-ticket |
@@ -13,16 +13,16 @@ Date of execution: Mon Feb 12 02:09:54 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.235GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 679MiB / 15981MiB  |
+| Memory | 672MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 39.50 |
-| User CPU Time | 65.59 |
-| System CPU Time | 14.40 |
+| Real CPU Time | 29.56 |
+| User CPU Time | 62.59 |
+| System CPU Time | 4.77 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=7.89 s (294.5 files/s, 62322.7 lines/s)
+cloc v 1.90  T=8.02 s (290.0 files/s, 61359.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

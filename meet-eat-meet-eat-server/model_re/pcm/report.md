@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Mon Feb 12 02:09:55 UTC 2024
+Date of execution: Tue Feb 13 02:08:58 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/meet-eat/meet-eat-server |
@@ -13,16 +13,16 @@ Date of execution: Mon Feb 12 02:09:55 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.237GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 746MiB / 15981MiB  |
+| Memory | 679MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.71 |
-| User CPU Time | 18.31 |
-| System CPU Time | 0.62 |
+| Real CPU Time | 10.78 |
+| User CPU Time | 20.98 |
+| System CPU Time | 0.68 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.17 s (523.1 files/s, 64172.0 lines/s)
+cloc v 1.90  T=0.18 s (515.8 files/s, 63273.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
