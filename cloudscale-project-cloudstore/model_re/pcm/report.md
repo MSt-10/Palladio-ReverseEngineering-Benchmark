@@ -1,5 +1,5 @@
 # Git repository information
-Date of execution: Tue Feb 13 02:08:56 UTC 2024
+Date of execution: Wed Feb 14 02:08:52 UTC 2024
 |    |    |
 |--- | ---|
 | Repository URL | https://github.com/cloudscale-project/cloudstore |
@@ -13,16 +13,16 @@ Date of execution: Tue Feb 13 02:08:56 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.308GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.236GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 659MiB / 15981MiB  |
+| Memory | 694MiB / 15981MiB  |
 
 # Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.40 |
-| User CPU Time | 18.88 |
-| System CPU Time | 0.66 |
+| Real CPU Time | 12.91 |
+| User CPU Time | 19.16 |
+| System CPU Time | 0.82 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -31,7 +31,7 @@ Explainations:
 -->
 
 # Cloc analysis
-cloc v 1.90  T=0.30 s (451.7 files/s, 77824.3 lines/s)
+cloc v 1.90  T=0.30 s (453.9 files/s, 78212.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
