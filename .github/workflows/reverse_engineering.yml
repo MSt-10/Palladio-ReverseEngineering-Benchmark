@@ -3,6 +3,12 @@ name: Reverse-Engineer Case Studies
 
 on:
   workflow_dispatch:
+    inputs:
+      overrideBenchmark:
+        description: 'Override Benchmark to true'
+        required: false
+        default: 'false' # The default is not overriding, keeping the existing value from .retriever.yml
+        type: 'boolean'
 
   # Every day at 2:00.
   schedule:
@@ -72,8 +78,14 @@ jobs:
           echo "repositories=$repos_str" >> $GITHUB_ENV
           echo "current_version=$(yq eval '.current_version' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules=$(yq eval '.rules[]' $CONFIG_FILE | paste -sd ",")" >> $GITHUB_ENV
-          echo "benchmark=$(yq eval '.benchmark // "false"' $CONFIG_FILE)" >> $GITHUB_ENV
           echo "rules_path=$(yq eval '.rules_path // "."' $CONFIG_FILE)" >> $GITHUB_ENV
+          
+          # Check for overrideBenchmark input
+          if [ "${{ github.event.inputs.overrideBenchmark }}" == "true" ]; then
+            echo "benchmark="true"" >> $GITHUB_ENV
+          else
+            echo "benchmark=$(yq eval '.benchmark // "false"' $CONFIG_FILE)" >> $GITHUB_ENV
+          fi
     
       - name: Checkout repositories
         run: |
