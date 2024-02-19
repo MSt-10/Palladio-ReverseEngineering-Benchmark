@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402120904 | Sun Feb 18 02:10:25 UTC 2024 |
+| v5.2.0.202402120904 | Mon Feb 19 02:10:15 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Feb 18 02:10:25 UTC 2024
+Date of execution: Mon Feb 19 02:10:15 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/meet-eat/meet-eat-server |
@@ -20,14 +20,14 @@ Date of execution: Sun Feb 18 02:10:25 UTC 2024
 | Kernel | 6.2.0-1019-azure  |
 | CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 694MiB / 15981MiB  |
+| Memory | 681MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.18 |
-| User CPU Time | 19.51 |
-| System CPU Time | 0.59 |
+| Real CPU Time | 9.07 |
+| User CPU Time | 20.50 |
+| System CPU Time | 0.68 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.18 s (509.1 files/s, 62459.4 lines/s)
+cloc v 1.90  T=0.17 s (528.6 files/s, 64849.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
