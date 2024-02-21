@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402120904 | Tue Feb 20 02:08:20 UTC 2024 |
+| v5.2.0.202402120904 | Wed Feb 21 02:09:04 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Feb 20 02:08:20 UTC 2024
+Date of execution: Wed Feb 21 02:09:04 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | b2d7e1fbd9909babf152df4836a240dc186101de |
+| Commit         | 5e4309dbda5f48da422efccff0e424c4ab960503 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Feb 20 02:08:20 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.3 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.185GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.239GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 682MiB / 15981MiB  |
+| Memory | 705MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3176.84 |
-| User CPU Time | 3233.54 |
-| System CPU Time | 39.78 |
+| Real CPU Time | 3112.20 |
+| User CPU Time | 3167.84 |
+| System CPU Time | 40.77 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,15 +36,15 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=22.28 s (314.0 files/s, 38241.1 lines/s)
+cloc v 1.90  T=22.21 s (315.1 files/s, 38370.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2768|37204|26285|248096
+TypeScript|2768|37217|26289|248149
 Java|2064|54542|53512|221438
 JSON|489|15|0|89134
-HTML|692|232|629|52245
-Sass|316|2590|175|14294
+HTML|692|232|629|52246
+Sass|317|2591|175|14308
 XML|150|217|268|8414
 reStructuredText|89|4244|2792|7332
 YAML|133|388|1039|5443
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|6996|102424|87455|662062
+SUM:|6997|102438|87459|662130
