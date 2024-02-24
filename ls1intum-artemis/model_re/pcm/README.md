@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402120904 | Fri Feb 23 02:08:37 UTC 2024 |
+| v5.2.0.202402120904 | Sat Feb 24 02:07:13 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Feb 23 02:08:37 UTC 2024
+Date of execution: Sat Feb 24 02:07:13 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | b9f26b1bcfae7215f97b9a64242b28b1cf7d4d3b |
+| Commit         | a665f9b2e6fe90b8438f2dd977b796cbad7f9217 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Fri Feb 23 02:08:37 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.276GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 661MiB / 15981MiB  |
+| Memory | 679MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3238.40 |
-| User CPU Time | 3294.16 |
-| System CPU Time | 42.26 |
+| Real CPU Time | 3057.67 |
+| User CPU Time | 3113.90 |
+| System CPU Time | 43.17 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=22.27 s (314.1 files/s, 38255.9 lines/s)
+cloc v 1.90  T=20.99 s (333.3 files/s, 40595.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2768|37217|26289|248149
-Java|2062|54528|53487|221407
+Java|2062|54541|53504|221478
 JSON|489|15|0|89150
 HTML|692|232|629|52246
 Sass|317|2591|175|14308
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|6995|102424|87434|662115
+SUM:|6995|102437|87451|662186
