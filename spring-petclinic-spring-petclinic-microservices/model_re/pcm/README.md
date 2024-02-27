@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402120904 | Mon Feb 26 02:11:25 UTC 2024 |
+| v5.2.0.202402260843 | Tue Feb 27 02:09:01 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Feb 26 02:11:25 UTC 2024
+Date of execution: Tue Feb 27 02:09:01 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
@@ -18,16 +18,16 @@ Date of execution: Mon Feb 26 02:11:25 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.2.0-1019-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.234GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 666MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.77 |
-| User CPU Time | 14.91 |
-| System CPU Time | 0.65 |
+| Real CPU Time | 6.70 |
+| User CPU Time | 15.14 |
+| System CPU Time | 0.67 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.35 s (422.6 files/s, 46616.5 lines/s)
+cloc v 1.90  T=0.35 s (426.6 files/s, 47051.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
