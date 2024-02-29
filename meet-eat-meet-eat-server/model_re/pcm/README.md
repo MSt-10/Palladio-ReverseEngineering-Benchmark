@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Wed Feb 28 12:00:20 UTC 2024 |
+| v5.2.0.202402260843 | Thu Feb 29 02:07:44 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Feb 28 12:00:20 UTC 2024
+Date of execution: Thu Feb 29 02:07:44 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/meet-eat/meet-eat-server |
@@ -18,17 +18,25 @@ Date of execution: Wed Feb 28 12:00:20 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1015-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.778GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.202GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 702MiB / 15981MiB  |
+| Memory | 671MiB / 15981MiB  |
 
 ## Retriever execution time
-| Mean [s] | Min [s] | Max [s] | Relative |
-|---:|---:|---:|---:|
-| 5.213 ± 0.123 | 5.014 | 5.448 | 1.00 |
+| Metric | Time (seconds) |
+| --- | ---: |
+| Real CPU Time | 6.42 |
+| User CPU Time | 20.62 |
+| System CPU Time | 0.55 |
+<!--
+Explainations:
+- __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
+- __User CPU Time__: time the command has spent running in user mode
+- __System CPU Time__: time the command has spent running in system or kernel mode
+-->
 
 ## Cloc analysis
-cloc v 1.90  T=0.18 s (494.5 files/s, 60668.3 lines/s)
+cloc v 1.90  T=0.18 s (509.4 files/s, 62497.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

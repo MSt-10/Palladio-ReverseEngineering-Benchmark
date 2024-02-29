@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Wed Feb 28 12:00:18 UTC 2024 |
+| v5.2.0.202402260843 | Thu Feb 29 02:07:50 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Feb 28 12:00:18 UTC 2024
+Date of execution: Thu Feb 29 02:07:50 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/georgwittberger/apache-spring-boot-microservice-example |
@@ -18,17 +18,25 @@ Date of execution: Wed Feb 28 12:00:18 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1015-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.139GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.276GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 663MiB / 15981MiB  |
+| Memory | 682MiB / 15981MiB  |
 
 ## Retriever execution time
-| Mean [s] | Min [s] | Max [s] | Relative |
-|---:|---:|---:|---:|
-| 3.295 ± 0.064 | 3.193 | 3.393 | 1.00 |
+| Metric | Time (seconds) |
+| --- | ---: |
+| Real CPU Time | 9.33 |
+| User CPU Time | 13.68 |
+| System CPU Time | 0.48 |
+<!--
+Explainations:
+- __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
+- __User CPU Time__: time the command has spent running in user mode
+- __System CPU Time__: time the command has spent running in system or kernel mode
+-->
 
 ## Cloc analysis
-cloc v 1.90  T=0.06 s (558.4 files/s, 16921.3 lines/s)
+cloc v 1.90  T=0.06 s (583.3 files/s, 17676.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
