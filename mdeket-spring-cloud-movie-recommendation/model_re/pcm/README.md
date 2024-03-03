@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Sat Mar  2 02:07:07 UTC 2024 |
+| v5.2.0.202402260843 | Sun Mar  3 02:10:20 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Mar  2 02:07:07 UTC 2024
+Date of execution: Sun Mar  3 02:10:20 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/mdeket/spring-cloud-movie-recommendation |
@@ -18,16 +18,16 @@ Date of execution: Sat Mar  2 02:07:07 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1015-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 673MiB / 15981MiB  |
+| Memory | 706MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.51 |
-| User CPU Time | 14.14 |
-| System CPU Time | 0.56 |
+| Real CPU Time | 11.47 |
+| User CPU Time | 14.39 |
+| System CPU Time | 0.65 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.10 s (532.9 files/s, 28222.4 lines/s)
+cloc v 1.90  T=0.10 s (539.8 files/s, 28590.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
