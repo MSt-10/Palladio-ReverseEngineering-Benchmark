@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Wed Mar  6 02:08:42 UTC 2024 |
+| v5.2.0.202402260843 | Thu Mar  7 02:03:48 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Mar  6 02:08:42 UTC 2024
+Date of execution: Thu Mar  7 02:03:48 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/fernandoabcampos/spring-netflix-oss-microservices |
@@ -18,16 +18,16 @@ Date of execution: Wed Mar  6 02:08:42 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1015-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.234GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 667MiB / 15981MiB  |
+| Memory | 676MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.10 |
-| User CPU Time | 14.22 |
-| System CPU Time | 0.53 |
+| Real CPU Time | 4.49 |
+| User CPU Time | 13.27 |
+| System CPU Time | 0.50 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.07 s (788.2 files/s, 31421.2 lines/s)
+cloc v 1.90  T=0.07 s (824.3 files/s, 32859.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
