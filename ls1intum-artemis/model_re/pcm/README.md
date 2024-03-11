@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Sun Mar 10 02:12:03 UTC 2024 |
+| v5.2.0.202402260843 | Mon Mar 11 02:10:04 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Mar 10 02:12:03 UTC 2024
+Date of execution: Mon Mar 11 02:10:04 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | c5a9a0c6593b23598d333fa22bcc042c8ebc648e |
+| Commit         | d36031406aafdb58c09d3d139aa2c048ef624b61 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Mar 10 02:12:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1015-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.240GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 695MiB / 15981MiB  |
+| Memory | 681MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3420.25 |
-| User CPU Time | 3473.86 |
-| System CPU Time | 45.04 |
+| Real CPU Time | 3194.98 |
+| User CPU Time | 3247.97 |
+| System CPU Time | 42.38 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,16 +36,16 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=23.80 s (295.2 files/s, 35978.0 lines/s)
+cloc v 1.90  T=22.81 s (308.0 files/s, 37556.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2788|37477|26462|249575
-Java|2061|54861|53655|223184
+TypeScript|2788|37486|26470|249754
+Java|2061|54881|53695|223326
 JSON|488|15|0|89234
-HTML|698|232|632|52335
+HTML|698|232|632|52347
 Sass|317|2583|177|14267
-XML|154|217|273|8478
+XML|155|217|273|8489
 reStructuredText|90|4255|2803|7338
 YAML|135|389|1045|5491
 Bourne Shell|64|393|476|1708
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7026|103021|87801|665565
+SUM:|7027|103050|87849|665909
