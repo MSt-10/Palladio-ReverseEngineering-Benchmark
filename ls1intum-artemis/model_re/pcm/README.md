@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Sun Mar 17 02:10:12 UTC 2024 |
+| v5.2.0.202402260843 | Mon Mar 18 02:09:02 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Mar 17 02:10:12 UTC 2024
+Date of execution: Mon Mar 18 02:09:02 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 2a4925478294f372ffadbd0c8dab19cac9d3366c |
+| Commit         | 1eb3c9bd279f8b2b11abfbe56692dd4e499a6e9a |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Mar 17 02:10:12 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1016-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.221GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 692MiB / 15981MiB  |
+| Memory | 678MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3448.14 |
-| User CPU Time | 3497.49 |
-| System CPU Time | 42.53 |
+| Real CPU Time | 3711.33 |
+| User CPU Time | 3762.67 |
+| System CPU Time | 42.32 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=22.82 s (308.8 files/s, 37620.7 lines/s)
+cloc v 1.90  T=22.82 s (308.8 files/s, 37618.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2788|37496|26519|249792
-Java|2079|55147|53963|224766
+Java|2079|55154|53964|224808
 JSON|488|15|0|89240
 HTML|698|232|631|52044
 Sass|317|2583|177|14267
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7048|103382|88222|666942
+SUM:|7048|103389|88223|666984

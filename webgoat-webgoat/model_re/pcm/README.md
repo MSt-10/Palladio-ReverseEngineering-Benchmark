@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202402260843 | Sun Mar 17 02:10:50 UTC 2024 |
+| v5.2.0.202402260843 | Mon Mar 18 02:09:59 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Mar 17 02:10:50 UTC 2024
+Date of execution: Mon Mar 18 02:09:59 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | c18430752a7cc6f3bce6213aca2306d32e3dc1a9 |
+| Commit         | 62931a183681b19605f4ca92710b507b9608e9d6 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Mar 17 02:10:50 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1016-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.900GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.777GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 674MiB / 15981MiB  |
+| Memory | 664MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20.00 |
-| User CPU Time | 37.70 |
-| System CPU Time | 2.47 |
+| Real CPU Time | 15.31 |
+| User CPU Time | 39.36 |
+| System CPU Time | 2.43 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.77 s (303.4 files/s, 39233.1 lines/s)
+cloc v 1.90  T=2.74 s (305.7 files/s, 39530.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 JavaScript|90|6708|3437|44099
-Java|355|3056|6627|18201
+Java|355|3057|6627|18216
 CSS|25|1198|161|8393
 HTML|69|658|252|5637
 AsciiDoc|237|1488|19|3672
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|6|0|29
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|839|13463|10629|84397
+SUM:|839|13464|10629|84412
