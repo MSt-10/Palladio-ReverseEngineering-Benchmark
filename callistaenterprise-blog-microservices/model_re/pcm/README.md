@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Wed Apr  3 02:10:20 UTC 2024 |
+| v5.2.0.202403250833 | Thu Apr  4 02:10:34 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Apr  3 02:10:20 UTC 2024
+Date of execution: Thu Apr  4 02:10:34 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/callistaenterprise/blog-microservices |
@@ -17,17 +17,17 @@ Date of execution: Wed Apr  3 02:10:20 UTC 2024
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
+| Kernel | 6.5.0-1016-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 688MiB / 15981MiB  |
+| Memory | 764MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.80 |
-| User CPU Time | 14.70 |
-| System CPU Time | 0.62 |
+| Real CPU Time | 4.53 |
+| User CPU Time | 14.22 |
+| System CPU Time | 0.58 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.31 s (306.4 files/s, 14769.8 lines/s)
+cloc v 1.90  T=0.29 s (328.9 files/s, 15857.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
