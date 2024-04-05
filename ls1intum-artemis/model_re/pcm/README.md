@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Thu Apr  4 02:10:36 UTC 2024 |
+| v5.2.0.202403250833 | Fri Apr  5 02:10:04 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Apr  4 02:10:36 UTC 2024
+Date of execution: Fri Apr  5 02:10:04 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 13fee2b26b6e9bb8561e24be0d1a2c50fb12f6da |
+| Commit         | f19f33209297873c78d1a567cb98b825d3bb5266 |
 
 
 ## System information
@@ -17,17 +17,17 @@ Date of execution: Thu Apr  4 02:10:36 UTC 2024
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1016-azure  |
+| Kernel | 6.5.0-1017-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 775MiB / 15981MiB  |
+| Memory | 778MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 13786.97 |
-| User CPU Time | 13864.75 |
-| System CPU Time | 62.58 |
+| Real CPU Time | 13986.15 |
+| User CPU Time | 14051.00 |
+| System CPU Time | 60.55 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,18 +36,18 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=23.04 s (313.9 files/s, 38209.0 lines/s)
+cloc v 1.90  T=22.94 s (315.4 files/s, 38384.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2890|39002|28317|258729
-Java|2141|56302|55772|229540
+Java|2141|56318|55783|229583
 JSON|493|15|0|89570
 HTML|699|245|635|52462
 Sass|319|2620|181|14485
 XML|160|226|285|8609
 reStructuredText|92|4350|2876|7451
-YAML|139|414|1063|5728
+YAML|139|414|1063|5731
 Bourne Shell|65|411|469|1787
 Python|34|491|129|1718
 CSV|11|4|0|1435
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7234|106188|91886|682336
+SUM:|7234|106204|91897|682382
