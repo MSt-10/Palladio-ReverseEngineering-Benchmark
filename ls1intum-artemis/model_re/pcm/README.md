@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Fri Apr  5 02:10:04 UTC 2024 |
+| v5.2.0.202403250833 | Sat Apr  6 02:08:47 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Apr  5 02:10:04 UTC 2024
+Date of execution: Sat Apr  6 02:08:47 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | f19f33209297873c78d1a567cb98b825d3bb5266 |
+| Commit         | dd752a5bb270e816518da4e855b9f58f3902476d |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Fri Apr  5 02:10:04 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 778MiB / 15981MiB  |
+| Memory | 687MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 13986.15 |
-| User CPU Time | 14051.00 |
-| System CPU Time | 60.55 |
+| Real CPU Time | 13295.94 |
+| User CPU Time | 13374.03 |
+| System CPU Time | 63.07 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,20 +36,20 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=22.94 s (315.4 files/s, 38384.2 lines/s)
+cloc v 1.90  T=24.09 s (297.8 files/s, 36043.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2890|39002|28317|258729
-Java|2141|56318|55783|229583
-JSON|493|15|0|89570
-HTML|699|245|635|52462
-Sass|319|2620|181|14485
-XML|160|226|285|8609
-reStructuredText|92|4350|2876|7451
-YAML|139|414|1063|5731
-Bourne Shell|65|411|469|1787
+TypeScript|2907|39099|28350|259733
+Java|2086|54260|54650|220861
+JSON|490|15|0|89098
+HTML|701|177|632|51919
+Sass|323|2643|181|14609
+XML|160|226|285|8597
+reStructuredText|91|4331|2956|7359
+YAML|138|411|1055|5643
 Python|34|491|129|1718
+Bourne Shell|44|375|420|1658
 CSV|11|4|0|1435
 Pascal|3|385|48|1367
 Markdown|32|444|0|1288
@@ -57,7 +57,7 @@ Swift|41|229|329|985
 Handlebars|8|86|0|897
 Maven|11|0|95|896
 SVG|12|0|2|852
-Gradle|12|132|90|810
+Gradle|12|132|91|809
 Groovy|13|128|355|670
 CSS|2|147|1|659
 OCaml|6|82|228|426
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7234|106204|91897|682382
+SUM:|7176|104140|90818|673451

@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Fri Apr  5 02:09:58 UTC 2024 |
+| v5.2.0.202403250833 | Sat Apr  6 02:08:48 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Apr  5 02:09:58 UTC 2024
+Date of execution: Sat Apr  6 02:08:48 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 9c950adeb5788e30a0e9300139050ddcc51edc29 |
+| Commit         | 3f6505f0bdab9931323793e86788db4bf7d4fd66 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -23,17 +23,17 @@ Date of execution: Fri Apr  5 02:09:58 UTC 2024
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1016-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.285GHz  |
+| Kernel | 6.5.0-1017-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.228GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 775MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 21.54 |
-| User CPU Time | 72.67 |
-| System CPU Time | 3.26 |
+| Real CPU Time | 27.98 |
+| User CPU Time | 76.42 |
+| System CPU Time | 3.16 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.64 s (242.0 files/s, 51632.0 lines/s)
+cloc v 1.90  T=9.48 s (246.2 files/s, 52537.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1874|47243|90819|190152
+Java|1874|47246|90822|190172
 XML|309|3219|2946|134519
 SQL|5|918|741|5464
 Maven|21|319|105|4566
@@ -59,9 +59,9 @@ DTD|8|151|24|667
 YAML|10|69|64|612
 XSLT|1|30|48|555
 JSON|6|2|0|503
-Bourne Shell|7|76|131|387
+Bourne Shell|7|78|130|387
 HTML|17|17|0|223
 Dockerfile|1|37|26|79
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2333|53554|96830|347469
+SUM:|2333|53559|96832|347489
