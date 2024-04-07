@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Sat Apr  6 02:08:47 UTC 2024 |
+| v5.2.0.202403250833 | Sun Apr  7 02:12:06 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Apr  6 02:08:47 UTC 2024
+Date of execution: Sun Apr  7 02:12:06 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | dd752a5bb270e816518da4e855b9f58f3902476d |
+| Commit         | bb1df341c17cd89a4a1a78f7511a1494a1aa2d5b |
 
 
 ## System information
@@ -20,14 +20,14 @@ Date of execution: Sat Apr  6 02:08:47 UTC 2024
 | Kernel | 6.5.0-1017-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 678MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 13295.94 |
-| User CPU Time | 13374.03 |
-| System CPU Time | 63.07 |
+| Real CPU Time | 13869.15 |
+| User CPU Time | 13951.76 |
+| System CPU Time | 62.15 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,18 +36,18 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.09 s (297.8 files/s, 36043.9 lines/s)
+cloc v 1.90  T=25.31 s (283.5 files/s, 34311.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2907|39099|28350|259733
-Java|2086|54260|54650|220861
+Java|2086|54266|54652|220914
 JSON|490|15|0|89098
 HTML|701|177|632|51919
 Sass|323|2643|181|14609
 XML|160|226|285|8597
 reStructuredText|91|4331|2956|7359
-YAML|138|411|1055|5643
+YAML|138|411|1058|5649
 Python|34|491|129|1718
 Bourne Shell|44|375|420|1658
 CSV|11|4|0|1435
@@ -57,7 +57,7 @@ Swift|41|229|329|985
 Handlebars|8|86|0|897
 Maven|11|0|95|896
 SVG|12|0|2|852
-Gradle|12|132|91|809
+Gradle|12|137|95|813
 Groovy|13|128|355|670
 CSS|2|147|1|659
 OCaml|6|82|228|426
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7176|104140|90818|673451
+SUM:|7176|104151|90827|673514
