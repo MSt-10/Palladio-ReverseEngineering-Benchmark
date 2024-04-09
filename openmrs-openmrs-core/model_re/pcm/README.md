@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Mon Apr  8 02:11:04 UTC 2024 |
+| v5.2.0.202403250833 | Tue Apr  9 02:10:07 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Apr  8 02:11:04 UTC 2024
+Date of execution: Tue Apr  9 02:10:07 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 78abae51456998b09f753c5ebde13690fffce687 |
+| Commit         | 005ad891eb91b6843e22528bbc622d69153b0d01 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -26,14 +26,14 @@ Date of execution: Mon Apr  8 02:11:04 UTC 2024
 | Kernel | 6.5.0-1017-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 699MiB / 15981MiB  |
+| Memory | 690MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 26.09 |
-| User CPU Time | 74.95 |
-| System CPU Time | 3.20 |
+| Real CPU Time | 24.65 |
+| User CPU Time | 75.18 |
+| System CPU Time | 3.16 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.56 s (244.2 files/s, 52105.8 lines/s)
+cloc v 1.90  T=9.64 s (242.1 files/s, 51642.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1874|47246|90822|190172
+Java|1874|47248|90822|190178
 XML|309|3219|2946|134519
 SQL|5|918|741|5464
 Maven|21|319|105|4566
@@ -56,7 +56,7 @@ Velocity Template Language|19|109|2|1213
 Markdown|12|352|0|1211
 JSP|7|180|68|921
 DTD|8|151|24|667
-YAML|10|69|64|612
+YAML|11|79|75|643
 XSLT|1|30|48|555
 JSON|6|2|0|503
 Bourne Shell|7|78|130|387
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|37|26|79
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2333|53559|96832|347489
+SUM:|2334|53571|96843|347526
