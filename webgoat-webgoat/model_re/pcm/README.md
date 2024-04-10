@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202403250833 | Tue Apr  9 02:10:59 UTC 2024 |
+| v5.2.0.202403250833 | Wed Apr 10 02:15:13 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Apr  9 02:10:59 UTC 2024
+Date of execution: Wed Apr 10 02:15:13 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
@@ -18,16 +18,16 @@ Date of execution: Tue Apr  9 02:10:59 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.587GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.782GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 705MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 23.24 |
-| User CPU Time | 42.87 |
-| System CPU Time | 2.69 |
+| Real CPU Time | 20.51 |
+| User CPU Time | 40.73 |
+| System CPU Time | 2.39 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.72 s (308.2 files/s, 39863.5 lines/s)
+cloc v 1.90  T=2.68 s (312.8 files/s, 40450.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
