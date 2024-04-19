@@ -1,21 +1,21 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404160757 | Thu Apr 18 02:10:26 UTC 2024 |
+| v5.2.0.202404160757 | Fri Apr 19 02:12:37 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Apr 18 02:10:26 UTC 2024
+Date of execution: Fri Apr 19 02:12:37 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 7cddb5f69f72ea5519ca38a5bc3c7df58e689377 |
+| Commit         | 2a8c7e9e5f0d57f3f462ae4a8a113855c73b7098 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
 | Branch         | master |
-| Commit         | 6d01f5fdef274903c242645456c7d5a7fab0a9e7 |
+| Commit         | e209db9e2c4f64fde844c9fa5597426e944f7e78 |
 
 
 ## System information
@@ -24,16 +24,16 @@ Date of execution: Thu Apr 18 02:10:26 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.264GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 676MiB / 15981MiB  |
+| Memory | 698MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 23.71 |
-| User CPU Time | 53.60 |
-| System CPU Time | 2.72 |
+| Real CPU Time | 22.46 |
+| User CPU Time | 55.56 |
+| System CPU Time | 2.65 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.48 s (246.1 files/s, 52498.8 lines/s)
+cloc v 1.90  T=9.39 s (248.5 files/s, 53013.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
