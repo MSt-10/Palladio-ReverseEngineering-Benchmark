@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Tue Apr 23 02:12:31 UTC 2024 |
+| v5.2.0.202404221423 | Wed Apr 24 02:11:43 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Apr 23 02:12:31 UTC 2024
+Date of execution: Wed Apr 24 02:11:43 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | d4a4a1a238dd8db8da1b6b64c3d78e9eca4b678d |
+| Commit         | 1f2f3ba14ec26243daad8a64f5c38046cc057762 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Apr 23 02:12:31 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 690MiB / 15981MiB  |
+| Memory | 682MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 13439.28 |
-| User CPU Time | 13490.84 |
-| System CPU Time | 55.17 |
+| Real CPU Time | 13212.40 |
+| User CPU Time | 13284.01 |
+| System CPU Time | 63.55 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,14 +36,14 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=23.95 s (298.6 files/s, 36518.3 lines/s)
+cloc v 1.90  T=24.39 s (293.2 files/s, 35857.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2943|39788|28872|264254
-Java|2091|54367|54831|221369
+TypeScript|2944|39794|28872|264303
+Java|2092|54383|54850|221449
 JSON|495|15|0|90362
-HTML|708|182|637|52425
+HTML|708|182|637|52427
 Sass|329|2645|187|14658
 reStructuredText|91|4386|3033|7419
 XML|74|85|149|6306
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7151|104843|91488|678160
+SUM:|7153|104865|91507|678291
