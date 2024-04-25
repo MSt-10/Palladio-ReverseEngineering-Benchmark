@@ -1,143 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_CTq4TAHgEe-VUacJtVfHNw">
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTWvPAHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_api_CardServiceController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTWvOwHgEe-VUacJtVfHNw" entityName="card-service/api Provider" providedInterface__OperationProvidedRole="_CTWvNQHgEe-VUacJtVfHNw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSvrMgHgEe-VUacJtVfHNw" describedService__SEFF="_CNCr0AHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CNkQQQHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSvEIAHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_CSvEIAHgEe-VUacJtVfHNw" entityName="If Branch" predecessor_AbstractAction="_CNkQQQHgEe-VUacJtVfHNw" successor_AbstractAction="_CSvrMAHgEe-VUacJtVfHNw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_CNmsgAHgEe-VUacJtVfHNw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_CNnTkAHgEe-VUacJtVfHNw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_CNleYAHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CNmFcAHgEe-VUacJtVfHNw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_CNmFcAHgEe-VUacJtVfHNw" entityName="fakeRepo.add(newCard)" predecessor_AbstractAction="_CNleYAHgEe-VUacJtVfHNw" successor_AbstractAction="_CNmFcQHgEe-VUacJtVfHNw"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_CNmFcQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CNmFcAHgEe-VUacJtVfHNw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(newCard.getId() != null)"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_CSvrMAHgEe-VUacJtVfHNw" entityName="System.out.println(&quot;New card passing: &quot; + newCard)" predecessor_AbstractAction="_CSvEIAHgEe-VUacJtVfHNw" successor_AbstractAction="_CSvrMQHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSvrMQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSvrMAHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSyHcgHgEe-VUacJtVfHNw" describedService__SEFF="_CNA2pAHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSvrMwHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSyHcAHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSyHcAHgEe-VUacJtVfHNw" entityName="fakeRepo" predecessor_AbstractAction="_CSvrMwHgEe-VUacJtVfHNw" successor_AbstractAction="_CSyHcQHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSyHcQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSyHcAHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSyugwHgEe-VUacJtVfHNw" describedService__SEFF="_CNBdsAHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSyugAHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSyugQHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSyugQHgEe-VUacJtVfHNw" entityName="Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()" predecessor_AbstractAction="_CSyugAHgEe-VUacJtVfHNw" successor_AbstractAction="_CSyuggHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSyuggHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSyugQHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_P0PH_AKpEe-WgIQLViOptA">
+  <components__Repository xsi:type="repository:BasicComponent" id="_Pz6X1gKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_StatementClient">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Pz6X1QKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_StatementClient Provider" providedInterface__OperationProvidedRole="_Pz6X0AKpEe-WgIQLViOptA"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTeD-gHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_CardClient">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTeD-QHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_CardClient Provider" providedInterface__OperationProvidedRole="_CTWvOQHgEe-VUacJtVfHNw"/>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTeD_AHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_api_StatementServiceController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTeD-wHgEe-VUacJtVfHNw" entityName="statement-service/api Provider" providedInterface__OperationProvidedRole="_CTWvOAHgEe-VUacJtVfHNw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSz8qgHgEe-VUacJtVfHNw" describedService__SEFF="_CMU6IAHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSz8pwHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSz8qAHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSz8qAHgEe-VUacJtVfHNw" entityName="fakeRepo" predecessor_AbstractAction="_CSz8pwHgEe-VUacJtVfHNw" successor_AbstractAction="_CSz8qQHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSz8qQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSz8qAHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSz8pgHgEe-VUacJtVfHNw" describedService__SEFF="_CMXWYwHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSzVmAHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSz8owHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_CSz8owHgEe-VUacJtVfHNw" entityName="If Branch" predecessor_AbstractAction="_CSzVmAHgEe-VUacJtVfHNw" successor_AbstractAction="_CSz8pAHgEe-VUacJtVfHNw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_CSz8oAHgEe-VUacJtVfHNw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_CSz8ogHgEe-VUacJtVfHNw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_CSzVmQHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSzVmgHgEe-VUacJtVfHNw"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSzVmgHgEe-VUacJtVfHNw" entityName="fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())" predecessor_AbstractAction="_CSzVmQHgEe-VUacJtVfHNw" successor_AbstractAction="_CSzVmwHgEe-VUacJtVfHNw">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_CSzVmwHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSzVmgHgEe-VUacJtVfHNw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(cardId != null)"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSz8pAHgEe-VUacJtVfHNw" entityName="null" predecessor_AbstractAction="_CSz8owHgEe-VUacJtVfHNw" successor_AbstractAction="_CSz8pQHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.null"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="null"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSz8pQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSz8pAHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSzVlwHgEe-VUacJtVfHNw" describedService__SEFF="_CMXWYQHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSzVlAHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSzVlQHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSzVlQHgEe-VUacJtVfHNw" entityName="Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()" predecessor_AbstractAction="_CSzVlAHgEe-VUacJtVfHNw" successor_AbstractAction="_CSzVlgHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSzVlgHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSzVlQHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTkxpAHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_MonitorDashboardApplication">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTkxowHgEe-VUacJtVfHNw" entityName="monitor-dashboard/ Provider" providedInterface__OperationProvidedRole="_CTWvNgHgEe-VUacJtVfHNw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSz8rwHgEe-VUacJtVfHNw" describedService__SEFF="_CNAPkAHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSz8rAHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSz8rQHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSz8rQHgEe-VUacJtVfHNw" entityName="&quot;forward:/hystrix&quot;" predecessor_AbstractAction="_CSz8rAHgEe-VUacJtVfHNw" successor_AbstractAction="_CSz8rgHgEe-VUacJtVfHNw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.STRING"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="STRING"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSz8rgHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSz8rQHgEe-VUacJtVfHNw"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTmm3gHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_CardStatementServiceController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTmm2wHgEe-VUacJtVfHNw" entityName="card-statement-composite/api/statement-by-card Provider" providedInterface__OperationProvidedRole="_CTWvOgHgEe-VUacJtVfHNw"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_CTmm3AHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_StatementClient Consumer" requiredInterface__OperationRequiredRole="_CTWvNwHgEe-VUacJtVfHNw"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_CTmm3QHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_CardClient Consumer" requiredInterface__OperationRequiredRole="_CTWvOQHgEe-VUacJtVfHNw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_CSzVkgHgEe-VUacJtVfHNw" describedService__SEFF="_CNA2oQHgEe-VUacJtVfHNw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_CSyuhQHgEe-VUacJtVfHNw" entityName="Start Action" successor_AbstractAction="_CSyuhgHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_CSyuhgHgEe-VUacJtVfHNw" entityName="response.put(cardClient.getCard(cardId),statementClient.getStatements(cardId))" predecessor_AbstractAction="_CSyuhQHgEe-VUacJtVfHNw" successor_AbstractAction="_CSzVkAHgEe-VUacJtVfHNw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_CSzVkAHgEe-VUacJtVfHNw" entityName="new ResponseEntity&lt;Map&lt;CardVO,List&lt;StatementVO>>>(response,HttpStatus.OK)" predecessor_AbstractAction="_CSyuhgHgEe-VUacJtVfHNw" successor_AbstractAction="_CSzVkQHgEe-VUacJtVfHNw">
+  <components__Repository xsi:type="repository:BasicComponent" id="_Pz6X2gKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_CardStatementServiceController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Pz6X1wKpEe-WgIQLViOptA" entityName="card-statement-composite/api/statement-by-card Provider" providedInterface__OperationProvidedRole="_Pz5wygKpEe-WgIQLViOptA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Pz6X2AKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_CardClient Consumer" requiredInterface__OperationRequiredRole="_Pz6X0gKpEe-WgIQLViOptA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Pz6X2QKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_StatementClient Consumer" requiredInterface__OperationRequiredRole="_Pz6X0AKpEe-WgIQLViOptA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzReowKpEe-WgIQLViOptA" describedService__SEFF="_PtBFowKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzQ3lQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzReoAKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_PzReoAKpEe-WgIQLViOptA" entityName="response.put(cardClient.getCard(cardId),statementClient.getStatements(cardId))" predecessor_AbstractAction="_PzQ3lQKpEe-WgIQLViOptA" successor_AbstractAction="_PzReoQKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzReoQKpEe-WgIQLViOptA" entityName="new ResponseEntity&lt;Map&lt;CardVO,List&lt;StatementVO>>>(response,HttpStatus.OK)" predecessor_AbstractAction="_PzReoAKpEe-WgIQLViOptA" successor_AbstractAction="_PzReogKpEe-WgIQLViOptA">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.new ResponseEntity&lt;Map&lt;CardVO,List&lt;StatementVO>>>(response,HttpStatus.OK)"/>
@@ -147,70 +20,197 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_CSzVkQHgEe-VUacJtVfHNw" entityName="Stop Action" predecessor_AbstractAction="_CSzVkAHgEe-VUacJtVfHNw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzReogKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzReoQKpEe-WgIQLViOptA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_CTocDgHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_StatementClient">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTocDQHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_StatementClient Provider" providedInterface__OperationProvidedRole="_CTWvNwHgEe-VUacJtVfHNw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Pz9bLQKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_api_CardServiceController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Pz9bLAKpEe-WgIQLViOptA" entityName="card-service/api Provider" providedInterface__OperationProvidedRole="_Pz6X0wKpEe-WgIQLViOptA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzSFvQKpEe-WgIQLViOptA" describedService__SEFF="_PtC60QKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzSFswKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzSFugKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_PzSFugKpEe-WgIQLViOptA" entityName="If Branch" predecessor_AbstractAction="_PzSFswKpEe-WgIQLViOptA" successor_AbstractAction="_PzSFuwKpEe-WgIQLViOptA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PzSFtwKpEe-WgIQLViOptA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_PzSFuQKpEe-WgIQLViOptA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_PzSFtAKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzSFtQKpEe-WgIQLViOptA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_PzSFtQKpEe-WgIQLViOptA" entityName="fakeRepo.add(newCard)" predecessor_AbstractAction="_PzSFtAKpEe-WgIQLViOptA" successor_AbstractAction="_PzSFtgKpEe-WgIQLViOptA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_PzSFtgKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzSFtQKpEe-WgIQLViOptA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(newCard.getId() != null)"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_PzSFuwKpEe-WgIQLViOptA" entityName="System.out.println(&quot;New card passing: &quot; + newCard)" predecessor_AbstractAction="_PzSFugKpEe-WgIQLViOptA" successor_AbstractAction="_PzSFvAKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzSFvAKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzSFuwKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzSswwKpEe-WgIQLViOptA" describedService__SEFF="_PtBssQKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzSswAKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzSswQKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzSswQKpEe-WgIQLViOptA" entityName="fakeRepo" predecessor_AbstractAction="_PzSswAKpEe-WgIQLViOptA" successor_AbstractAction="_PzSswgKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzSswgKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzSswQKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzSFsgKpEe-WgIQLViOptA" describedService__SEFF="_PtC60wKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzRepQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzSFsAKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzSFsAKpEe-WgIQLViOptA" entityName="Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()" predecessor_AbstractAction="_PzRepQKpEe-WgIQLViOptA" successor_AbstractAction="_PzSFsQKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Optional.ofNullable(fakeRepo.stream().filter((card) -> card.getId().equals(cardId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one CardId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzSFsQKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzSFsAKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_CTqRMQHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_api_CardServiceController">
-    <assemblyContexts__ComposedStructure id="_CTq4SAHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTWvPAHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_CTtUgAHgEe-VUacJtVfHNw" innerProvidedRole_ProvidedDelegationConnector="_CTWvOwHgEe-VUacJtVfHNw" outerProvidedRole_ProvidedDelegationConnector="_CTqRMAHgEe-VUacJtVfHNw" assemblyContext_ProvidedDelegationConnector="_CTq4SAHgEe-VUacJtVfHNw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTqRMAHgEe-VUacJtVfHNw" entityName="card-service/api Provider" providedInterface__OperationProvidedRole="_CTWvNQHgEe-VUacJtVfHNw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_P0Ev4QKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_api_StatementServiceController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0Ev4AKpEe-WgIQLViOptA" entityName="statement-service/api Provider" providedInterface__OperationProvidedRole="_Pz6X0QKpEe-WgIQLViOptA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzObVAKpEe-WgIQLViOptA" describedService__SEFF="_PsPpkAKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzObUQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzObUgKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzObUgKpEe-WgIQLViOptA" entityName="fakeRepo" predecessor_AbstractAction="_PzObUQKpEe-WgIQLViOptA" successor_AbstractAction="_PzObUwKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzObUwKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzObUgKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzObUAKpEe-WgIQLViOptA" describedService__SEFF="_PsSs4QKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PtoJoQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzN0QAKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzN0QAKpEe-WgIQLViOptA" entityName="Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()" predecessor_AbstractAction="_PtoJoQKpEe-WgIQLViOptA" successor_AbstractAction="_PzN0QQKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="Optional.ofNullable(fakeRepo.stream().filter((statement) -> statement.getId().equals(statementId)).reduce(null,(u,v) -> {&#xA;  if (u != null &amp;&amp; v != null)   throw new IllegalStateException(&quot;More than one StatementId found&quot;);&#xA; else   return u == null ? v : u;&#xA;}&#xA;)).get()"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzN0QQKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzN0QAKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzQ3kwKpEe-WgIQLViOptA" describedService__SEFF="_PsSs4wKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzObVQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzQ3kAKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_PzQ3kAKpEe-WgIQLViOptA" entityName="If Branch" predecessor_AbstractAction="_PzObVQKpEe-WgIQLViOptA" successor_AbstractAction="_PzQ3kQKpEe-WgIQLViOptA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PzPpcAKpEe-WgIQLViOptA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_PzQQgAKpEe-WgIQLViOptA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_PzPCYAKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzPCYQKpEe-WgIQLViOptA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzPCYQKpEe-WgIQLViOptA" entityName="fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())" predecessor_AbstractAction="_PzPCYAKpEe-WgIQLViOptA" successor_AbstractAction="_PzPCYgKpEe-WgIQLViOptA">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRepo.stream().filter((statement) -> statement.getCardId().equals(cardId)).collect(Collectors.toList())"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_PzPCYgKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzPCYQKpEe-WgIQLViOptA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(cardId != null)"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzQ3kQKpEe-WgIQLViOptA" entityName="null" predecessor_AbstractAction="_PzQ3kAKpEe-WgIQLViOptA" successor_AbstractAction="_PzQ3kgKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.null"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="null"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzQ3kgKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzQ3kQKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_CTqRMwHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_api_StatementServiceController">
-    <assemblyContexts__ComposedStructure id="_CTq4RgHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTeD_AHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_CTtUgQHgEe-VUacJtVfHNw" innerProvidedRole_ProvidedDelegationConnector="_CTeD-wHgEe-VUacJtVfHNw" outerProvidedRole_ProvidedDelegationConnector="_CTqRMgHgEe-VUacJtVfHNw" assemblyContext_ProvidedDelegationConnector="_CTq4RgHgEe-VUacJtVfHNw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTqRMgHgEe-VUacJtVfHNw" entityName="statement-service/api Provider" providedInterface__OperationProvidedRole="_CTWvOAHgEe-VUacJtVfHNw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_P0K2hAKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_MonitorDashboardApplication">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0K2gwKpEe-WgIQLViOptA" entityName="monitor-dashboard/ Provider" providedInterface__OperationProvidedRole="_Pz6X1AKpEe-WgIQLViOptA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PzSsyAKpEe-WgIQLViOptA" describedService__SEFF="_PtAekAKpEe-WgIQLViOptA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PzSsxQKpEe-WgIQLViOptA" entityName="Start Action" successor_AbstractAction="_PzSsxgKpEe-WgIQLViOptA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PzSsxgKpEe-WgIQLViOptA" entityName="&quot;forward:/hystrix&quot;" predecessor_AbstractAction="_PzSsxQKpEe-WgIQLViOptA" successor_AbstractAction="_PzSsxwKpEe-WgIQLViOptA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.STRING"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="STRING"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PzSsxwKpEe-WgIQLViOptA" entityName="Stop Action" predecessor_AbstractAction="_PzSsxgKpEe-WgIQLViOptA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_CTqRNQHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_MonitorDashboardApplication">
-    <assemblyContexts__ComposedStructure id="_CTq4SgHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTkxpAHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_CTtUgwHgEe-VUacJtVfHNw" innerProvidedRole_ProvidedDelegationConnector="_CTkxowHgEe-VUacJtVfHNw" outerProvidedRole_ProvidedDelegationConnector="_CTqRNAHgEe-VUacJtVfHNw" assemblyContext_ProvidedDelegationConnector="_CTq4SgHgEe-VUacJtVfHNw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTqRNAHgEe-VUacJtVfHNw" entityName="monitor-dashboard/ Provider" providedInterface__OperationProvidedRole="_CTWvNgHgEe-VUacJtVfHNw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_P0MrtwKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_CardClient">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0MrtgKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_CardClient Provider" providedInterface__OperationProvidedRole="_Pz6X0gKpEe-WgIQLViOptA"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_CTqRNwHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service">
-    <assemblyContexts__ComposedStructure id="_CTq4QAHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTocDgHgEe-VUacJtVfHNw"/>
-    <assemblyContexts__ComposedStructure id="_CTq4QgHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTmm3gHgEe-VUacJtVfHNw"/>
-    <assemblyContexts__ComposedStructure id="_CTq4RAHgEe-VUacJtVfHNw" encapsulatedComponent__AssemblyContext="_CTeD-gHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_CTsGYAHgEe-VUacJtVfHNw" requiringAssemblyContext_AssemblyConnector="_CTq4QgHgEe-VUacJtVfHNw" providingAssemblyContext_AssemblyConnector="_CTq4RAHgEe-VUacJtVfHNw" providedRole_AssemblyConnector="_CTeD-QHgEe-VUacJtVfHNw" requiredRole_AssemblyConnector="_CTmm3QHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_CTstcAHgEe-VUacJtVfHNw" requiringAssemblyContext_AssemblyConnector="_CTq4QgHgEe-VUacJtVfHNw" providingAssemblyContext_AssemblyConnector="_CTq4QAHgEe-VUacJtVfHNw" providedRole_AssemblyConnector="_CTocDQHgEe-VUacJtVfHNw" requiredRole_AssemblyConnector="_CTmm3AHgEe-VUacJtVfHNw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_CTtUggHgEe-VUacJtVfHNw" innerProvidedRole_ProvidedDelegationConnector="_CTmm2wHgEe-VUacJtVfHNw" outerProvidedRole_ProvidedDelegationConnector="_CTqRNgHgEe-VUacJtVfHNw" assemblyContext_ProvidedDelegationConnector="_CTq4QgHgEe-VUacJtVfHNw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_CTqRNgHgEe-VUacJtVfHNw" entityName="card-statement-composite/api/statement-by-card Provider" providedInterface__OperationProvidedRole="_CTWvOgHgEe-VUacJtVfHNw"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_P0Og4QKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_MonitorDashboardApplication">
+    <assemblyContexts__ComposedStructure id="_P0PH-gKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_P0K2hAKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_P0RkMAKpEe-WgIQLViOptA" innerProvidedRole_ProvidedDelegationConnector="_P0K2gwKpEe-WgIQLViOptA" outerProvidedRole_ProvidedDelegationConnector="_P0Og4AKpEe-WgIQLViOptA" assemblyContext_ProvidedDelegationConnector="_P0PH-gKpEe-WgIQLViOptA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0Og4AKpEe-WgIQLViOptA" entityName="monitor-dashboard/ Provider" providedInterface__OperationProvidedRole="_Pz6X1AKpEe-WgIQLViOptA"/>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvNQHgEe-VUacJtVfHNw" entityName="card-service/api">
-    <signatures__OperationInterface id="_CNCr0AHgEe-VUacJtVfHNw" entityName="card-service/api/new-card" returnType__OperationSignature="_CNCEwAHgEe-VUacJtVfHNw">
-      <parameters__OperationSignature dataType__Parameter="_CNA2pgHgEe-VUacJtVfHNw" parameterName="Card" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_CNA2pAHgEe-VUacJtVfHNw" entityName="card-service/api/cards" returnType__OperationSignature="_CMTsAAHgEe-VUacJtVfHNw"/>
-    <signatures__OperationInterface id="_CNBdsAHgEe-VUacJtVfHNw" entityName="card-service/api/card" returnType__OperationSignature="_CNA2pgHgEe-VUacJtVfHNw">
-      <parameters__OperationSignature dataType__Parameter="_CMWvUAHgEe-VUacJtVfHNw" parameterName="Long" modifier__Parameter="in"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_P0Og4wKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service">
+    <assemblyContexts__ComposedStructure id="_P0PH8AKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_Pz6X2gKpEe-WgIQLViOptA"/>
+    <assemblyContexts__ComposedStructure id="_P0PH8gKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_Pz6X1gKpEe-WgIQLViOptA"/>
+    <assemblyContexts__ComposedStructure id="_P0PH-AKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_P0MrtwKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_P0QWEAKpEe-WgIQLViOptA" requiringAssemblyContext_AssemblyConnector="_P0PH8AKpEe-WgIQLViOptA" providingAssemblyContext_AssemblyConnector="_P0PH8gKpEe-WgIQLViOptA" providedRole_AssemblyConnector="_Pz6X1QKpEe-WgIQLViOptA" requiredRole_AssemblyConnector="_Pz6X2QKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_P0QWEQKpEe-WgIQLViOptA" requiringAssemblyContext_AssemblyConnector="_P0PH8AKpEe-WgIQLViOptA" providingAssemblyContext_AssemblyConnector="_P0PH-AKpEe-WgIQLViOptA" providedRole_AssemblyConnector="_P0MrtgKpEe-WgIQLViOptA" requiredRole_AssemblyConnector="_Pz6X2AKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_P0RkMwKpEe-WgIQLViOptA" innerProvidedRole_ProvidedDelegationConnector="_Pz6X1wKpEe-WgIQLViOptA" outerProvidedRole_ProvidedDelegationConnector="_P0Og4gKpEe-WgIQLViOptA" assemblyContext_ProvidedDelegationConnector="_P0PH8AKpEe-WgIQLViOptA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0Og4gKpEe-WgIQLViOptA" entityName="card-statement-composite/api/statement-by-card Provider" providedInterface__OperationProvidedRole="_Pz5wygKpEe-WgIQLViOptA"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_P0Og5QKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_api_CardServiceController">
+    <assemblyContexts__ComposedStructure id="_P0PH9AKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_Pz9bLQKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_P0RkMQKpEe-WgIQLViOptA" innerProvidedRole_ProvidedDelegationConnector="_Pz9bLAKpEe-WgIQLViOptA" outerProvidedRole_ProvidedDelegationConnector="_P0Og5AKpEe-WgIQLViOptA" assemblyContext_ProvidedDelegationConnector="_P0PH9AKpEe-WgIQLViOptA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0Og5AKpEe-WgIQLViOptA" entityName="card-service/api Provider" providedInterface__OperationProvidedRole="_Pz6X0wKpEe-WgIQLViOptA"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_P0Og5wKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_api_StatementServiceController">
+    <assemblyContexts__ComposedStructure id="_P0PH9gKpEe-WgIQLViOptA" encapsulatedComponent__AssemblyContext="_P0Ev4QKpEe-WgIQLViOptA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_P0RkMgKpEe-WgIQLViOptA" innerProvidedRole_ProvidedDelegationConnector="_P0Ev4AKpEe-WgIQLViOptA" outerProvidedRole_ProvidedDelegationConnector="_P0Og5gKpEe-WgIQLViOptA" assemblyContext_ProvidedDelegationConnector="_P0PH9gKpEe-WgIQLViOptA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_P0Og5gKpEe-WgIQLViOptA" entityName="statement-service/api Provider" providedInterface__OperationProvidedRole="_Pz6X0QKpEe-WgIQLViOptA"/>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz5wygKpEe-WgIQLViOptA" entityName="card-statement-composite/api/statement-by-card">
+    <signatures__OperationInterface id="_PtBFowKpEe-WgIQLViOptA" entityName="card-statement-composite/api/statement-by-card" returnType__OperationSignature="_PtBFogKpEe-WgIQLViOptA">
+      <parameters__OperationSignature dataType__Parameter="_PsSF0AKpEe-WgIQLViOptA" parameterName="Long" modifier__Parameter="in"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvNgHgEe-VUacJtVfHNw" entityName="monitor-dashboard/">
-    <signatures__OperationInterface id="_CNAPkAHgEe-VUacJtVfHNw" entityName="monitor-dashboard/">
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz6X0AKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_StatementClient"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz6X0QKpEe-WgIQLViOptA" entityName="statement-service/api">
+    <signatures__OperationInterface id="_PsPpkAKpEe-WgIQLViOptA" entityName="statement-service/api/statements" returnType__OperationSignature="_PsObcAKpEe-WgIQLViOptA"/>
+    <signatures__OperationInterface id="_PsSs4QKpEe-WgIQLViOptA" entityName="statement-service/api/statement" returnType__OperationSignature="_PsSs4AKpEe-WgIQLViOptA">
+      <parameters__OperationSignature dataType__Parameter="_PsSF0AKpEe-WgIQLViOptA" parameterName="Long" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_PsSs4wKpEe-WgIQLViOptA" entityName="statement-service/api/statement$2" returnType__OperationSignature="_PsObcAKpEe-WgIQLViOptA">
+      <parameters__OperationSignature dataType__Parameter="_PsSF0AKpEe-WgIQLViOptA" parameterName="Long" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz6X0gKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_CardClient"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz6X0wKpEe-WgIQLViOptA" entityName="card-service/api">
+    <signatures__OperationInterface id="_PtC60QKpEe-WgIQLViOptA" entityName="card-service/api/new-card" returnType__OperationSignature="_PtC60AKpEe-WgIQLViOptA">
+      <parameters__OperationSignature dataType__Parameter="_PtBsswKpEe-WgIQLViOptA" parameterName="Card" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_PtBssQKpEe-WgIQLViOptA" entityName="card-service/api/cards" returnType__OperationSignature="_PsObcAKpEe-WgIQLViOptA"/>
+    <signatures__OperationInterface id="_PtC60wKpEe-WgIQLViOptA" entityName="card-service/api/card" returnType__OperationSignature="_PtBsswKpEe-WgIQLViOptA">
+      <parameters__OperationSignature dataType__Parameter="_PsSF0AKpEe-WgIQLViOptA" parameterName="Long" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Pz6X1AKpEe-WgIQLViOptA" entityName="monitor-dashboard/">
+    <signatures__OperationInterface id="_PtAekAKpEe-WgIQLViOptA" entityName="monitor-dashboard/">
       <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvNwHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_StatementClient"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvOAHgEe-VUacJtVfHNw" entityName="statement-service/api">
-    <signatures__OperationInterface id="_CMU6IAHgEe-VUacJtVfHNw" entityName="statement-service/api/statements" returnType__OperationSignature="_CMTsAAHgEe-VUacJtVfHNw"/>
-    <signatures__OperationInterface id="_CMXWYwHgEe-VUacJtVfHNw" entityName="statement-service/api/statement$2" returnType__OperationSignature="_CMTsAAHgEe-VUacJtVfHNw">
-      <parameters__OperationSignature dataType__Parameter="_CMWvUAHgEe-VUacJtVfHNw" parameterName="Long" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_CMXWYQHgEe-VUacJtVfHNw" entityName="statement-service/api/statement" returnType__OperationSignature="_CMXWYAHgEe-VUacJtVfHNw">
-      <parameters__OperationSignature dataType__Parameter="_CMWvUAHgEe-VUacJtVfHNw" parameterName="Long" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvOQHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_CardClient"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_CTWvOgHgEe-VUacJtVfHNw" entityName="card-statement-composite/api/statement-by-card">
-    <signatures__OperationInterface id="_CNA2oQHgEe-VUacJtVfHNw" entityName="card-statement-composite/api/statement-by-card" returnType__OperationSignature="_CNA2oAHgEe-VUacJtVfHNw">
-      <parameters__OperationSignature dataType__Parameter="_CMWvUAHgEe-VUacJtVfHNw" parameterName="Long" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CMTsAAHgEe-VUacJtVfHNw" entityName="java_util_List"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CMWvUAHgEe-VUacJtVfHNw" entityName="java_lang_Long"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CMXWYAHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_model_Statement"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CNA2oAHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_service_ResponseEntity"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CNA2pgHgEe-VUacJtVfHNw" entityName="com_spring_netflix_oss_microservices_model_Card"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_CNCEwAHgEe-VUacJtVfHNw" entityName="Void"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PsObcAKpEe-WgIQLViOptA" entityName="java_util_List"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PsSF0AKpEe-WgIQLViOptA" entityName="java_lang_Long"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PsSs4AKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_model_Statement"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PtBFogKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_service_ResponseEntity"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PtBsswKpEe-WgIQLViOptA" entityName="com_spring_netflix_oss_microservices_model_Card"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PtC60AKpEe-WgIQLViOptA" entityName="Void"/>
 </repository:Repository>
