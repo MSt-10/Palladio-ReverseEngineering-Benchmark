@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Mon Apr 29 02:12:40 UTC 2024 |
+| v5.2.0.202404221423 | Tue Apr 30 02:11:26 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Apr 29 02:12:41 UTC 2024
+Date of execution: Tue Apr 30 02:11:26 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 97360f63a005b860c3c67c5067be71b212fc4044 |
+| Commit         | 73657304d45914a8ad5da4d96198d7310e680147 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Mon Apr 29 02:12:41 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.238GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.720GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 690MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 22.43 |
-| User CPU Time | 55.95 |
-| System CPU Time | 2.64 |
+| Real CPU Time | 21.22 |
+| User CPU Time | 53.68 |
+| System CPU Time | 2.52 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.54 s (244.8 files/s, 52221.3 lines/s)
+cloc v 1.90  T=9.36 s (249.3 files/s, 53188.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1874|47255|90822|190194
+Java|1874|47257|90823|190192
 XML|309|3219|2946|134519
 SQL|5|918|741|5464
 Maven|21|319|105|4566
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|37|26|79
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2334|53578|96843|347542
+SUM:|2334|53580|96844|347540
