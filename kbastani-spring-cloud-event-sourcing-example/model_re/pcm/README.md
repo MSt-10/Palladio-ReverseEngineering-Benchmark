@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Tue Apr 30 02:11:23 UTC 2024 |
+| v5.2.0.202404221423 | Wed May  1 02:15:10 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Apr 30 02:11:23 UTC 2024
+Date of execution: Wed May  1 02:15:10 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kbastani/spring-cloud-event-sourcing-example |
@@ -18,16 +18,16 @@ Date of execution: Tue Apr 30 02:11:23 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.050GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.237GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 706MiB / 15981MiB  |
+| Memory | 698MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 10.36 |
-| User CPU Time | 21.25 |
-| System CPU Time | 1.03 |
+| Real CPU Time | 5.40 |
+| User CPU Time | 16.74 |
+| System CPU Time | 0.77 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=3.89 s (135.1 files/s, 39191.8 lines/s)
+cloc v 1.90  T=3.05 s (172.6 files/s, 50072.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
