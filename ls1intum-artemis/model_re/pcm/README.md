@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Fri May  3 02:13:56 UTC 2024 |
+| v5.2.0.202404221423 | Sat May  4 02:10:48 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri May  3 02:13:56 UTC 2024
+Date of execution: Sat May  4 02:10:48 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 3b2d6b815d20c1eeededd357b5712a1dafa000ff |
+| Commit         | d0f3e1ba3ee8e32ac1ecdabca38a885dfac4afc2 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Fri May  3 02:13:56 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 676MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 14294.78 |
-| User CPU Time | 14364.65 |
-| System CPU Time | 66.87 |
+| Real CPU Time | 13940.25 |
+| User CPU Time | 13995.59 |
+| System CPU Time | 52.73 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,13 +36,13 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.85 s (288.4 files/s, 35499.1 lines/s)
+cloc v 1.90  T=25.23 s (284.2 files/s, 34972.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2959|40007|29040|265389
-Java|2082|54294|54764|226550
-JSON|496|15|0|90525
+TypeScript|2958|40006|29044|265386
+Java|2083|54259|54761|226443
+JSON|496|15|0|90706
 HTML|711|188|647|53027
 Sass|332|2666|186|14769
 reStructuredText|90|4378|2998|7390
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7169|105079|91571|685642
+SUM:|7169|105043|91572|685713
