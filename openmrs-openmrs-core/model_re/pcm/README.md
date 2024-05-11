@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Fri May 10 02:15:47 UTC 2024 |
+| v5.2.0.202404221423 | Sat May 11 02:12:14 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri May 10 02:15:47 UTC 2024
+Date of execution: Sat May 11 02:12:14 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | b9e1542bc994a0a5323e727c19305a6429d84098 |
+| Commit         | 7d70503404031469b8e3fa98cc4dd39edb38e0c8 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Fri May 10 02:15:47 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.043GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.247GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 692MiB / 15981MiB  |
+| Memory | 690MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 25.34 |
-| User CPU Time | 55.10 |
-| System CPU Time | 2.60 |
+| Real CPU Time | 32.22 |
+| User CPU Time | 58.64 |
+| System CPU Time | 2.63 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=10.55 s (221.2 files/s, 47215.3 lines/s)
+cloc v 1.90  T=9.54 s (244.6 files/s, 52201.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -55,13 +55,13 @@ CSS|13|290|678|2049
 Velocity Template Language|19|109|2|1213
 Markdown|12|352|0|1211
 JSP|7|180|68|921
+YAML|11|87|77|689
 DTD|8|151|24|667
-YAML|11|79|75|643
 XSLT|1|30|48|555
 JSON|6|2|0|503
 Bourne Shell|7|78|130|387
 HTML|17|17|0|223
-Dockerfile|1|37|26|79
+Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2334|53608|96875|347631
+SUM:|2334|53617|96877|347679
