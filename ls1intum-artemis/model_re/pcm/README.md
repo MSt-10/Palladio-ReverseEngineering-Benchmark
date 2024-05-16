@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Wed May 15 02:16:05 UTC 2024 |
+| v5.2.0.202404221423 | Thu May 16 02:14:13 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed May 15 02:16:05 UTC 2024
+Date of execution: Thu May 16 02:14:13 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 712e79905de71db255d3ca2c5752a1f1d5081eb7 |
+| Commit         | 8dbc1cbb6d3bf5f297bb05dc7e9197901d41abad |
 
 
 ## System information
@@ -17,17 +17,17 @@ Date of execution: Wed May 15 02:16:05 UTC 2024
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1018-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.227GHz  |
+| Kernel | 6.5.0-1021-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.225GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 688MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 14123.21 |
-| User CPU Time | 14184.31 |
-| System CPU Time | 53.68 |
+| Real CPU Time | 14057.42 |
+| User CPU Time | 14130.63 |
+| System CPU Time | 68.73 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,14 +36,14 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=27.05 s (265.6 files/s, 32659.7 lines/s)
+cloc v 1.90  T=24.87 s (289.0 files/s, 35536.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2952|40027|29104|265626
-Java|2107|54342|55017|227000
-JSON|496|15|0|90432
-HTML|707|189|647|53001
+TypeScript|2954|40046|29110|265744
+Java|2107|54350|55054|227087
+JSON|496|15|0|90434
+HTML|708|190|647|53022
 Sass|333|2666|186|14784
 reStructuredText|90|4451|3047|7518
 XML|79|94|146|6461
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7186|105210|91933|686460
+SUM:|7189|105238|91976|686688
