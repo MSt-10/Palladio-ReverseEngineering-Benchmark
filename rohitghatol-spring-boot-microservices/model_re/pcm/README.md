@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Fri May 17 02:18:41 UTC 2024 |
+| v5.2.0.202404221423 | Sat May 18 02:14:35 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri May 17 02:18:41 UTC 2024
+Date of execution: Sat May 18 02:14:35 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/rohitghatol/spring-boot-microservices |
@@ -18,15 +18,15 @@ Date of execution: Fri May 17 02:18:41 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.234GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.225GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 731MiB / 15981MiB  |
+| Memory | 715MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 9.35 |
-| User CPU Time | 13.12 |
+| Real CPU Time | 7.85 |
+| User CPU Time | 14.20 |
 | System CPU Time | 0.54 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.27 s (347.8 files/s, 19822.5 lines/s)
+cloc v 1.90  T=0.28 s (337.6 files/s, 19241.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
