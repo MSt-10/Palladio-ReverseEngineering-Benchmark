@@ -1,208 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_PS74FBiqEe-h29XrxawjFw">
-  <components__Repository xsi:type="repository:BasicComponent" id="_PSvDzBiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_callback_controller_CallbackController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PSvDyxiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/callback[GET] Provider" providedInterface__OperationProvidedRole="_PSvDxxiqEe-h29XrxawjFw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PSP7khiqEe-h29XrxawjFw" describedService__SEFF="_PMX9FBiqEe-h29XrxawjFw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_PNA2QRiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PNDSgBiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PNDSgBiqEe-h29XrxawjFw" entityName="logger.info(&quot;BatchInfo with tag {} and date {} received from federation gateway {}.&quot;,batchTag,date,config.getSourceSystem())" predecessor_AbstractAction="_PNA2QRiqEe-h29XrxawjFw" successor_AbstractAction="_PSNfUBiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_PSNfUBiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PNDSgBiqEe-h29XrxawjFw" successor_AbstractAction="_PSP7kBiqEe-h29XrxawjFw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PNEgoBiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PNFHsBiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PND5kBiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PND5kRiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PND5kRiqEe-h29XrxawjFw" entityName="logger.info(&quot;BatchInfo with tag {} and date {} was persisted successfully with status {} in system {}.&quot;,federationBatchInfo.getBatchTag(),federationBatchInfo.getDate(),federationBatchInfo.getStatus(),config.getSourceSystem())" predecessor_AbstractAction="_PND5kBiqEe-h29XrxawjFw" successor_AbstractAction="_PND5khiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PND5khiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PND5kRiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(savedSuccessfully)"/>
-        </branches_Branch>
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSM4QxiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PSM4RRiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PSM4QBiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSM4QRiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSM4QRiqEe-h29XrxawjFw" entityName="logger.warn(&quot;BatchInfo with tag {} already existed in system {} and was not persisted.&quot;,federationBatchInfo.getBatchTag(),config.getSourceSystem())" predecessor_AbstractAction="_PSM4QBiqEe-h29XrxawjFw" successor_AbstractAction="_PSM4QhiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PSM4QhiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSM4QRiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: else"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSP7kBiqEe-h29XrxawjFw" entityName="ResponseEntity.ok().build()" predecessor_AbstractAction="_PSNfUBiqEe-h29XrxawjFw" successor_AbstractAction="_PSP7kRiqEe-h29XrxawjFw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.ok().build()"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.ok().build()"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_PSP7kRiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSP7kBiqEe-h29XrxawjFw"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_PSyHExiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_verification_TanVerifier"/>
-  <components__Repository xsi:type="repository:BasicComponent" id="_PSyHFhiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_SubmissionController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PSyHFBiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST] Provider" providedInterface__OperationProvidedRole="_PSvDyhiqEe-h29XrxawjFw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PSyHFRiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST] Provider" providedInterface__OperationProvidedRole="_PSvDyRiqEe-h29XrxawjFw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PSQipBiqEe-h29XrxawjFw" describedService__SEFF="_PLtOsRiqEe-h29XrxawjFw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_PSP7lBiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSP7lRiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSP7lRiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_PSP7lBiqEe-h29XrxawjFw" successor_AbstractAction="_PSQioBiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSQioBiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_PSP7lRiqEe-h29XrxawjFw" successor_AbstractAction="_PSQioRiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSQioRiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementSubmissionOnBehalfCounter()" predecessor_AbstractAction="_PSQioBiqEe-h29XrxawjFw" successor_AbstractAction="_PSQiohiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSQiohiqEe-h29XrxawjFw" entityName="buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)" predecessor_AbstractAction="_PSQioRiqEe-h29XrxawjFw" successor_AbstractAction="_PSQioxiqEe-h29XrxawjFw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_PSQioxiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSQiohiqEe-h29XrxawjFw"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PSSX0BiqEe-h29XrxawjFw" describedService__SEFF="_PMXWABiqEe-h29XrxawjFw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_PSQiphiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSQirhiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_PSQirhiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSQiphiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJtBiqEe-h29XrxawjFw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSQiqxiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PSQirRiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PSQipxiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSQiqBiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSQiqBiqEe-h29XrxawjFw" entityName="logger.warn(&quot;'cwa-authorization' and 'cwa-otp' header missing!&quot;)" predecessor_AbstractAction="_PSQipxiqEe-h29XrxawjFw" successor_AbstractAction="_PSQiqRiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSQiqRiqEe-h29XrxawjFw" entityName="badRequest()" predecessor_AbstractAction="_PSQiqBiqEe-h29XrxawjFw" successor_AbstractAction="_PSQiqhiqEe-h29XrxawjFw">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PSQiqhiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSQiqRiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(isEmpty(tan) &amp;&amp; isEmpty(otp))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_PSRJtBiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSQirhiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwxRiqEe-h29XrxawjFw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSRJsRiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PSRJsxiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PSQirxiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSQisBiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSQisBiqEe-h29XrxawjFw" entityName="logger.warn(&quot;'cwa-authorization' and 'cwa-otp' header provided!&quot;)" predecessor_AbstractAction="_PSQirxiqEe-h29XrxawjFw" successor_AbstractAction="_PSQisRiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSQisRiqEe-h29XrxawjFw" entityName="badRequest()" predecessor_AbstractAction="_PSQisBiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJsBiqEe-h29XrxawjFw">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PSRJsBiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSQisRiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isEmpty(tan) &amp;&amp; !isEmpty(otp))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_PSRwxRiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSRJtBiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwzBiqEe-h29XrxawjFw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSRwwhiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PSRwxBiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PSRJtRiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSRJvBiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_PSRJvBiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSRJtRiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJxBiqEe-h29XrxawjFw">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSRJuRiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_PSRJuxiqEe-h29XrxawjFw">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_PSRJthiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSRJtxiqEe-h29XrxawjFw"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSRJtxiqEe-h29XrxawjFw" entityName="badRequest()" predecessor_AbstractAction="_PSRJthiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJuBiqEe-h29XrxawjFw">
-                    <localVariableUsages_SetVariableAction>
-                      <variableCharacterisation_VariableUsage type="VALUE">
-                        <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
-                      </variableCharacterisation_VariableUsage>
-                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
-                      </namedReference__VariableUsage>
-                    </localVariableUsages_SetVariableAction>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_PSRJuBiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSRJtxiqEe-h29XrxawjFw"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isSelfReport(exposureKeys) || !isUuid(otp))"/>
-              </branches_Branch>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_PSRJxBiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSRJvBiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJxRiqEe-h29XrxawjFw">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSRJwRiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_PSRJwxiqEe-h29XrxawjFw">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_PSRJvRiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSRJvhiqEe-h29XrxawjFw"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRJvhiqEe-h29XrxawjFw" entityName="logger.warn(&quot;We reached the maximum number ({}) of allowed Self-Report-Submissions for today ({})!&quot;,submissionServiceConfig.getMaxKeysPerDay(),now(UTC))" predecessor_AbstractAction="_PSRJvRiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJvxiqEe-h29XrxawjFw"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSRJvxiqEe-h29XrxawjFw" entityName="tooManyRequests()" predecessor_AbstractAction="_PSRJvhiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJwBiqEe-h29XrxawjFw">
-                    <localVariableUsages_SetVariableAction>
-                      <variableCharacterisation_VariableUsage type="VALUE">
-                        <specification_VariableCharacterisation specification="PrimitiveType.tooManyRequests()"/>
-                      </variableCharacterisation_VariableUsage>
-                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="tooManyRequests()"/>
-                      </namedReference__VariableUsage>
-                    </localVariableUsages_SetVariableAction>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_PSRJwBiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSRJvxiqEe-h29XrxawjFw"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(diagnosisKeyService.countTodaysDiagnosisKeys() >= submissionServiceConfig.getMaxKeysPerDay())"/>
-              </branches_Branch>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRJxRiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_PSRJxBiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJxhiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRJxhiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_PSRJxRiqEe-h29XrxawjFw" successor_AbstractAction="_PSRJxxiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRJxxiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementSelfReportSubmissions()" predecessor_AbstractAction="_PSRJxhiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwwBiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSRwwBiqEe-h29XrxawjFw" entityName="buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)" predecessor_AbstractAction="_PSRJxxiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwwRiqEe-h29XrxawjFw">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PSRwwRiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSRwwBiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isEmpty(otp))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_PSRwzBiqEe-h29XrxawjFw" entityName="If Branch" predecessor_AbstractAction="_PSRwxRiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwzRiqEe-h29XrxawjFw">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_PSRwyRiqEe-h29XrxawjFw" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_PSRwyxiqEe-h29XrxawjFw">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_PSRwxhiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSRwxxiqEe-h29XrxawjFw"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSRwxxiqEe-h29XrxawjFw" entityName="badRequest()" predecessor_AbstractAction="_PSRwxhiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwyBiqEe-h29XrxawjFw">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_PSRwyBiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSRwxxiqEe-h29XrxawjFw"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!validSubmissionType(exposureKeys))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRwzRiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_PSRwzBiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwzhiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSRwzhiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_PSRwzRiqEe-h29XrxawjFw" successor_AbstractAction="_PSRwzxiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSRwzxiqEe-h29XrxawjFw" entityName="buildRealDeferredResult(exposureKeys,tan,tanVerifier)" predecessor_AbstractAction="_PSRwzhiqEe-h29XrxawjFw" successor_AbstractAction="_PSRw0BiqEe-h29XrxawjFw">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(exposureKeys,tan,tanVerifier)"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(exposureKeys,tan,tanVerifier)"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_PSRw0BiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSRwzxiqEe-h29XrxawjFw"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_PS2_kBiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_verification_SrsOtpVerifier"/>
-  <components__Repository xsi:type="repository:BasicComponent" id="_PS2_khiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_FakeRequestController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PS2_kRiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2 Provider" providedInterface__OperationProvidedRole="_PSvDyBiqEe-h29XrxawjFw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PSSX2BiqEe-h29XrxawjFw" describedService__SEFF="_PMYkIRiqEe-h29XrxawjFw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_PSSX0hiqEe-h29XrxawjFw" entityName="Start Action" successor_AbstractAction="_PSSX0xiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSSX0xiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_PSSX0hiqEe-h29XrxawjFw" successor_AbstractAction="_PSSX1BiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSSX1BiqEe-h29XrxawjFw" entityName="submissionMonitor.incrementFakeRequestCounter()" predecessor_AbstractAction="_PSSX0xiqEe-h29XrxawjFw" successor_AbstractAction="_PSSX1RiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_PSSX1RiqEe-h29XrxawjFw" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),delay,MILLISECONDS)" predecessor_AbstractAction="_PSSX1BiqEe-h29XrxawjFw" successor_AbstractAction="_PSSX1hiqEe-h29XrxawjFw"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PSSX1hiqEe-h29XrxawjFw" entityName="deferredResult" predecessor_AbstractAction="_PSSX1RiqEe-h29XrxawjFw" successor_AbstractAction="_PSSX1xiqEe-h29XrxawjFw">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_foG9ahlzEe-gIPwYiZ2wRQ">
+  <components__Repository xsi:type="repository:BasicComponent" id="_fn7XOxlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_FakeRequestController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_fn7XOhlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST] Provider" providedInterface__OperationProvidedRole="_fn7XORlzEe-gIPwYiZ2wRQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fnc2FRlzEe-gIPwYiZ2wRQ" describedService__SEFF="_fgWvkBlzEe-gIPwYiZ2wRQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fncPBBlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnc2EBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnc2EBlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_fncPBBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2ERlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnc2ERlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementFakeRequestCounter()" predecessor_AbstractAction="_fnc2EBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2EhlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnc2EhlzEe-gIPwYiZ2wRQ" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),delay,MILLISECONDS)" predecessor_AbstractAction="_fnc2ERlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2ExlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnc2ExlzEe-gIPwYiZ2wRQ" entityName="deferredResult" predecessor_AbstractAction="_fnc2EhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2FBlzEe-gIPwYiZ2wRQ">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -212,48 +17,246 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_PSSX1xiqEe-h29XrxawjFw" entityName="Stop Action" predecessor_AbstractAction="_PSSX1hiqEe-h29XrxawjFw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fnc2FBlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnc2ExlzEe-gIPwYiZ2wRQ"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_PS6p8hiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_SubmissionController">
-    <assemblyContexts__ComposedStructure id="_PS74EhiqEe-h29XrxawjFw" encapsulatedComponent__AssemblyContext="_PSyHFhiqEe-h29XrxawjFw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_PS8fIBiqEe-h29XrxawjFw" innerProvidedRole_ProvidedDelegationConnector="_PSyHFBiqEe-h29XrxawjFw" outerProvidedRole_ProvidedDelegationConnector="_PS6p8RiqEe-h29XrxawjFw" assemblyContext_ProvidedDelegationConnector="_PS74EhiqEe-h29XrxawjFw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_PS8fIxiqEe-h29XrxawjFw" innerProvidedRole_ProvidedDelegationConnector="_PSyHFRiqEe-h29XrxawjFw" outerProvidedRole_ProvidedDelegationConnector="_PS6p8BiqEe-h29XrxawjFw" assemblyContext_ProvidedDelegationConnector="_PS74EhiqEe-h29XrxawjFw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PS6p8BiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST] Provider" providedInterface__OperationProvidedRole="_PSvDyRiqEe-h29XrxawjFw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PS6p8RiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST] Provider" providedInterface__OperationProvidedRole="_PSvDyhiqEe-h29XrxawjFw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_fn9zfRlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_verification_SrsOtpVerifier"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_fn9zfhlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_verification_TanVerifier"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_fn-aghlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_SubmissionController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_fn-agBlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST] Provider" providedInterface__OperationProvidedRole="_fn7XNxlzEe-gIPwYiZ2wRQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_fn-agRlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2 Provider" providedInterface__OperationProvidedRole="_fn7XOBlzEe-gIPwYiZ2wRQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fnerShlzEe-gIPwYiZ2wRQ" describedService__SEFF="_fhLO8hlzEe-gIPwYiZ2wRQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fnerRBlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnerRRlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnerRRlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_fnerRBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerRhlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnerRhlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_fnerRRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerRxlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fnerRxlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementSubmissionOnBehalfCounter()" predecessor_AbstractAction="_fnerRhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerSBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnerSBlzEe-gIPwYiZ2wRQ" entityName="buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)" predecessor_AbstractAction="_fnerRxlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerSRlzEe-gIPwYiZ2wRQ">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(submissionPayload,tan,eventTanVerifier)"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fnerSRlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnerSBlzEe-gIPwYiZ2wRQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fnerQhlzEe-gIPwYiZ2wRQ" describedService__SEFF="_fhKn4BlzEe-gIPwYiZ2wRQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fnc2FxlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnddIBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_fnddIBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fnc2FxlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddKBlzEe-gIPwYiZ2wRQ">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fnc2HBlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fnc2HhlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fnc2GBlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnc2GRlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fnc2GRlzEe-gIPwYiZ2wRQ" entityName="logger.warn(&quot;'cwa-authorization' and 'cwa-otp' header missing!&quot;)" predecessor_AbstractAction="_fnc2GBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2GhlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnc2GhlzEe-gIPwYiZ2wRQ" entityName="badRequest()" predecessor_AbstractAction="_fnc2GRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnc2GxlzEe-gIPwYiZ2wRQ">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fnc2GxlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnc2GhlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(isEmpty(tan) &amp;&amp; isEmpty(otp))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_fnddKBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fnddIBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEORlzEe-gIPwYiZ2wRQ">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fnddJRlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fnddJxlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fnddIRlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnddIhlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fnddIhlzEe-gIPwYiZ2wRQ" entityName="logger.warn(&quot;'cwa-authorization' and 'cwa-otp' header provided!&quot;)" predecessor_AbstractAction="_fnddIRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddIxlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnddIxlzEe-gIPwYiZ2wRQ" entityName="badRequest()" predecessor_AbstractAction="_fnddIhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddJBlzEe-gIPwYiZ2wRQ">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fnddJBlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnddIxlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isEmpty(tan) &amp;&amp; !isEmpty(otp))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_fneEORlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fnddKBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEQBlzEe-gIPwYiZ2wRQ">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fneENhlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fneEOBlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fnddKRlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnddMBlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_fnddMBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fnddKRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEMBlzEe-gIPwYiZ2wRQ">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fnddLRlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_fnddLxlzEe-gIPwYiZ2wRQ">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_fnddKhlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnddKxlzEe-gIPwYiZ2wRQ"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnddKxlzEe-gIPwYiZ2wRQ" entityName="badRequest()" predecessor_AbstractAction="_fnddKhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddLBlzEe-gIPwYiZ2wRQ">
+                    <localVariableUsages_SetVariableAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
+                      </namedReference__VariableUsage>
+                    </localVariableUsages_SetVariableAction>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_fnddLBlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnddKxlzEe-gIPwYiZ2wRQ"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isSelfReport(exposureKeys) || !isUuid(otp))"/>
+              </branches_Branch>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_fneEMBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fnddMBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEMRlzEe-gIPwYiZ2wRQ">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fnddNRlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_fnddNxlzEe-gIPwYiZ2wRQ">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_fnddMRlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnddMhlzEe-gIPwYiZ2wRQ"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_fnddMhlzEe-gIPwYiZ2wRQ" entityName="logger.warn(&quot;We reached the maximum number ({}) of allowed Self-Report-Submissions for today ({})!&quot;,submissionServiceConfig.getMaxKeysPerDay(),now(UTC))" predecessor_AbstractAction="_fnddMRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddMxlzEe-gIPwYiZ2wRQ"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnddMxlzEe-gIPwYiZ2wRQ" entityName="tooManyRequests()" predecessor_AbstractAction="_fnddMhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnddNBlzEe-gIPwYiZ2wRQ">
+                    <localVariableUsages_SetVariableAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="PrimitiveType.tooManyRequests()"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="tooManyRequests()"/>
+                      </namedReference__VariableUsage>
+                    </localVariableUsages_SetVariableAction>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_fnddNBlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnddMxlzEe-gIPwYiZ2wRQ"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(diagnosisKeyService.countTodaysDiagnosisKeys() >= submissionServiceConfig.getMaxKeysPerDay())"/>
+              </branches_Branch>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fneEMRlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_fneEMBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEMhlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fneEMhlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_fneEMRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEMxlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fneEMxlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementSelfReportSubmissions()" predecessor_AbstractAction="_fneEMhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneENBlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fneENBlzEe-gIPwYiZ2wRQ" entityName="buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)" predecessor_AbstractAction="_fneEMxlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneENRlzEe-gIPwYiZ2wRQ">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(exposureKeys,otp,srsOtpVerifier)"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fneENRlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fneENBlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!isEmpty(otp))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_fneEQBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fneEORlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEQRlzEe-gIPwYiZ2wRQ">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fneEPRlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fneEPxlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fneEOhlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fneEOxlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fneEOxlzEe-gIPwYiZ2wRQ" entityName="badRequest()" predecessor_AbstractAction="_fneEOhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEPBlzEe-gIPwYiZ2wRQ">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.badRequest()"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="badRequest()"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fneEPBlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fneEOxlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!validSubmissionType(exposureKeys))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fneEQRlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRequestCounter()" predecessor_AbstractAction="_fneEQBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fneEQhlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fneEQhlzEe-gIPwYiZ2wRQ" entityName="submissionMonitor.incrementRealRequestCounter()" predecessor_AbstractAction="_fneEQRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerQBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fnerQBlzEe-gIPwYiZ2wRQ" entityName="buildRealDeferredResult(exposureKeys,tan,tanVerifier)" predecessor_AbstractAction="_fneEQhlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnerQRlzEe-gIPwYiZ2wRQ">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.buildRealDeferredResult(exposureKeys,tan,tanVerifier)"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="buildRealDeferredResult(exposureKeys,tan,tanVerifier)"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fnerQRlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnerQBlzEe-gIPwYiZ2wRQ"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_PS6p8xiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_verification_TanVerifier">
-    <assemblyContexts__ComposedStructure id="_PS7RAhiqEe-h29XrxawjFw" encapsulatedComponent__AssemblyContext="_PSyHExiqEe-h29XrxawjFw"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_foCr8RlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_callback_controller_CallbackController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_foCr8BlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/callback[GET] Provider" providedInterface__OperationProvidedRole="_fn7XNhlzEe-gIPwYiZ2wRQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fncPAhlzEe-gIPwYiZ2wRQ" describedService__SEFF="_fhMdExlzEe-gIPwYiZ2wRQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fh7c4RlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fh-gMBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_fh-gMBlzEe-gIPwYiZ2wRQ" entityName="logger.info(&quot;BatchInfo with tag {} and date {} received from federation gateway {}.&quot;,batchTag,date,config.getSourceSystem())" predecessor_AbstractAction="_fh7c4RlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnZywBlzEe-gIPwYiZ2wRQ"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_fnZywBlzEe-gIPwYiZ2wRQ" entityName="If Branch" predecessor_AbstractAction="_fh-gMBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fncPABlzEe-gIPwYiZ2wRQ">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fh_HQBlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fiAVYBlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fh-gMRlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fh-gMhlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fh-gMhlzEe-gIPwYiZ2wRQ" entityName="logger.info(&quot;BatchInfo with tag {} and date {} was persisted successfully with status {} in system {}.&quot;,federationBatchInfo.getBatchTag(),federationBatchInfo.getDate(),federationBatchInfo.getStatus(),config.getSourceSystem())" predecessor_AbstractAction="_fh-gMRlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fh-gMxlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fh-gMxlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fh-gMhlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(savedSuccessfully)"/>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_fnZLsxlzEe-gIPwYiZ2wRQ" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_fnZLtRlzEe-gIPwYiZ2wRQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_fnZLsBlzEe-gIPwYiZ2wRQ" entityName="Start Action" successor_AbstractAction="_fnZLsRlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_fnZLsRlzEe-gIPwYiZ2wRQ" entityName="logger.warn(&quot;BatchInfo with tag {} already existed in system {} and was not persisted.&quot;,federationBatchInfo.getBatchTag(),config.getSourceSystem())" predecessor_AbstractAction="_fnZLsBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fnZLshlzEe-gIPwYiZ2wRQ"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_fnZLshlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fnZLsRlzEe-gIPwYiZ2wRQ"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: else"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_fncPABlzEe-gIPwYiZ2wRQ" entityName="ResponseEntity.ok().build()" predecessor_AbstractAction="_fnZywBlzEe-gIPwYiZ2wRQ" successor_AbstractAction="_fncPARlzEe-gIPwYiZ2wRQ">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.ok().build()"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.ok().build()"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fncPARlzEe-gIPwYiZ2wRQ" entityName="Stop Action" predecessor_AbstractAction="_fncPABlzEe-gIPwYiZ2wRQ"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_PS6p9BiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_verification_SrsOtpVerifier">
-    <assemblyContexts__ComposedStructure id="_PS7RABiqEe-h29XrxawjFw" encapsulatedComponent__AssemblyContext="_PS2_kBiqEe-h29XrxawjFw"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_foGWUBlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_verification_TanVerifier">
+    <assemblyContexts__ComposedStructure id="_foG9ZhlzEe-gIPwYiZ2wRQ" encapsulatedComponent__AssemblyContext="_fn9zfhlzEe-gIPwYiZ2wRQ"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_PS6p9hiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_callback_controller_CallbackController">
-    <assemblyContexts__ComposedStructure id="_PS7RBBiqEe-h29XrxawjFw" encapsulatedComponent__AssemblyContext="_PSvDzBiqEe-h29XrxawjFw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_PS8fIhiqEe-h29XrxawjFw" innerProvidedRole_ProvidedDelegationConnector="_PSvDyxiqEe-h29XrxawjFw" outerProvidedRole_ProvidedDelegationConnector="_PS6p9RiqEe-h29XrxawjFw" assemblyContext_ProvidedDelegationConnector="_PS7RBBiqEe-h29XrxawjFw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PS6p9RiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/callback[GET] Provider" providedInterface__OperationProvidedRole="_PSvDxxiqEe-h29XrxawjFw"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_foGWUhlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_callback_controller_CallbackController">
+    <assemblyContexts__ComposedStructure id="_foG9YBlzEe-gIPwYiZ2wRQ" encapsulatedComponent__AssemblyContext="_foCr8RlzEe-gIPwYiZ2wRQ"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_foILgBlzEe-gIPwYiZ2wRQ" innerProvidedRole_ProvidedDelegationConnector="_foCr8BlzEe-gIPwYiZ2wRQ" outerProvidedRole_ProvidedDelegationConnector="_foGWURlzEe-gIPwYiZ2wRQ" assemblyContext_ProvidedDelegationConnector="_foG9YBlzEe-gIPwYiZ2wRQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_foGWURlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/callback[GET] Provider" providedInterface__OperationProvidedRole="_fn7XNhlzEe-gIPwYiZ2wRQ"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_PS6p-BiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_FakeRequestController">
-    <assemblyContexts__ComposedStructure id="_PS74EBiqEe-h29XrxawjFw" encapsulatedComponent__AssemblyContext="_PS2_khiqEe-h29XrxawjFw"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_PS8fIRiqEe-h29XrxawjFw" innerProvidedRole_ProvidedDelegationConnector="_PS2_kRiqEe-h29XrxawjFw" outerProvidedRole_ProvidedDelegationConnector="_PS6p9xiqEe-h29XrxawjFw" assemblyContext_ProvidedDelegationConnector="_PS74EBiqEe-h29XrxawjFw"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PS6p9xiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2 Provider" providedInterface__OperationProvidedRole="_PSvDyBiqEe-h29XrxawjFw"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_foGWVRlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_SubmissionController">
+    <assemblyContexts__ComposedStructure id="_foG9ZBlzEe-gIPwYiZ2wRQ" encapsulatedComponent__AssemblyContext="_fn-aghlzEe-gIPwYiZ2wRQ"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_foHkcRlzEe-gIPwYiZ2wRQ" innerProvidedRole_ProvidedDelegationConnector="_fn-agRlzEe-gIPwYiZ2wRQ" outerProvidedRole_ProvidedDelegationConnector="_foGWUxlzEe-gIPwYiZ2wRQ" assemblyContext_ProvidedDelegationConnector="_foG9ZBlzEe-gIPwYiZ2wRQ"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_foILgRlzEe-gIPwYiZ2wRQ" innerProvidedRole_ProvidedDelegationConnector="_fn-agBlzEe-gIPwYiZ2wRQ" outerProvidedRole_ProvidedDelegationConnector="_foGWVBlzEe-gIPwYiZ2wRQ" assemblyContext_ProvidedDelegationConnector="_foG9ZBlzEe-gIPwYiZ2wRQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_foGWUxlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2 Provider" providedInterface__OperationProvidedRole="_fn7XOBlzEe-gIPwYiZ2wRQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_foGWVBlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST] Provider" providedInterface__OperationProvidedRole="_fn7XNxlzEe-gIPwYiZ2wRQ"/>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_PSvDxxiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/callback[GET]">
-    <signatures__OperationInterface id="_PMX9FBiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/callback[GET]" returnType__OperationSignature="_PMX9ExiqEe-h29XrxawjFw">
+  <components__Repository xsi:type="repository:CompositeComponent" id="_foGWVxlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_FakeRequestController">
+    <assemblyContexts__ComposedStructure id="_foG9aBlzEe-gIPwYiZ2wRQ" encapsulatedComponent__AssemblyContext="_fn7XOxlzEe-gIPwYiZ2wRQ"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_foHkcBlzEe-gIPwYiZ2wRQ" innerProvidedRole_ProvidedDelegationConnector="_fn7XOhlzEe-gIPwYiZ2wRQ" outerProvidedRole_ProvidedDelegationConnector="_foGWVhlzEe-gIPwYiZ2wRQ" assemblyContext_ProvidedDelegationConnector="_foG9aBlzEe-gIPwYiZ2wRQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_foGWVhlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST] Provider" providedInterface__OperationProvidedRole="_fn7XORlzEe-gIPwYiZ2wRQ"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_foGWWBlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_verification_SrsOtpVerifier">
+    <assemblyContexts__ComposedStructure id="_foG9YhlzEe-gIPwYiZ2wRQ" encapsulatedComponent__AssemblyContext="_fn9zfRlzEe-gIPwYiZ2wRQ"/>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_fn7XNhlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/callback[GET]">
+    <signatures__OperationInterface id="_fhMdExlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/callback[GET]" returnType__OperationSignature="_fhMdEhlzEe-gIPwYiZ2wRQ">
       <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
-      <parameters__OperationSignature dataType__Parameter="_PMX9EhiqEe-h29XrxawjFw" parameterName="LocalDate" modifier__Parameter="in"/>
+      <parameters__OperationSignature dataType__Parameter="_fhMdERlzEe-gIPwYiZ2wRQ" parameterName="LocalDate" modifier__Parameter="in"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_PSvDyBiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2">
-    <signatures__OperationInterface id="_PMYkIRiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2" returnType__OperationSignature="_PLtOsBiqEe-h29XrxawjFw">
-      <parameters__OperationSignature dataType__Parameter="_PMYkIBiqEe-h29XrxawjFw" parameterName="Integer" modifier__Parameter="in"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_fn7XNxlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST]">
+    <signatures__OperationInterface id="_fhLO8hlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST]" returnType__OperationSignature="_fgWIgBlzEe-gIPwYiZ2wRQ">
+      <parameters__OperationSignature dataType__Parameter="_fhKA0BlzEe-gIPwYiZ2wRQ" parameterName="SubmissionPayload" modifier__Parameter="in"/>
+      <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_PSvDyRiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]">
-    <signatures__OperationInterface id="_PMXWABiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]" returnType__OperationSignature="_PLtOsBiqEe-h29XrxawjFw">
-      <parameters__OperationSignature dataType__Parameter="_PLrZgBiqEe-h29XrxawjFw" parameterName="SubmissionPayload" modifier__Parameter="in"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_fn7XOBlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2">
+    <signatures__OperationInterface id="_fhKn4BlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]$2" returnType__OperationSignature="_fgWIgBlzEe-gIPwYiZ2wRQ">
+      <parameters__OperationSignature dataType__Parameter="_fhKA0BlzEe-gIPwYiZ2wRQ" parameterName="SubmissionPayload" modifier__Parameter="in"/>
       <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
@@ -262,17 +265,14 @@
       </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_PSvDyhiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST]">
-    <signatures__OperationInterface id="_PLtOsRiqEe-h29XrxawjFw" entityName="SPRING-APPLICATION/version/v1/submission-on-behalf[POST]" returnType__OperationSignature="_PLtOsBiqEe-h29XrxawjFw">
-      <parameters__OperationSignature dataType__Parameter="_PLrZgBiqEe-h29XrxawjFw" parameterName="SubmissionPayload" modifier__Parameter="in"/>
-      <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
-        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
-      </parameters__OperationSignature>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_fn7XORlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]">
+    <signatures__OperationInterface id="_fgWvkBlzEe-gIPwYiZ2wRQ" entityName="SPRING-APPLICATION/version/v1/diagnosis-keys[POST]" returnType__OperationSignature="_fgWIgBlzEe-gIPwYiZ2wRQ">
+      <parameters__OperationSignature dataType__Parameter="_fgU6YBlzEe-gIPwYiZ2wRQ" parameterName="Integer" modifier__Parameter="in"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PLrZgBiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_SubmissionPayload"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PLtOsBiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_submission_controller_DeferredResult"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PMX9EhiqEe-h29XrxawjFw" entityName="java_time_LocalDate"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PMX9ExiqEe-h29XrxawjFw" entityName="app_coronawarn_server_services_callback_controller_ResponseEntity"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PMYkIBiqEe-h29XrxawjFw" entityName="java_lang_Integer"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fgU6YBlzEe-gIPwYiZ2wRQ" entityName="java_lang_Integer"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fgWIgBlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_DeferredResult"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fhKA0BlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_submission_controller_SubmissionPayload"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fhMdERlzEe-gIPwYiZ2wRQ" entityName="java_time_LocalDate"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fhMdEhlzEe-gIPwYiZ2wRQ" entityName="app_coronawarn_server_services_callback_controller_ResponseEntity"/>
 </repository:Repository>

@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Thu May 23 02:14:27 UTC 2024 |
+| v5.2.0.202404221423 | Fri May 24 02:15:06 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu May 23 02:14:27 UTC 2024
+Date of execution: Fri May 24 02:15:06 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 26ce2db43f011fa572c2b053a434b656093b3c7e |
+| Commit         | f3948ccbc1eb915c2209a5c1b3ccc012060d0abd |
 
 
 ## System information
@@ -20,14 +20,14 @@ Date of execution: Thu May 23 02:14:27 UTC 2024
 | Kernel | 6.5.0-1021-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 688MiB / 15981MiB  |
+| Memory | 692MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 14818.14 |
-| User CPU Time | 14867.64 |
-| System CPU Time | 45.85 |
+| Real CPU Time | 14448.32 |
+| User CPU Time | 14511.12 |
+| System CPU Time | 60.43 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.21 s (297.7 files/s, 36657.4 lines/s)
+cloc v 1.90  T=24.56 s (293.5 files/s, 36135.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -52,7 +52,7 @@ Python|34|491|126|1712
 Bourne Shell|44|345|420|1682
 Pascal|4|443|48|1545
 CSV|11|4|0|1435
-Markdown|32|412|0|1217
+Markdown|32|415|0|1222
 Swift|41|229|329|985
 Handlebars|8|86|0|897
 Maven|11|0|95|896
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7209|105660|92266|689648
+SUM:|7209|105663|92266|689653
