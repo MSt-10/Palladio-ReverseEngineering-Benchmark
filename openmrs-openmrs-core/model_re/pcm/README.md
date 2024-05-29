@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Tue May 28 02:15:26 UTC 2024 |
+| v5.2.0.202404221423 | Wed May 29 02:16:11 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue May 28 02:15:26 UTC 2024
+Date of execution: Wed May 29 02:16:11 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 00b99cf2c9e83c28c174bff95ae77aea6e877bc1 |
+| Commit         | b289591149e21822bf0e88c52522de88adc3118d |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Tue May 28 02:15:26 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.217GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 684MiB / 15981MiB  |
+| Memory | 704MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 24.51 |
-| User CPU Time | 57.80 |
-| System CPU Time | 2.81 |
+| Real CPU Time | 19.04 |
+| User CPU Time | 55.48 |
+| System CPU Time | 2.70 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.83 s (237.5 files/s, 50697.2 lines/s)
+cloc v 1.90  T=9.80 s (238.2 files/s, 50850.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -55,7 +55,7 @@ CSS|13|290|678|2049
 Velocity Template Language|19|109|2|1213
 Markdown|12|352|0|1211
 JSP|7|180|68|921
-YAML|11|87|77|689
+YAML|11|107|79|787
 DTD|8|151|24|667
 XSLT|1|30|48|555
 JSON|6|2|0|503
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2334|53617|96877|347679
+SUM:|2334|53637|96879|347777
