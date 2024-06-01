@@ -1,260 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_wWyWbB7zEe-6p5TzsiMONg">
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWgpnR7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_InternalTanController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWgpmx7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST] Provider" providedInterface__OperationProvidedRole="_wWgplh7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWgpnB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmB7zEe-6p5TzsiMONg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wV0GBx7zEe-6p5TzsiMONg" describedService__SEFF="_wP8HgB7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wV0GBB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV0GBR7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wV0GBR7zEe-6p5TzsiMONg" entityName="tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)" predecessor_AbstractAction="_wV0GBB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0GBh7zEe-6p5TzsiMONg">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wV0GBh7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV0GBR7zEe-6p5TzsiMONg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wV0GAh7zEe-6p5TzsiMONg" describedService__SEFF="_wP65ZB7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wVy35R7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVy38h7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wVy38h7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVy35R7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0GAB7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVy36R7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVy36x7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVy35h7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVy35x7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVy35x7zEe-6p5TzsiMONg" entityName="requiredRoles.add(AuthorizationRole.AUTH_C19_HOTLINE)" predecessor_AbstractAction="_wVy35h7zEe-6p5TzsiMONg" successor_AbstractAction="_wVy36B7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVy36B7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVy35x7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(teleTanType == null)"/>
-        </branches_Branch>
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVy37x7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVy38R7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVy37B7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVy37R7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVy37R7zEe-6p5TzsiMONg" entityName="requiredRoles.add(AuthorizationRole.AUTH_C19_HOTLINE_EVENT)" predecessor_AbstractAction="_wVy37B7zEe-6p5TzsiMONg" successor_AbstractAction="_wVy37h7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVy37h7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVy37R7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(teleTanType == TeleTanType.EVENT)"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wV0GAB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVy38h7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0GAR7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVze_x7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVzfAR7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVze8B7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVze_R7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wVze_R7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVze8B7zEe-6p5TzsiMONg" successor_AbstractAction="_wVze_h7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVze9R7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_wVze9x7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVze8R7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVze8h7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVze8h7zEe-6p5TzsiMONg" entityName="log.info(&quot;The teleTAN is generated.&quot;)" predecessor_AbstractAction="_wVze8R7zEe-6p5TzsiMONg" successor_AbstractAction="_wVze8x7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVze8x7zEe-6p5TzsiMONg" entityName="ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))" predecessor_AbstractAction="_wVze8h7zEe-6p5TzsiMONg" successor_AbstractAction="_wVze9B7zEe-6p5TzsiMONg">
-                    <localVariableUsages_SetVariableAction>
-                      <variableCharacterisation_VariableUsage type="VALUE">
-                        <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))"/>
-                      </variableCharacterisation_VariableUsage>
-                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))"/>
-                      </namedReference__VariableUsage>
-                    </localVariableUsages_SetVariableAction>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVze9B7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVze8x7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(tanService.isTeleTanRateLimitNotExceeded())"/>
-              </branches_Branch>
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVze-h7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_wVze_B7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVze-B7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVze-R7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVze-R7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVze-B7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: else"/>
-              </branches_Branch>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVze_h7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVze_R7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(jwtService.isAuthorized(authorization.getToken(),requiredRoles))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wV0GAR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV0GAB7zEe-6p5TzsiMONg"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWmJKB7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTanController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWmJJx7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmR7zEe-6p5TzsiMONg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wV2iQx7zEe-6p5TzsiMONg" describedService__SEFF="_wP7gcB7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tER7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV0tGB7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wV0tGB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV0tER7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0tGR7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV0tFR7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wV0tFx7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tEh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV0tEx7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wV0tEx7zEe-6p5TzsiMONg" entityName="fakeRequestService.generateTan(registrationToken)" predecessor_AbstractAction="_wV0tEh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0tFB7zEe-6p5TzsiMONg">
-              <localVariableUsages_SetVariableAction>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="PrimitiveType.fakeRequestService.generateTan(registrationToken)"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRequestService.generateTan(registrationToken)"/>
-                </namedReference__VariableUsage>
-              </localVariableUsages_SetVariableAction>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wV0tFB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV0tEx7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if((fake != null) &amp;&amp; (fake.equals(&quot;1&quot;)))"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_wV0tGR7zEe-6p5TzsiMONg" entityName="stopWatch.start()" predecessor_AbstractAction="_wV0tGB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV2iQR7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wV2iQR7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV0tGR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV2iQh7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV17Px7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wV2iQB7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tGh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV17PR7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wV17PR7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV0tGh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17Ph7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV17Oh7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_wV17PB7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tGx7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV17MB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:BranchAction" id="_wV17MB7zEe-6p5TzsiMONg" entityName="Switch Branch" predecessor_AbstractAction="_wV0tGx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17MR7zEe-6p5TzsiMONg">
-                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV1UJB7zEe-6p5TzsiMONg">
-                      <branchBehaviour_BranchTransition id="_wV1UJh7zEe-6p5TzsiMONg">
-                        <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tHB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV1UIR7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:BranchAction" id="_wV1UIR7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV0tHB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV1UIh7zEe-6p5TzsiMONg">
-                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV0tIB7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                            <branchBehaviour_BranchTransition id="_wV1UIB7zEe-6p5TzsiMONg">
-                              <steps_Behaviour xsi:type="seff:StartAction" id="_wV0tHR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV0tHh7zEe-6p5TzsiMONg"/>
-                              <steps_Behaviour xsi:type="seff:InternalAction" id="_wV0tHh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wV0tHR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV0tHx7zEe-6p5TzsiMONg"/>
-                              <steps_Behaviour xsi:type="seff:StopAction" id="_wV0tHx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV0tHh7zEe-6p5TzsiMONg"/>
-                            </branchBehaviour_BranchTransition>
-                            <branchCondition_GuardedBranchTransition specification="@position: Condition: if(covidTestResult.getTestResult() != LabTestResult.POSITIVE.getTestResult() &amp;&amp; covidTestResult.getTestResult() != LabTestResult.QUICK_POSITIVE.getTestResult())"/>
-                          </branches_Branch>
-                        </steps_Behaviour>
-                        <steps_Behaviour xsi:type="seff:InternalAction" id="_wV1UIh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wV1UIR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV1UIx7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:StopAction" id="_wV1UIx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV1UIh7zEe-6p5TzsiMONg"/>
-                      </branchBehaviour_BranchTransition>
-                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(HASHED_GUID)"/>
-                    </branches_Branch>
-                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV1UKh7zEe-6p5TzsiMONg">
-                      <branchBehaviour_BranchTransition id="_wV1ULB7zEe-6p5TzsiMONg">
-                        <steps_Behaviour xsi:type="seff:StartAction" id="_wV1UJx7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV1UKB7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:InternalAction" id="_wV1UKB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wV1UJx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV1UKR7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:StopAction" id="_wV1UKR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV1UKB7zEe-6p5TzsiMONg"/>
-                      </branchBehaviour_BranchTransition>
-                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
-                    </branches_Branch>
-                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV1UMB7zEe-6p5TzsiMONg">
-                      <branchBehaviour_BranchTransition id="_wV1UMh7zEe-6p5TzsiMONg">
-                        <steps_Behaviour xsi:type="seff:StartAction" id="_wV1ULR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV1ULh7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:InternalAction" id="_wV1ULh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wV1ULR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV1ULx7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:StopAction" id="_wV1ULx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV1ULh7zEe-6p5TzsiMONg"/>
-                      </branchBehaviour_BranchTransition>
-                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
-                    </branches_Branch>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17MR7zEe-6p5TzsiMONg" entityName="appSession.incrementTanCounter()" predecessor_AbstractAction="_wV17MB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17Mh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17Mh7zEe-6p5TzsiMONg" entityName="appSession.setUpdatedAt(LocalDateTime.now())" predecessor_AbstractAction="_wV17MR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17Mx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17Mx7zEe-6p5TzsiMONg" entityName="appSessionService.saveAppSession(appSession)" predecessor_AbstractAction="_wV17Mh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17NB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17NB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wV17Mx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17NR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17NR7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTanRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wV17NB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17Nh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17Nh7zEe-6p5TzsiMONg" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.status(HttpStatus.CREATED).body(returnTan)),fakeDelayService.realDelayTan(),MILLISECONDS)" predecessor_AbstractAction="_wV17NR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17Nx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV17Nx7zEe-6p5TzsiMONg" entityName="log.info(&quot;Returning the successfully generated tan.&quot;)" predecessor_AbstractAction="_wV17Nh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17OB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wV17OB7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wV17Nx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV17OR7zEe-6p5TzsiMONg">
-                    <localVariableUsages_SetVariableAction>
-                      <variableCharacterisation_VariableUsage type="VALUE">
-                        <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
-                      </variableCharacterisation_VariableUsage>
-                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="deferredResult"/>
-                      </namedReference__VariableUsage>
-                    </localVariableUsages_SetVariableAction>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wV17OR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV17OB7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.getTanCounter() &lt; tancountermax)"/>
-              </branches_Branch>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wV17Ph7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV17PR7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(actual.isPresent())"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wV2iQh7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV2iQR7zEe-6p5TzsiMONg"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWolZB7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_InternalTestStateController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWolYx7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2 Provider" providedInterface__OperationProvidedRole="_wWgplx7zEe-6p5TzsiMONg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wV3waB7zEe-6p5TzsiMONg" describedService__SEFF="_wP6SUR7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wV2iRR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV3wZR7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wV3wZR7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV2iRR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3wZh7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV3wYh7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wV3wZB7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wV2iRh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV3wYB7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wV3wYB7zEe-6p5TzsiMONg" entityName="Switch Branch" predecessor_AbstractAction="_wV2iRh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3wYR7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV3JUx7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wV3JVR7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wV2iRx7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV2iUx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:BranchAction" id="_wV2iUx7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV2iRx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV2iVB7zEe-6p5TzsiMONg">
-                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV2iUB7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                      <branchBehaviour_BranchTransition id="_wV2iUh7zEe-6p5TzsiMONg">
-                        <steps_Behaviour xsi:type="seff:StartAction" id="_wV2iSB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV2iTh7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:BranchAction" id="_wV2iTh7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wV2iSB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV2iTx7zEe-6p5TzsiMONg">
-                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV2iSx7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                            <branchBehaviour_BranchTransition id="_wV2iTR7zEe-6p5TzsiMONg">
-                              <steps_Behaviour xsi:type="seff:StartAction" id="_wV2iSR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV2iSh7zEe-6p5TzsiMONg"/>
-                              <steps_Behaviour xsi:type="seff:StopAction" id="_wV2iSh7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV2iSR7zEe-6p5TzsiMONg"/>
-                            </branchBehaviour_BranchTransition>
-                            <branchCondition_GuardedBranchTransition specification="@position: Condition: if(testResultDob.getTestResult() != testResult.getTestResult())"/>
-                          </branches_Branch>
-                        </steps_Behaviour>
-                        <steps_Behaviour xsi:type="seff:StopAction" id="_wV2iTx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV2iTh7zEe-6p5TzsiMONg"/>
-                      </branchBehaviour_BranchTransition>
-                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.get().getHashedGuidDob() != null)"/>
-                    </branches_Branch>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV2iVB7zEe-6p5TzsiMONg" entityName="log.debug(&quot;Result {}&quot;,testResult)" predecessor_AbstractAction="_wV2iUx7zEe-6p5TzsiMONg" successor_AbstractAction="_wV2iVR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV2iVR7zEe-6p5TzsiMONg" entityName="log.info(&quot;The result for registration token based on hashed Guid will be returned.&quot;)" predecessor_AbstractAction="_wV2iVB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3JUB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wV3JUB7zEe-6p5TzsiMONg" entityName="ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))" predecessor_AbstractAction="_wV2iVR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3JUR7zEe-6p5TzsiMONg">
-                    <localVariableUsages_SetVariableAction>
-                      <variableCharacterisation_VariableUsage type="VALUE">
-                        <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))"/>
-                      </variableCharacterisation_VariableUsage>
-                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))"/>
-                      </namedReference__VariableUsage>
-                    </localVariableUsages_SetVariableAction>
-                  </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV3JUR7zEe-6p5TzsiMONg" entityName="log.info(&quot;Internal TestState is not allowed for TeleTan Token.&quot;)" predecessor_AbstractAction="_wV3JUB7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3JUh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wV3JUh7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV3JUR7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(HASHED_GUID)"/>
-              </branches_Branch>
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV3JWR7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wV3JWx7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wV3JVh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV3JVx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wV3JVx7zEe-6p5TzsiMONg" entityName="log.info(&quot;Internal TestState is not allowed for TeleTan Token.&quot;)" predecessor_AbstractAction="_wV3JVh7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3JWB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wV3JWB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV3JVx7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
-              </branches_Branch>
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wV3JXh7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wV3JYB7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wV3JXB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wV3JXR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wV3JXR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV3JXB7zEe-6p5TzsiMONg"/>
-                </branchBehaviour_BranchTransition>
-                <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
-              </branches_Branch>
-            </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wV3wYR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV3wYB7zEe-6p5TzsiMONg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.isPresent())"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_wV3wZh7zEe-6p5TzsiMONg" entityName="log.info(&quot;The registration token doesn't exist.&quot;)" predecessor_AbstractAction="_wV3wZR7zEe-6p5TzsiMONg" successor_AbstractAction="_wV3wZx7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wV3wZx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wV3wZh7zEe-6p5TzsiMONg"/>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWrBoR7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTokenController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWrBoB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST] Provider" providedInterface__OperationProvidedRole="_wWgplR7zEe-6p5TzsiMONg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wVy34x7zEe-6p5TzsiMONg" describedService__SEFF="_wP8HhB7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wVv0mR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVwbpB7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wVwbpB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVv0mR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwbpR7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVwboR7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVwbox7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVv0mh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVv0mx7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVv0mx7zEe-6p5TzsiMONg" entityName="fakeRequestController.generateRegistrationToken(request)" predecessor_AbstractAction="_wVv0mh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwboB7zEe-6p5TzsiMONg">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_AceONB-9Ee-LmoSpecUQcA">
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcLTRx-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTokenController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcLTRh-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST] Provider" providedInterface__OperationProvidedRole="_AcLTRR-9Ee-LmoSpecUQcA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbhzDx-9Ee-LmoSpecUQcA" describedService__SEFF="_AVhRoR-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_AbcTdB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_Abf91R-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_Abf91R-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbcTdB-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf91h-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_Abf90h-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_Abf91B-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbcTdR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_Abf90B-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_Abf90B-9Ee-LmoSpecUQcA" entityName="fakeRequestController.generateRegistrationToken(request)" predecessor_AbstractAction="_AbcTdR-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf90R-9Ee-LmoSpecUQcA">
               <localVariableUsages_SetVariableAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
                   <specification_VariableCharacterisation specification="PrimitiveType.fakeRequestController.generateRegistrationToken(request)"/>
@@ -264,21 +18,21 @@
                 </namedReference__VariableUsage>
               </localVariableUsages_SetVariableAction>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVwboB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVv0mx7zEe-6p5TzsiMONg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_Abf90R-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_Abf90B-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if((fake != null) &amp;&amp; (fake.equals(&quot;1&quot;)))"/>
         </branches_Branch>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_wVwbpR7zEe-6p5TzsiMONg" entityName="stopWatch.start()" predecessor_AbstractAction="_wVwbpB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVy34R7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wVy34R7zEe-6p5TzsiMONg" entityName="Switch Branch" predecessor_AbstractAction="_wVwbpR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVy34h7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVxpwR7zEe-6p5TzsiMONg">
-          <branchBehaviour_BranchTransition id="_wVxpwx7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVwbph7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVwbpx7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVwbpx7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVwbph7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwbqB7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVwbqB7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVwbpx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwbqR7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVwbqR7zEe-6p5TzsiMONg" entityName="deferredResult.setResult(responseEntity)" predecessor_AbstractAction="_wVwbqB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwbqh7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVwbqh7zEe-6p5TzsiMONg" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_wVwbqR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVwbqx7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVwbqx7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVwbqh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCux7zEe-6p5TzsiMONg">
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Abf91h-9Ee-LmoSpecUQcA" entityName="stopWatch.start()" predecessor_AbstractAction="_Abf91R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzDR-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbhzDR-9Ee-LmoSpecUQcA" entityName="Switch Branch" predecessor_AbstractAction="_Abf91h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzDh-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_Abgk8B-9Ee-LmoSpecUQcA">
+          <branchBehaviour_BranchTransition id="_AbhL8B-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_Abf91x-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_Abf92B-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abf92B-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_Abf91x-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf92R-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abf92R-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_Abf92B-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf92h-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abf92h-9Ee-LmoSpecUQcA" entityName="deferredResult.setResult(responseEntity)" predecessor_AbstractAction="_Abf92R-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf92x-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abf92x-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_Abf92h-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abf93B-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_Abf93B-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_Abf92x-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk7B-9Ee-LmoSpecUQcA">
               <localVariableUsages_SetVariableAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
                   <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -288,17 +42,17 @@
                 </namedReference__VariableUsage>
               </localVariableUsages_SetVariableAction>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wVxCux7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVwbqx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCvB7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVxCuB7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_wVxCuh7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVwbrB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVxCsB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCsB7zEe-6p5TzsiMONg" entityName="teleTan.setRedeemed(true)" predecessor_AbstractAction="_wVwbrB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCsR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCsR7zEe-6p5TzsiMONg" entityName="tanService.saveTan(teleTan)" predecessor_AbstractAction="_wVxCsB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCsh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCsh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVxCsR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCsx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCsx7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVxCsh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCtB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCtB7zEe-6p5TzsiMONg" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),fakeDelayService.realDelayToken(),MILLISECONDS)" predecessor_AbstractAction="_wVxCsx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCtR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCtR7zEe-6p5TzsiMONg" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_wVxCtB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCth7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVxCth7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVxCtR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCtx7zEe-6p5TzsiMONg">
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_Abgk7B-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_Abf93B-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk7R-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_Abgk6R-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_Abgk6x-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_Abgk4B-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_Abgk4R-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk4R-9Ee-LmoSpecUQcA" entityName="teleTan.setRedeemed(true)" predecessor_AbstractAction="_Abgk4B-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk4h-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk4h-9Ee-LmoSpecUQcA" entityName="tanService.saveTan(teleTan)" predecessor_AbstractAction="_Abgk4R-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk4x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk4x-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_Abgk4h-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk5B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk5B-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_Abgk4x-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk5R-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk5R-9Ee-LmoSpecUQcA" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),fakeDelayService.realDelayToken(),MILLISECONDS)" predecessor_AbstractAction="_Abgk5B-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk5h-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk5h-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_Abgk5R-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk5x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_Abgk5x-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_Abgk5h-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk6B-9Ee-LmoSpecUQcA">
                     <localVariableUsages_SetVariableAction>
                       <variableCharacterisation_VariableUsage type="VALUE">
                         <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -308,31 +62,31 @@
                       </namedReference__VariableUsage>
                     </localVariableUsages_SetVariableAction>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVxCtx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVxCth7zEe-6p5TzsiMONg"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_Abgk6B-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_Abgk5x-9Ee-LmoSpecUQcA"/>
                 </branchBehaviour_BranchTransition>
                 <branchCondition_GuardedBranchTransition specification="@position: Condition: if(optional.isPresent())"/>
               </branches_Branch>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCvB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVxCux7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxCvR7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxCvR7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVxCvB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpwB7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVxpwB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVxCvR7zEe-6p5TzsiMONg"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk7R-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_Abgk7B-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk7h-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Abgk7h-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_Abgk7R-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abgk7x-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_Abgk7x-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_Abgk7h-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if(GUID)"/>
         </branches_Branch>
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVyQ2B7zEe-6p5TzsiMONg">
-          <branchBehaviour_BranchTransition id="_wVyQ2h7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVxpxB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVyQ1B7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wVyQ1B7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVxpxB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVyQ1R7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVyQ0R7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                <branchBehaviour_BranchTransition id="_wVyQ0x7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVxpxR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVxpxh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpxh7zEe-6p5TzsiMONg" entityName="teleTan.setRedeemed(true)" predecessor_AbstractAction="_wVxpxR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpxx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpxx7zEe-6p5TzsiMONg" entityName="tanService.saveTan(teleTan)" predecessor_AbstractAction="_wVxpxh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpyB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpyB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVxpxx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpyR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpyR7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVxpyB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpyh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpyh7zEe-6p5TzsiMONg" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),fakeDelayService.realDelayToken(),MILLISECONDS)" predecessor_AbstractAction="_wVxpyR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpyx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVxpyx7zEe-6p5TzsiMONg" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_wVxpyh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVxpzB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVxpzB7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVxpyx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVyQ0B7zEe-6p5TzsiMONg">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbhzBB-9Ee-LmoSpecUQcA">
+          <branchBehaviour_BranchTransition id="_AbhzBh-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbhL8R-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbhzAB-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_AbhzAB-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbhL8R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzAR-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbhL-x-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_AbhL_R-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbhL8h-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbhL8x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL8x-9Ee-LmoSpecUQcA" entityName="teleTan.setRedeemed(true)" predecessor_AbstractAction="_AbhL8h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL9B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL9B-9Ee-LmoSpecUQcA" entityName="tanService.saveTan(teleTan)" predecessor_AbstractAction="_AbhL8x-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL9R-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL9R-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbhL9B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL9h-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL9h-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTokenRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_AbhL9R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL9x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL9x-9Ee-LmoSpecUQcA" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(response),fakeDelayService.realDelayToken(),MILLISECONDS)" predecessor_AbstractAction="_AbhL9h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL-B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhL-B-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Returning the successfully generated RegistrationToken.&quot;)" predecessor_AbstractAction="_AbhL9x-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL-R-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbhL-R-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_AbhL-B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhL-h-9Ee-LmoSpecUQcA">
                     <localVariableUsages_SetVariableAction>
                       <variableCharacterisation_VariableUsage type="VALUE">
                         <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -342,39 +96,137 @@
                       </namedReference__VariableUsage>
                     </localVariableUsages_SetVariableAction>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVyQ0B7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVxpzB7zEe-6p5TzsiMONg"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbhL-h-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbhL-R-9Ee-LmoSpecUQcA"/>
                 </branchBehaviour_BranchTransition>
                 <branchCondition_GuardedBranchTransition specification="@position: Condition: if(optional.isPresent())"/>
               </branches_Branch>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVyQ1R7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVyQ1B7zEe-6p5TzsiMONg" successor_AbstractAction="_wVyQ1h7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVyQ1h7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVyQ1R7zEe-6p5TzsiMONg" successor_AbstractAction="_wVyQ1x7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVyQ1x7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVyQ1h7zEe-6p5TzsiMONg"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhzAR-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbhzAB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzAh-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhzAh-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbhzAR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzAx-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbhzAx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbhzAh-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
         </branches_Branch>
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVyQ3h7zEe-6p5TzsiMONg">
-          <branchBehaviour_BranchTransition id="_wVy34B7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVyQ2x7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVyQ3B7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_wVyQ3B7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVyQ2x7zEe-6p5TzsiMONg" successor_AbstractAction="_wVyQ3R7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVyQ3R7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVyQ3B7zEe-6p5TzsiMONg"/>
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbhzCh-9Ee-LmoSpecUQcA">
+          <branchBehaviour_BranchTransition id="_AbhzDB-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbhzBx-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbhzCB-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_AbhzCB-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbhzBx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbhzCR-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbhzCR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbhzCB-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
         </branches_Branch>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wVy34h7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVy34R7zEe-6p5TzsiMONg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbhzDh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbhzDR-9Ee-LmoSpecUQcA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWs23R7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_service_FakeRequestService"/>
-  <components__Repository xsi:type="repository:BasicComponent" id="_wWs23x7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTestStateController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWs23h7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmh7zEe-6p5TzsiMONg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_wVv0lx7zEe-6p5TzsiMONg" describedService__SEFF="_wPFL4B7zEe-6p5TzsiMONg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_wQcd0R7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVsKMB7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wVsKMB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wQcd0R7zEe-6p5TzsiMONg" successor_AbstractAction="_wVsxQB7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVq8EB7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVrjIB7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wQeTAB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVqVAB7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVqVAB7zEe-6p5TzsiMONg" entityName="fakeRequestService.getTestState(registrationToken)" predecessor_AbstractAction="_wQeTAB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVqVAR7zEe-6p5TzsiMONg">
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcO9qB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_service_FakeRequestService"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcO9qh-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTanController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcO9qR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQB-9Ee-LmoSpecUQcA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbYCBh-9Ee-LmoSpecUQcA" describedService__SEFF="_AVgqkh-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_AV9WgR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbUXoR-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbUXoR-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AV9WgR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbVlwB-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbTwkB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbUXoB-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AV_LsB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbSicB-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbSicB-9Ee-LmoSpecUQcA" entityName="fakeRequestService.generateTan(registrationToken)" predecessor_AbstractAction="_AV_LsB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbTJgB-9Ee-LmoSpecUQcA">
+              <localVariableUsages_SetVariableAction>
+                <variableCharacterisation_VariableUsage type="VALUE">
+                  <specification_VariableCharacterisation specification="PrimitiveType.fakeRequestService.generateTan(registrationToken)"/>
+                </variableCharacterisation_VariableUsage>
+                <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                  <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="fakeRequestService.generateTan(registrationToken)"/>
+                </namedReference__VariableUsage>
+              </localVariableUsages_SetVariableAction>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbTJgB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbSicB-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if((fake != null) &amp;&amp; (fake.equals(&quot;1&quot;)))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_AbVlwB-9Ee-LmoSpecUQcA" entityName="stopWatch.start()" predecessor_AbstractAction="_AbUXoR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYCBB-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbYCBB-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbVlwB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYCBR-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbYCAR-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbYCAx-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbVlwR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbXa-R-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_AbXa-R-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbVlwR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYCAB-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbXa9h-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_AbXa-B-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbVlwh-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbWz7B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:BranchAction" id="_AbWz7B-9Ee-LmoSpecUQcA" entityName="Switch Branch" predecessor_AbstractAction="_AbVlwh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWz7R-9Ee-LmoSpecUQcA">
+                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbWM2h-9Ee-LmoSpecUQcA">
+                      <branchBehaviour_BranchTransition id="_AbWM3B-9Ee-LmoSpecUQcA">
+                        <steps_Behaviour xsi:type="seff:StartAction" id="_AbWM0B-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbWM1x-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:BranchAction" id="_AbWM1x-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbWM0B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWM2B-9Ee-LmoSpecUQcA">
+                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbWM1B-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                            <branchBehaviour_BranchTransition id="_AbWM1h-9Ee-LmoSpecUQcA">
+                              <steps_Behaviour xsi:type="seff:StartAction" id="_AbWM0R-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbWM0h-9Ee-LmoSpecUQcA"/>
+                              <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWM0h-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbWM0R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWM0x-9Ee-LmoSpecUQcA"/>
+                              <steps_Behaviour xsi:type="seff:StopAction" id="_AbWM0x-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbWM0h-9Ee-LmoSpecUQcA"/>
+                            </branchBehaviour_BranchTransition>
+                            <branchCondition_GuardedBranchTransition specification="@position: Condition: if(covidTestResult.getTestResult() != LabTestResult.POSITIVE.getTestResult() &amp;&amp; covidTestResult.getTestResult() != LabTestResult.QUICK_POSITIVE.getTestResult())"/>
+                          </branches_Branch>
+                        </steps_Behaviour>
+                        <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWM2B-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbWM1x-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWM2R-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:StopAction" id="_AbWM2R-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbWM2B-9Ee-LmoSpecUQcA"/>
+                      </branchBehaviour_BranchTransition>
+                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(HASHED_GUID)"/>
+                    </branches_Branch>
+                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbWz4x-9Ee-LmoSpecUQcA">
+                      <branchBehaviour_BranchTransition id="_AbWz5R-9Ee-LmoSpecUQcA">
+                        <steps_Behaviour xsi:type="seff:StartAction" id="_AbWz4B-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbWz4R-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWz4R-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbWz4B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWz4h-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:StopAction" id="_AbWz4h-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbWz4R-9Ee-LmoSpecUQcA"/>
+                      </branchBehaviour_BranchTransition>
+                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
+                    </branches_Branch>
+                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbWz6R-9Ee-LmoSpecUQcA">
+                      <branchBehaviour_BranchTransition id="_AbWz6x-9Ee-LmoSpecUQcA">
+                        <steps_Behaviour xsi:type="seff:StartAction" id="_AbWz5h-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbWz5x-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWz5x-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbWz5h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWz6B-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:StopAction" id="_AbWz6B-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbWz5x-9Ee-LmoSpecUQcA"/>
+                      </branchBehaviour_BranchTransition>
+                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
+                    </branches_Branch>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWz7R-9Ee-LmoSpecUQcA" entityName="appSession.incrementTanCounter()" predecessor_AbstractAction="_AbWz7B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWz7h-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWz7h-9Ee-LmoSpecUQcA" entityName="appSession.setUpdatedAt(LocalDateTime.now())" predecessor_AbstractAction="_AbWz7R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbWz7x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbWz7x-9Ee-LmoSpecUQcA" entityName="appSessionService.saveAppSession(appSession)" predecessor_AbstractAction="_AbWz7h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa8B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbXa8B-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbWz7x-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa8R-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbXa8R-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTanRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_AbXa8B-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa8h-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbXa8h-9Ee-LmoSpecUQcA" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.status(HttpStatus.CREATED).body(returnTan)),fakeDelayService.realDelayTan(),MILLISECONDS)" predecessor_AbstractAction="_AbXa8R-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa8x-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbXa8x-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Returning the successfully generated tan.&quot;)" predecessor_AbstractAction="_AbXa8h-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa9B-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbXa9B-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_AbXa8x-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbXa9R-9Ee-LmoSpecUQcA">
+                    <localVariableUsages_SetVariableAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="deferredResult"/>
+                      </namedReference__VariableUsage>
+                    </localVariableUsages_SetVariableAction>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbXa9R-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbXa9B-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.getTanCounter() &lt; tancountermax)"/>
+              </branches_Branch>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbYCAB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbXa-R-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(actual.isPresent())"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbYCBR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbYCBB-9Ee-LmoSpecUQcA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcSA8R-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTestStateController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcSA8B-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQh-9Ee-LmoSpecUQcA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbaeTh-9Ee-LmoSpecUQcA" describedService__SEFF="_AVgDgR-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_AbYCCB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbYCDx-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbYCDx-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbYCCB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpEB-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbYCDB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbYCDh-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbYCCR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbYCCh-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbYCCh-9Ee-LmoSpecUQcA" entityName="fakeRequestService.getTestState(registrationToken)" predecessor_AbstractAction="_AbYCCR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYCCx-9Ee-LmoSpecUQcA">
               <localVariableUsages_SetVariableAction>
                 <variableCharacterisation_VariableUsage type="VALUE">
                   <specification_VariableCharacterisation specification="PrimitiveType.fakeRequestService.getTestState(registrationToken)"/>
@@ -384,45 +236,45 @@
                 </namedReference__VariableUsage>
               </localVariableUsages_SetVariableAction>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVqVAR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVqVAB7zEe-6p5TzsiMONg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbYCCx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbYCCh-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if((fake != null) &amp;&amp; (fake.equals(&quot;1&quot;)))"/>
         </branches_Branch>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_wVsxQB7zEe-6p5TzsiMONg" entityName="stopWatch.start()" predecessor_AbstractAction="_wVsKMB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVv0lB7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_wVv0lB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVsxQB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVv0lR7zEe-6p5TzsiMONg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVv0kR7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_wVv0kx7zEe-6p5TzsiMONg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_wVsxQR7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVvNjR7zEe-6p5TzsiMONg"/>
-            <steps_Behaviour xsi:type="seff:BranchAction" id="_wVvNjR7zEe-6p5TzsiMONg" entityName="Switch Branch" predecessor_AbstractAction="_wVsxQR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVv0kB7zEe-6p5TzsiMONg">
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVumcx7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wVumdR7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVtYUB7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVtYUR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVtYUR7zEe-6p5TzsiMONg" entityName="testResult.setResponsePadding(RandomStringUtils.randomAlphanumeric(RESPONSE_PADDING_LENGTH))" predecessor_AbstractAction="_wVtYUB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVtYXR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:BranchAction" id="_wVtYXR7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVtYUR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVtYXh7zEe-6p5TzsiMONg">
-                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVtYWh7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                      <branchBehaviour_BranchTransition id="_wVtYXB7zEe-6p5TzsiMONg">
-                        <steps_Behaviour xsi:type="seff:StartAction" id="_wVtYUh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVtYWB7zEe-6p5TzsiMONg"/>
-                        <steps_Behaviour xsi:type="seff:BranchAction" id="_wVtYWB7zEe-6p5TzsiMONg" entityName="If Branch" predecessor_AbstractAction="_wVtYUh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVtYWR7zEe-6p5TzsiMONg">
-                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVtYVR7zEe-6p5TzsiMONg" entityName="Guarded Branch Transition">
-                            <branchBehaviour_BranchTransition id="_wVtYVx7zEe-6p5TzsiMONg">
-                              <steps_Behaviour xsi:type="seff:StartAction" id="_wVtYUx7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVtYVB7zEe-6p5TzsiMONg"/>
-                              <steps_Behaviour xsi:type="seff:StopAction" id="_wVtYVB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVtYUx7zEe-6p5TzsiMONg"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_AbYpEB-9Ee-LmoSpecUQcA" entityName="stopWatch.start()" predecessor_AbstractAction="_AbYCDx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbaeSx-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbaeSx-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbYpEB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbaeTB-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbaeSB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbaeSh-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbYpER-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbaeRh-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_AbaeRh-9Ee-LmoSpecUQcA" entityName="Switch Branch" predecessor_AbstractAction="_AbYpER-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbaeRx-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbZQKh-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbZQLB-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbYpEh-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbYpEx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbYpEx-9Ee-LmoSpecUQcA" entityName="testResult.setResponsePadding(RandomStringUtils.randomAlphanumeric(RESPONSE_PADDING_LENGTH))" predecessor_AbstractAction="_AbYpEh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpHx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:BranchAction" id="_AbYpHx-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbYpEx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpIB-9Ee-LmoSpecUQcA">
+                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbYpHB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                      <branchBehaviour_BranchTransition id="_AbYpHh-9Ee-LmoSpecUQcA">
+                        <steps_Behaviour xsi:type="seff:StartAction" id="_AbYpFB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbYpGh-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:BranchAction" id="_AbYpGh-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbYpFB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpGx-9Ee-LmoSpecUQcA">
+                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbYpFx-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                            <branchBehaviour_BranchTransition id="_AbYpGR-9Ee-LmoSpecUQcA">
+                              <steps_Behaviour xsi:type="seff:StartAction" id="_AbYpFR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbYpFh-9Ee-LmoSpecUQcA"/>
+                              <steps_Behaviour xsi:type="seff:StopAction" id="_AbYpFh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbYpFR-9Ee-LmoSpecUQcA"/>
                             </branchBehaviour_BranchTransition>
                             <branchCondition_GuardedBranchTransition specification="@position: Condition: if(testResultDob.getTestResult() != testResult.getTestResult())"/>
                           </branches_Branch>
                         </steps_Behaviour>
-                        <steps_Behaviour xsi:type="seff:StopAction" id="_wVtYWR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVtYWB7zEe-6p5TzsiMONg"/>
+                        <steps_Behaviour xsi:type="seff:StopAction" id="_AbYpGx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbYpGh-9Ee-LmoSpecUQcA"/>
                       </branchBehaviour_BranchTransition>
                       <branchCondition_GuardedBranchTransition specification="@position: Condition: if(!config.isDisableDobHashCheckForExternalTestResult() &amp;&amp; appSession.get().getHashedGuidDob() != null)"/>
                     </branches_Branch>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVtYXh7zEe-6p5TzsiMONg" entityName="log.debug(&quot;Result {}&quot;,testResult)" predecessor_AbstractAction="_wVtYXR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_YB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_YB7zEe-6p5TzsiMONg" entityName="log.info(&quot;The result for registration token based on hashed Guid will be returned.&quot;)" predecessor_AbstractAction="_wVtYXh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_YR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_YR7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVt_YB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_Yh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_Yh7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVt_YR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_Yx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_Yx7zEe-6p5TzsiMONg" entityName="deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId())))" predecessor_AbstractAction="_wVt_Yh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_ZB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVt_ZB7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVt_Yx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_ZR7zEe-6p5TzsiMONg">
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbYpIB-9Ee-LmoSpecUQcA" entityName="log.debug(&quot;Result {}&quot;,testResult)" predecessor_AbstractAction="_AbYpHx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpIR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbYpIR-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The result for registration token based on hashed Guid will be returned.&quot;)" predecessor_AbstractAction="_AbYpIB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbYpIh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbYpIh-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbYpIR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQIB-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQIB-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_AbYpIh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQIR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQIR-9Ee-LmoSpecUQcA" entityName="deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId())))" predecessor_AbstractAction="_AbZQIB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQIh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbZQIh-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_AbZQIR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQIx-9Ee-LmoSpecUQcA">
                     <localVariableUsages_SetVariableAction>
                       <variableCharacterisation_VariableUsage type="VALUE">
                         <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -432,11 +284,11 @@
                       </namedReference__VariableUsage>
                     </localVariableUsages_SetVariableAction>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_ZR7zEe-6p5TzsiMONg" entityName="log.info(&quot;The result for registration token based on teleTAN will be returned.&quot;)" predecessor_AbstractAction="_wVt_ZB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_Zh7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_Zh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVt_ZR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_Zx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_Zx7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVt_Zh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVt_aB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVt_aB7zEe-6p5TzsiMONg" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(LabTestResult.POSITIVE.getTestResult(),appSession.get().getCreatedAt().toEpochSecond(ZoneOffset.UTC),null))),fakeDelayService.realDelayTest(),MILLISECONDS)" predecessor_AbstractAction="_wVt_Zx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVumcB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVumcB7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVt_aB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVumcR7zEe-6p5TzsiMONg">
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQIx-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The result for registration token based on teleTAN will be returned.&quot;)" predecessor_AbstractAction="_AbZQIh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQJB-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQJB-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbZQIx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQJR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQJR-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_AbZQJB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQJh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQJh-9Ee-LmoSpecUQcA" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(LabTestResult.POSITIVE.getTestResult(),appSession.get().getCreatedAt().toEpochSecond(ZoneOffset.UTC),null))),fakeDelayService.realDelayTest(),MILLISECONDS)" predecessor_AbstractAction="_AbZQJR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQJx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbZQJx-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_AbZQJh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQKB-9Ee-LmoSpecUQcA">
                     <localVariableUsages_SetVariableAction>
                       <variableCharacterisation_VariableUsage type="VALUE">
                         <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -446,19 +298,19 @@
                       </namedReference__VariableUsage>
                     </localVariableUsages_SetVariableAction>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVumcR7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVumcB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVumch7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVumch7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVumcR7zEe-6p5TzsiMONg"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZQKB-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbZQJx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZQKR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbZQKR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbZQKB-9Ee-LmoSpecUQcA"/>
                 </branchBehaviour_BranchTransition>
                 <branchCondition_GuardedBranchTransition specification="@position: Condition: if(HASHED_GUID)"/>
               </branches_Branch>
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVvNhB7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wVvNhh7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVumdh7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVumdx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVumdx7zEe-6p5TzsiMONg" entityName="log.info(&quot;The result for registration token based on teleTAN will be returned.&quot;)" predecessor_AbstractAction="_wVumdh7zEe-6p5TzsiMONg" successor_AbstractAction="_wVumeB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVumeB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVumdx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVumeR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVumeR7zEe-6p5TzsiMONg" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_wVumeB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVvNgB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVvNgB7zEe-6p5TzsiMONg" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(LabTestResult.POSITIVE.getTestResult(),appSession.get().getCreatedAt().toEpochSecond(ZoneOffset.UTC),null))),fakeDelayService.realDelayTest(),MILLISECONDS)" predecessor_AbstractAction="_wVumeR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVvNgR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_wVvNgR7zEe-6p5TzsiMONg" entityName="deferredResult" predecessor_AbstractAction="_wVvNgB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVvNgh7zEe-6p5TzsiMONg">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbZ3OB-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbZ3Oh-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbZ3MB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbZ3MR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZ3MR-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The result for registration token based on teleTAN will be returned.&quot;)" predecessor_AbstractAction="_AbZ3MB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3Mh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZ3Mh-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbZ3MR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3Mx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZ3Mx-9Ee-LmoSpecUQcA" entityName="fakeDelayService.updateFakeTestRequestDelay(stopWatch.getTotalTimeMillis())" predecessor_AbstractAction="_AbZ3Mh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3NB-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZ3NB-9Ee-LmoSpecUQcA" entityName="scheduledExecutor.schedule(() -> deferredResult.setResult(ResponseEntity.ok(generateReturnTestResult(LabTestResult.POSITIVE.getTestResult(),appSession.get().getCreatedAt().toEpochSecond(ZoneOffset.UTC),null))),fakeDelayService.realDelayTest(),MILLISECONDS)" predecessor_AbstractAction="_AbZ3Mx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3NR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbZ3NR-9Ee-LmoSpecUQcA" entityName="deferredResult" predecessor_AbstractAction="_AbZ3NB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3Nh-9Ee-LmoSpecUQcA">
                     <localVariableUsages_SetVariableAction>
                       <variableCharacterisation_VariableUsage type="VALUE">
                         <specification_VariableCharacterisation specification="PrimitiveType.deferredResult"/>
@@ -468,104 +320,252 @@
                       </namedReference__VariableUsage>
                     </localVariableUsages_SetVariableAction>
                   </steps_Behaviour>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVvNgh7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVvNgR7zEe-6p5TzsiMONg" successor_AbstractAction="_wVvNgx7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVvNgx7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVvNgh7zEe-6p5TzsiMONg"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbZ3Nh-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbZ3NR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbZ3Nx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbZ3Nx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbZ3Nh-9Ee-LmoSpecUQcA"/>
                 </branchBehaviour_BranchTransition>
                 <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
               </branches_Branch>
-              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_wVvNih7zEe-6p5TzsiMONg">
-                <branchBehaviour_BranchTransition id="_wVvNjB7zEe-6p5TzsiMONg">
-                  <steps_Behaviour xsi:type="seff:StartAction" id="_wVvNhx7zEe-6p5TzsiMONg" entityName="Start Action" successor_AbstractAction="_wVvNiB7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:InternalAction" id="_wVvNiB7zEe-6p5TzsiMONg" entityName="stopWatch.stop()" predecessor_AbstractAction="_wVvNhx7zEe-6p5TzsiMONg" successor_AbstractAction="_wVvNiR7zEe-6p5TzsiMONg"/>
-                  <steps_Behaviour xsi:type="seff:StopAction" id="_wVvNiR7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVvNiB7zEe-6p5TzsiMONg"/>
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbaeQx-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbaeRR-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbaeQB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbaeQR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbaeQR-9Ee-LmoSpecUQcA" entityName="stopWatch.stop()" predecessor_AbstractAction="_AbaeQB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbaeQh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbaeQh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbaeQR-9Ee-LmoSpecUQcA"/>
                 </branchBehaviour_BranchTransition>
                 <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
               </branches_Branch>
             </steps_Behaviour>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_wVv0kB7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVvNjR7zEe-6p5TzsiMONg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbaeRx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbaeRh-9Ee-LmoSpecUQcA"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.isPresent())"/>
         </branches_Branch>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_wVv0lR7zEe-6p5TzsiMONg" entityName="log.info(&quot;The registration token doesn't exist.&quot;)" predecessor_AbstractAction="_wVv0lB7zEe-6p5TzsiMONg" successor_AbstractAction="_wVv0lh7zEe-6p5TzsiMONg"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_wVv0lh7zEe-6p5TzsiMONg" entityName="Stop Action" predecessor_AbstractAction="_wVv0lR7zEe-6p5TzsiMONg"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_AbaeTB-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The registration token doesn't exist.&quot;)" predecessor_AbstractAction="_AbaeSx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbaeTR-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbaeTR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbaeTB-9Ee-LmoSpecUQcA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxIQR7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTestStateController">
-    <assemblyContexts__ComposedStructure id="_wWyWaB7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWs23x7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWy9ch7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWs23h7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxIQB7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWaB7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxIQB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmh7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcT2LB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_InternalTestStateController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcT2Kx-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2 Provider" providedInterface__OperationProvidedRole="_AcLTRB-9Ee-LmoSpecUQcA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbjBMx-9Ee-LmoSpecUQcA" describedService__SEFF="_AVgDhB-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_AbhzER-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbjBMB-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbjBMB-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbhzER-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbjBMR-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbjBLR-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbjBLx-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbhzEh-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbjBKx-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_AbjBKx-9Ee-LmoSpecUQcA" entityName="Switch Branch" predecessor_AbstractAction="_AbhzEh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbjBLB-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbiaIh-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbiaJB-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbiaEB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbiaHB-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:BranchAction" id="_AbiaHB-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbiaEB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaHR-9Ee-LmoSpecUQcA">
+                    <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbiaGR-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                      <branchBehaviour_BranchTransition id="_AbiaGx-9Ee-LmoSpecUQcA">
+                        <steps_Behaviour xsi:type="seff:StartAction" id="_AbiaER-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbiaFx-9Ee-LmoSpecUQcA"/>
+                        <steps_Behaviour xsi:type="seff:BranchAction" id="_AbiaFx-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbiaER-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaGB-9Ee-LmoSpecUQcA">
+                          <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbiaFB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                            <branchBehaviour_BranchTransition id="_AbiaFh-9Ee-LmoSpecUQcA">
+                              <steps_Behaviour xsi:type="seff:StartAction" id="_AbiaEh-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbiaEx-9Ee-LmoSpecUQcA"/>
+                              <steps_Behaviour xsi:type="seff:StopAction" id="_AbiaEx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbiaEh-9Ee-LmoSpecUQcA"/>
+                            </branchBehaviour_BranchTransition>
+                            <branchCondition_GuardedBranchTransition specification="@position: Condition: if(testResultDob.getTestResult() != testResult.getTestResult())"/>
+                          </branches_Branch>
+                        </steps_Behaviour>
+                        <steps_Behaviour xsi:type="seff:StopAction" id="_AbiaGB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbiaFx-9Ee-LmoSpecUQcA"/>
+                      </branchBehaviour_BranchTransition>
+                      <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.get().getHashedGuidDob() != null)"/>
+                    </branches_Branch>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbiaHR-9Ee-LmoSpecUQcA" entityName="log.debug(&quot;Result {}&quot;,testResult)" predecessor_AbstractAction="_AbiaHB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaHh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbiaHh-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The result for registration token based on hashed Guid will be returned.&quot;)" predecessor_AbstractAction="_AbiaHR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaHx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbiaHx-9Ee-LmoSpecUQcA" entityName="ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))" predecessor_AbstractAction="_AbiaHh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaIB-9Ee-LmoSpecUQcA">
+                    <localVariableUsages_SetVariableAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.ok(new InternalTestResult(testResult.getTestResult(),testResult.getSc(),testResult.getLabId(),testResult.getResponsePadding(),appSession.get().getHashedGuid()))"/>
+                      </namedReference__VariableUsage>
+                    </localVariableUsages_SetVariableAction>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbiaIB-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Internal TestState is not allowed for TeleTan Token.&quot;)" predecessor_AbstractAction="_AbiaHx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbiaIR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbiaIR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbiaIB-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(HASHED_GUID)"/>
+              </branches_Branch>
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbjBIx-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbjBJR-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbjBIB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbjBIR-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbjBIR-9Ee-LmoSpecUQcA" entityName="log.info(&quot;Internal TestState is not allowed for TeleTan Token.&quot;)" predecessor_AbstractAction="_AbjBIB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbjBIh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbjBIh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbjBIR-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(TELETAN)"/>
+              </branches_Branch>
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbjBKB-9Ee-LmoSpecUQcA">
+                <branchBehaviour_BranchTransition id="_AbjBKh-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbjBJh-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbjBJx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbjBJx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbjBJh-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if()"/>
+              </branches_Branch>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbjBLB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbjBKx-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(appSession.isPresent())"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_AbjBMR-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The registration token doesn't exist.&quot;)" predecessor_AbstractAction="_AbjBMB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbjBMh-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbjBMh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbjBMR-9Ee-LmoSpecUQcA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxvUB7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_service_FakeRequestService">
-    <assemblyContexts__ComposedStructure id="_wWyWYB7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWs23R7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_AcWSZh-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_InternalTanController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcWSZB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQR-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcWSZR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQx-9Ee-LmoSpecUQcA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbbsbR-9Ee-LmoSpecUQcA" describedService__SEFF="_AUog0B-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_AbaeUB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbFWx-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_AbbFWx-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbaeUB-9Ee-LmoSpecUQcA" successor_AbstractAction="_Abbsax-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbbFUh-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbbFVB-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbaeUR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbFUB-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_AbbFUB-9Ee-LmoSpecUQcA" entityName="requiredRoles.add(AuthorizationRole.AUTH_C19_HOTLINE)" predecessor_AbstractAction="_AbaeUR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbFUR-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbbFUR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbbFUB-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(teleTanType == null)"/>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbbFWB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_AbbFWh-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbbFVR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbFVh-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_AbbFVh-9Ee-LmoSpecUQcA" entityName="requiredRoles.add(AuthorizationRole.AUTH_C19_HOTLINE_EVENT)" predecessor_AbstractAction="_AbbFVR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbFVx-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbbFVx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbbFVh-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(teleTanType == TeleTanType.EVENT)"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_Abbsax-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbbFWx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbsbB-9Ee-LmoSpecUQcA">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbbsaB-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_Abbsah-9Ee-LmoSpecUQcA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_AbbFXB-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbsZh-9Ee-LmoSpecUQcA"/>
+            <steps_Behaviour xsi:type="seff:BranchAction" id="_AbbsZh-9Ee-LmoSpecUQcA" entityName="If Branch" predecessor_AbstractAction="_AbbFXB-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbsZx-9Ee-LmoSpecUQcA">
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbbFYR-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_AbbsYB-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbbFXR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbFXh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:InternalAction" id="_AbbFXh-9Ee-LmoSpecUQcA" entityName="log.info(&quot;The teleTAN is generated.&quot;)" predecessor_AbstractAction="_AbbFXR-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbFXx-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbbFXx-9Ee-LmoSpecUQcA" entityName="ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))" predecessor_AbstractAction="_AbbFXh-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbbFYB-9Ee-LmoSpecUQcA">
+                    <localVariableUsages_SetVariableAction>
+                      <variableCharacterisation_VariableUsage type="VALUE">
+                        <specification_VariableCharacterisation specification="PrimitiveType.ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))"/>
+                      </variableCharacterisation_VariableUsage>
+                      <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+                        <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="ResponseEntity.status(HttpStatus.CREATED).body(new TeleTan(teleTan))"/>
+                      </namedReference__VariableUsage>
+                    </localVariableUsages_SetVariableAction>
+                  </steps_Behaviour>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbbFYB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbbFXx-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: if(tanService.isTeleTanRateLimitNotExceeded())"/>
+              </branches_Branch>
+              <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_AbbsYx-9Ee-LmoSpecUQcA" entityName="Guarded Branch Transition">
+                <branchBehaviour_BranchTransition id="_AbbsZR-9Ee-LmoSpecUQcA">
+                  <steps_Behaviour xsi:type="seff:StartAction" id="_AbbsYR-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbbsYh-9Ee-LmoSpecUQcA"/>
+                  <steps_Behaviour xsi:type="seff:StopAction" id="_AbbsYh-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbbsYR-9Ee-LmoSpecUQcA"/>
+                </branchBehaviour_BranchTransition>
+                <branchCondition_GuardedBranchTransition specification="@position: Condition: else"/>
+              </branches_Branch>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_AbbsZx-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbbsZh-9Ee-LmoSpecUQcA"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(jwtService.isAuthorized(authorization.getToken(),requiredRoles))"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbbsbB-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_Abbsax-9Ee-LmoSpecUQcA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_AbcTch-9Ee-LmoSpecUQcA" describedService__SEFF="_AVh4sB-9Ee-LmoSpecUQcA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Abbsbx-9Ee-LmoSpecUQcA" entityName="Start Action" successor_AbstractAction="_AbcTcB-9Ee-LmoSpecUQcA"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_AbcTcB-9Ee-LmoSpecUQcA" entityName="tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)" predecessor_AbstractAction="_Abbsbx-9Ee-LmoSpecUQcA" successor_AbstractAction="_AbcTcR-9Ee-LmoSpecUQcA">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="tanService.getEntityByTan(tan.getTan()).filter(t -> t.canBeRedeemed(LocalDateTime.now())).map(t -> {&#xA;  tanService.deleteTan(t);&#xA;  log.info(&quot;The Tan is valid.&quot;);&#xA;  return t;&#xA;}&#xA;).map(t -> {&#xA;  ResponseEntity.BodyBuilder responseBuilder=ResponseEntity.ok();&#xA;  if (t.getTeleTanType() != null) {&#xA;    responseBuilder.header(TELE_TAN_TYPE_HEADER,t.getTeleTanType().toString());&#xA;  }&#xA;  return responseBuilder.build();&#xA;}&#xA;).orElseGet(() -> {&#xA;  log.info(&quot;The Tan is invalid.&quot;);&#xA;  throw new VerificationServerException(HttpStatus.NOT_FOUND,&quot;No Tan found or Tan is invalid&quot;);&#xA;}&#xA;)"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_AbcTcR-9Ee-LmoSpecUQcA" entityName="Stop Action" predecessor_AbstractAction="_AbcTcB-9Ee-LmoSpecUQcA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxvUh7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTokenController">
-    <assemblyContexts__ComposedStructure id="_wWyWZB7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWrBoR7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWzkgR7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWrBoB7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxvUR7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWZB7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxvUR7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST] Provider" providedInterface__OperationProvidedRole="_wWgplR7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AccZAR-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_InternalTestStateController">
+    <assemblyContexts__ComposedStructure id="_AceOMh-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcT2LB-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1RR-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcT2Kx-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AccZAB-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AceOMh-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AccZAB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2 Provider" providedInterface__OperationProvidedRole="_AcLTRB-9Ee-LmoSpecUQcA"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxvVR7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_InternalTanController">
-    <assemblyContexts__ComposedStructure id="_wWyWah7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWgpnR7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWy9cR7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWgpmx7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxvUx7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWah7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWzkgB7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWgpnB7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxvVB7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWah7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxvUx7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST] Provider" providedInterface__OperationProvidedRole="_wWgplh7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxvVB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmB7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AcdAER-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTestStateController">
+    <assemblyContexts__ComposedStructure id="_AcdnJB-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcSA8R-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1RB-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcSA8B-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AcdAEB-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AcdnJB-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcdAEB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQh-9Ee-LmoSpecUQcA"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxvVx7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ExternalTanController">
-    <assemblyContexts__ComposedStructure id="_wWyWZh7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWmJKB7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWy9cB7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWmJJx7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxvVh7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWZh7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxvVh7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan[POST] Provider" providedInterface__OperationProvidedRole="_wWgpmR7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AcdAFB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_InternalTanController">
+    <assemblyContexts__ComposedStructure id="_AceOMB-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcWSZh-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1QR-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcWSZR-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AcdAEx-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AceOMB-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1Qx-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcWSZB-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AcdAEh-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AceOMB-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcdAEh-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQR-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcdAEx-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQx-9Ee-LmoSpecUQcA"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_wWxvWR7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_InternalTestStateController">
-    <assemblyContexts__ComposedStructure id="_wWyWYh7zEe-6p5TzsiMONg" encapsulatedComponent__AssemblyContext="_wWolZB7zEe-6p5TzsiMONg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_wWy9cx7zEe-6p5TzsiMONg" innerProvidedRole_ProvidedDelegationConnector="_wWolYx7zEe-6p5TzsiMONg" outerProvidedRole_ProvidedDelegationConnector="_wWxvWB7zEe-6p5TzsiMONg" assemblyContext_ProvidedDelegationConnector="_wWyWYh7zEe-6p5TzsiMONg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_wWxvWB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2 Provider" providedInterface__OperationProvidedRole="_wWgplx7zEe-6p5TzsiMONg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AcdAFh-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTokenController">
+    <assemblyContexts__ComposedStructure id="_AcdnIh-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcLTRx-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1QB-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcLTRh-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AcdAFR-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AcdnIh-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcdAFR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST] Provider" providedInterface__OperationProvidedRole="_AcLTRR-9Ee-LmoSpecUQcA"/>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgplR7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST]">
-    <signatures__OperationInterface id="_wP8HhB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST]" returnType__OperationSignature="_wPEk0B7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wP8Hgx7zEe-6p5TzsiMONg" parameterName="RegistrationTokenRequest" modifier__Parameter="in"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AcdAFx-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_service_FakeRequestService">
+    <assemblyContexts__ComposedStructure id="_AcdnIB-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcO9qB-9Ee-LmoSpecUQcA"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_AcdAGR-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ExternalTanController">
+    <assemblyContexts__ComposedStructure id="_AcdnJh-9Ee-LmoSpecUQcA" encapsulatedComponent__AssemblyContext="_AcO9qh-9Ee-LmoSpecUQcA"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Ace1Qh-9Ee-LmoSpecUQcA" innerProvidedRole_ProvidedDelegationConnector="_AcO9qR-9Ee-LmoSpecUQcA" outerProvidedRole_ProvidedDelegationConnector="_AcdAGB-9Ee-LmoSpecUQcA" assemblyContext_ProvidedDelegationConnector="_AcdnJh-9Ee-LmoSpecUQcA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_AcdAGB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan[POST] Provider" providedInterface__OperationProvidedRole="_AcLTQB-9Ee-LmoSpecUQcA"/>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTQB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan[POST]">
+    <signatures__OperationInterface id="_AVgqkh-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan[POST]" returnType__OperationSignature="_AVgDgB-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AVfccB-9Ee-LmoSpecUQcA" parameterName="RegistrationToken" modifier__Parameter="in"/>
       <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgplh7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST]">
-    <signatures__OperationInterface id="_wP8HgB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST]" returnType__OperationSignature="_wP6SUB7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wP7gcx7zEe-6p5TzsiMONg" parameterName="Tan" modifier__Parameter="in"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTQR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST]">
+    <signatures__OperationInterface id="_AUog0B-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST]" returnType__OperationSignature="_AUn5wR-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AUmroB-9Ee-LmoSpecUQcA" parameterName="AuthorizationToken" modifier__Parameter="in"/>
+      <parameters__OperationSignature dataType__Parameter="_AUn5wB-9Ee-LmoSpecUQcA" parameterName="TeleTanType" modifier__Parameter="in"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgplx7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2">
-    <signatures__OperationInterface id="_wP6SUR7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2" returnType__OperationSignature="_wP6SUB7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wPDWsB7zEe-6p5TzsiMONg" parameterName="RegistrationToken" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgpmB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST]">
-    <signatures__OperationInterface id="_wP65ZB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan/teletan[POST]" returnType__OperationSignature="_wP6SUB7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wP65Yh7zEe-6p5TzsiMONg" parameterName="AuthorizationToken" modifier__Parameter="in"/>
-      <parameters__OperationSignature dataType__Parameter="_wP65Yx7zEe-6p5TzsiMONg" parameterName="TeleTanType" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgpmR7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan[POST]">
-    <signatures__OperationInterface id="_wP7gcB7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/tan[POST]" returnType__OperationSignature="_wPEk0B7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wPDWsB7zEe-6p5TzsiMONg" parameterName="RegistrationToken" modifier__Parameter="in"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTQh-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]">
+    <signatures__OperationInterface id="_AVgDgR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]" returnType__OperationSignature="_AVgDgB-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AVfccB-9Ee-LmoSpecUQcA" parameterName="RegistrationToken" modifier__Parameter="in"/>
       <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_wWgpmh7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]">
-    <signatures__OperationInterface id="_wPFL4B7zEe-6p5TzsiMONg" entityName="SPRING-APPLICATION/version/v1/testresult[POST]" returnType__OperationSignature="_wPEk0B7zEe-6p5TzsiMONg">
-      <parameters__OperationSignature dataType__Parameter="_wPDWsB7zEe-6p5TzsiMONg" parameterName="RegistrationToken" modifier__Parameter="in"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTQx-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST]">
+    <signatures__OperationInterface id="_AVh4sB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/tan/verify[POST]" returnType__OperationSignature="_AUn5wR-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AVhRpB-9Ee-LmoSpecUQcA" parameterName="Tan" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTRB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2">
+    <signatures__OperationInterface id="_AVgDhB-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/testresult[POST]$2" returnType__OperationSignature="_AUn5wR-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AVfccB-9Ee-LmoSpecUQcA" parameterName="RegistrationToken" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_AcLTRR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST]">
+    <signatures__OperationInterface id="_AVhRoR-9Ee-LmoSpecUQcA" entityName="SPRING-APPLICATION/version/v1/registrationToken[POST]" returnType__OperationSignature="_AVgDgB-9Ee-LmoSpecUQcA">
+      <parameters__OperationSignature dataType__Parameter="_AVhRoB-9Ee-LmoSpecUQcA" parameterName="RegistrationTokenRequest" modifier__Parameter="in"/>
       <parameters__OperationSignature parameterName="String" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wPDWsB7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_model_RegistrationToken"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wPEk0B7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_DeferredResult"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wP6SUB7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_controller_ResponseEntity"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wP65Yh7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_model_AuthorizationToken"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wP65Yx7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_model_TeleTanType"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wP7gcx7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_model_Tan"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_wP8Hgx7zEe-6p5TzsiMONg" entityName="app_coronawarn_verification_model_RegistrationTokenRequest"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AUmroB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_model_AuthorizationToken"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AUn5wB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_model_TeleTanType"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AUn5wR-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_ResponseEntity"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AVfccB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_model_RegistrationToken"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AVgDgB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_controller_DeferredResult"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AVhRoB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_model_RegistrationTokenRequest"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_AVhRpB-9Ee-LmoSpecUQcA" entityName="app_coronawarn_verification_model_Tan"/>
 </repository:Repository>
