@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202404221423 | Sun Jun  2 02:17:04 UTC 2024 |
+| v5.2.0.202404221423 | Mon Jun  3 02:16:28 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Jun  2 02:17:04 UTC 2024
+Date of execution: Mon Jun  3 02:16:28 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 1348a86de1ce91d19422687567a7964fc9d9cc95 |
+| Commit         | 85f3776883064b9079272cd4077d44fcc0a6985a |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Jun  2 02:17:04 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.038GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 693MiB / 15981MiB  |
+| Memory | 704MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 14712.70 |
-| User CPU Time | 14752.82 |
-| System CPU Time | 45.17 |
+| Real CPU Time | 13861.79 |
+| User CPU Time | 13921.60 |
+| System CPU Time | 64.71 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.09 s (300.5 files/s, 37113.3 lines/s)
+cloc v 1.90  T=24.45 s (296.2 files/s, 36582.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2973|40391|29193|267898
-Java|2128|54580|55496|228517
+TypeScript|2975|40420|29231|268089
+Java|2128|54592|55504|228574
 JSON|496|15|0|94727
 HTML|712|195|649|53463
 Sass|334|2664|190|14784
@@ -50,7 +50,7 @@ XML|82|94|146|6514
 YAML|142|475|1067|6116
 Python|34|501|126|1760
 Bourne Shell|44|345|420|1682
-Pascal|4|443|48|1545
+Pascal|5|465|56|1655
 CSV|11|4|0|1435
 Markdown|32|414|0|1220
 Swift|41|229|329|985
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7240|105945|92590|695501
+SUM:|7243|106008|92644|695859
