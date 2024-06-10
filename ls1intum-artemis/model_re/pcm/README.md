@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406050756 | Sun Jun  9 02:17:54 UTC 2024 |
+| v5.2.0.202406050756 | Mon Jun 10 02:17:15 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Jun  9 02:17:54 UTC 2024
+Date of execution: Mon Jun 10 02:17:15 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 33b3d4fd6c31f55a8b49b38e57be86782517432e |
+| Commit         | df6b7899a8778e61b08a495f7b6024601cb70bc9 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Jun  9 02:17:54 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.970GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.238GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 689MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16372.60 |
-| User CPU Time | 16449.09 |
-| System CPU Time | 72.94 |
+| Real CPU Time | 16275.46 |
+| User CPU Time | 16344.79 |
+| System CPU Time | 68.36 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,15 +36,15 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.76 s (295.8 files/s, 36345.7 lines/s)
+cloc v 1.90  T=24.80 s (294.9 files/s, 36234.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2987|40460|29240|268860
-Java|2171|55080|56190|230477
-JSON|500|15|0|94855
-HTML|720|199|651|53854
-Sass|340|2705|190|15029
+TypeScript|2987|40458|29245|268875
+Java|2162|54892|55889|229702
+JSON|500|15|0|94857
+HTML|720|199|652|53832
+Sass|340|2707|190|15012
 reStructuredText|92|4594|3148|7736
 XML|84|98|152|6564
 YAML|143|479|1071|6342
@@ -56,14 +56,14 @@ Markdown|32|414|0|1220
 Swift|41|229|329|985
 Handlebars|8|86|0|897
 Maven|11|0|95|896
-Gradle|13|151|107|880
+Gradle|13|151|107|879
 SVG|13|0|3|855
 Groovy|13|127|363|667
 CSS|2|147|1|659
 OCaml|6|82|228|426
 Bourne Again Shell|1|66|74|352
 TeX|1|1|6|317
-JavaScript|7|27|44|264
+JavaScript|6|27|29|251
 Kotlin|14|76|69|214
 Expect|4|39|37|183
 PHP|2|92|656|117
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7322|106666|93385|699726
+SUM:|7312|106478|93075|698915
