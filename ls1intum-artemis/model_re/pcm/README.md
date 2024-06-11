@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406050756 | Mon Jun 10 02:17:15 UTC 2024 |
+| v5.2.0.202406050756 | Tue Jun 11 02:16:23 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Jun 10 02:17:15 UTC 2024
+Date of execution: Tue Jun 11 02:16:23 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | df6b7899a8778e61b08a495f7b6024601cb70bc9 |
+| Commit         | 0a0deafa9ba2e8e1cf17995e527460e7c3e421cb |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Mon Jun 10 02:17:15 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.238GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 689MiB / 15981MiB  |
+| Memory | 700MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16275.46 |
-| User CPU Time | 16344.79 |
-| System CPU Time | 68.36 |
+| Real CPU Time | 16283.99 |
+| User CPU Time | 16353.69 |
+| System CPU Time | 69.39 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.80 s (294.9 files/s, 36234.0 lines/s)
+cloc v 1.90  T=25.69 s (284.6 files/s, 34969.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2987|40458|29245|268875
-Java|2162|54892|55889|229702
+Java|2162|54892|55889|229703
 JSON|500|15|0|94857
 HTML|720|199|652|53832
 Sass|340|2707|190|15012
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7312|106478|93075|698915
+SUM:|7312|106478|93075|698916
