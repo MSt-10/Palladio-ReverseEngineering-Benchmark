@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406050756 | Sat Jun 15 02:16:36 UTC 2024 |
+| v5.2.0.202406050756 | Sun Jun 16 02:18:41 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Jun 15 02:16:36 UTC 2024
+Date of execution: Sun Jun 16 02:18:41 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/sqshq/piggymetrics |
@@ -18,16 +18,16 @@ Date of execution: Sat Jun 15 02:16:36 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1021-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.184GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 697MiB / 15981MiB  |
+| Memory | 701MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.39 |
-| User CPU Time | 16.49 |
-| System CPU Time | 0.67 |
+| Real CPU Time | 9.94 |
+| User CPU Time | 16.13 |
+| System CPU Time | 0.82 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.49 s (327.6 files/s, 45148.9 lines/s)
+cloc v 1.90  T=0.49 s (325.8 files/s, 44904.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406050756 | Sat Jun 15 02:15:48 UTC 2024 |
+| v5.2.0.202406050756 | Sun Jun 16 02:18:04 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Jun 15 02:15:48 UTC 2024
+Date of execution: Sun Jun 16 02:18:04 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 5189c95195a569372ca023c61c2906ff8130879b |
+| Commit         | 59c255c7900da5165f80efef64fe0dbad48c6137 |
 
 
 ## System information
@@ -20,14 +20,14 @@ Date of execution: Sat Jun 15 02:15:48 UTC 2024
 | Kernel | 6.5.0-1021-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 716MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 15766.13 |
-| User CPU Time | 15829.48 |
-| System CPU Time | 70.88 |
+| Real CPU Time | 16748.86 |
+| User CPU Time | 16802.87 |
+| System CPU Time | 55.78 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,13 +36,13 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=26.40 s (277.1 files/s, 34040.7 lines/s)
+cloc v 1.90  T=24.49 s (298.7 files/s, 36698.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2987|40458|29245|268889
-Java|2162|54892|55895|229696
-JSON|500|15|0|94861
+TypeScript|2987|40459|29248|268879
+Java|2162|54895|55900|229710
+JSON|500|15|0|94862
 HTML|720|199|652|53839
 Sass|340|2707|190|15012
 reStructuredText|95|4653|3207|7802
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7315|106537|93133|699009
+SUM:|7315|106541|93141|699014
