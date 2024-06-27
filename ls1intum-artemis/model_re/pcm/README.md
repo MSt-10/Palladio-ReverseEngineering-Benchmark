@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406240805 | Wed Jun 26 02:16:08 UTC 2024 |
+| v5.2.0.202406240805 | Thu Jun 27 02:16:18 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Jun 26 02:16:08 UTC 2024
+Date of execution: Thu Jun 27 02:16:18 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 57161b3f2f698025dc8036f67e46fcb1095d2922 |
+| Commit         | 1edba55278ab9cbfb41530f937874581b48bd0b7 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Wed Jun 26 02:16:08 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 702MiB / 15981MiB  |
+| Memory | 703MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17134.68 |
-| User CPU Time | 17198.40 |
-| System CPU Time | 71.63 |
+| Real CPU Time | 16734.85 |
+| User CPU Time | 16805.66 |
+| System CPU Time | 63.95 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,15 +36,15 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.54 s (300.4 files/s, 36898.6 lines/s)
+cloc v 1.90  T=24.60 s (299.6 files/s, 36799.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|3004|40796|29368|271500
-Java|2191|55280|56340|231396
+Java|2191|55277|56340|231380
 JSON|500|15|0|95317
 HTML|725|200|658|54261
-Sass|342|2721|190|15078
+Sass|342|2722|190|15083
 reStructuredText|95|4695|3335|7855
 XML|88|104|167|6671
 YAML|143|479|1064|6350
@@ -76,4 +76,4 @@ INI|1|6|2|15
 make|1|5|8|11
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7371|107298|93734|704321
+SUM:|7371|107296|93734|704310
