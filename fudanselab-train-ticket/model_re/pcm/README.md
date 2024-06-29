@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406240805 | Fri Jun 28 02:16:37 UTC 2024 |
+| v5.2.0.202406240805 | Sat Jun 29 02:15:52 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Jun 28 02:16:37 UTC 2024
+Date of execution: Sat Jun 29 02:15:52 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/fudanselab/train-ticket |
@@ -18,16 +18,16 @@ Date of execution: Fri Jun 28 02:16:37 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.259GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 699MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 43.32 |
-| User CPU Time | 64.75 |
-| System CPU Time | 4.07 |
+| Real CPU Time | 39.23 |
+| User CPU Time | 62.37 |
+| System CPU Time | 4.31 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=7.88 s (295.1 files/s, 62440.0 lines/s)
+cloc v 1.90  T=8.24 s (282.3 files/s, 59739.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:

@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406240805 | Fri Jun 28 02:16:43 UTC 2024 |
+| v5.2.0.202406240805 | Sat Jun 29 02:15:53 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Jun 28 02:16:43 UTC 2024
+Date of execution: Sat Jun 29 02:15:53 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 79f068d33a26c5849e0f67532d4ba0c98b2f07f1 |
+| Commit         | 41682036320a62289545cb9327108e95f4dd7b1f |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Fri Jun 28 02:16:43 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.238GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.235GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 697MiB / 15981MiB  |
+| Memory | 704MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16651.89 |
-| User CPU Time | 16699.80 |
-| System CPU Time | 51.79 |
+| Real CPU Time | 17207.59 |
+| User CPU Time | 17258.37 |
+| System CPU Time | 60.16 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,15 +36,15 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.77 s (298.2 files/s, 36606.8 lines/s)
+cloc v 1.90  T=24.78 s (298.3 files/s, 36617.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3010|40925|29403|272011
-Java|2193|55352|56432|231821
-JSON|502|15|0|95455
-HTML|727|208|631|54222
-Sass|340|2715|190|14982
+TypeScript|3010|40953|29428|272157
+Java|2195|55364|56452|231909
+JSON|502|15|0|95485
+HTML|727|209|631|54292
+Sass|340|2717|190|14989
 reStructuredText|95|4700|3339|7868
 XML|89|104|167|6684
 YAML|144|480|1065|6354
@@ -76,4 +76,4 @@ make|6|34|139|72
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7388|107538|93971|705355
+SUM:|7390|107581|94016|705696
