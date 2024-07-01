@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406240805 | Sun Jun 30 02:18:34 UTC 2024 |
+| v5.2.0.202406240805 | Mon Jul  1 02:20:32 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Jun 30 02:18:34 UTC 2024
+Date of execution: Mon Jul  1 02:20:32 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
@@ -24,15 +24,15 @@ Date of execution: Sun Jun 30 02:18:34 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.787GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15981MiB  |
+| Memory | 690MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 28.38 |
-| User CPU Time | 55.10 |
+| Real CPU Time | 22.86 |
+| User CPU Time | 56.01 |
 | System CPU Time | 2.73 |
 <!--
 Explainations:
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.49 s (245.9 files/s, 52548.6 lines/s)
+cloc v 1.90  T=9.87 s (236.5 files/s, 50549.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
