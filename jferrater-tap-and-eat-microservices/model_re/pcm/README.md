@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202407010739 | Tue Jul  2 02:16:38 UTC 2024 |
+| v5.2.0.202407010739 | Tue Jul  2 02:16:37 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Jul  2 02:16:38 UTC 2024
+Date of execution: Tue Jul  2 02:16:37 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
-| Repository URL | https://github.com/cloudscale-project/cloudstore |
+| Repository URL | https://github.com/jferrater/tap-and-eat-microservices |
 | Branch         | master |
-| Commit         | dcbf23a2b9150ba69733e6776085e96bbfd96572 |
+| Commit         | 3ad20b8fa421dc837ef423270a9bf9ece1615a03 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Jul  2 02:16:38 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.553GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.189GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 697MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.26 |
-| User CPU Time | 16.57 |
-| System CPU Time | 0.67 |
+| Real CPU Time | 4.19 |
+| User CPU Time | 12.67 |
+| System CPU Time | 0.56 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,17 +36,18 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.29 s (460.2 files/s, 79298.7 lines/s)
+cloc v 1.90  T=0.12 s (589.8 files/s, 19631.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|98|2234|1327|7673
-CSS|4|975|42|6268
-JavaScript|2|549|330|1403
-HTML|15|49|3|1098
-XML|12|54|43|387
-Maven|1|7|101|314
-Markdown|1|78|0|126
-Bourne Shell|1|7|0|21
+Maven|9|83|0|657
+Java|35|203|119|624
+Bourne Shell|1|30|65|138
+DOS Batch|1|32|0|113
+YAML|13|20|1|111
+Markdown|1|4|0|61
+Dockerfile|8|0|0|48
+XML|1|0|0|17
+INI|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|134|3953|1846|17290
+SUM:|70|372|185|1773

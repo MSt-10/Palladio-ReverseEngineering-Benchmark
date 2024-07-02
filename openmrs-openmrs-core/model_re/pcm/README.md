@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202406240805 | Mon Jul  1 02:20:32 UTC 2024 |
+| v5.2.0.202407010739 | Tue Jul  2 02:16:38 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Jul  1 02:20:32 UTC 2024
+Date of execution: Tue Jul  2 02:16:38 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 2586624dbca17138658d4dd821b1355226106dca |
+| Commit         | 3933fb312cafe98c56924eb7e63ebf53f29e8a6a |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Mon Jul  1 02:20:32 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.226GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 690MiB / 15981MiB  |
+| Memory | 696MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 22.86 |
-| User CPU Time | 56.01 |
-| System CPU Time | 2.73 |
+| Real CPU Time | 23.81 |
+| User CPU Time | 56.16 |
+| System CPU Time | 2.84 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.87 s (236.5 files/s, 50549.1 lines/s)
+cloc v 1.90  T=9.82 s (237.6 files/s, 50788.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1878|47394|90818|190928
+Java|1878|47399|90821|190939
 XML|305|3179|2879|134433
 SQL|5|918|741|5464
 Maven|21|319|105|4575
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2334|53706|96776|348345
+SUM:|2334|53711|96779|348356
