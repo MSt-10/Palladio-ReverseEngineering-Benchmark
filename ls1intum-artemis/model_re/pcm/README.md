@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202407010739 | Wed Jul  3 02:16:14 UTC 2024 |
+| v5.2.0.202407010739 | Thu Jul  4 02:16:38 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Jul  3 02:16:14 UTC 2024
+Date of execution: Thu Jul  4 02:16:38 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 9561277c55f3ca05b8262ae1062a06d5daec42f5 |
+| Commit         | a6eade2a875cae1080a86344b5c294af894a4b7b |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Wed Jul  3 02:16:14 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 695MiB / 15981MiB  |
+| Memory | 724MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17333.54 |
-| User CPU Time | 17406.92 |
-| System CPU Time | 72.47 |
+| Real CPU Time | 17842.88 |
+| User CPU Time | 17913.75 |
+| System CPU Time | 73.13 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,16 +36,16 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=26.37 s (281.6 files/s, 34398.8 lines/s)
+cloc v 1.90  T=25.25 s (294.0 files/s, 35922.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3023|40952|29084|271312
-Java|2201|55502|56650|232489
+TypeScript|3023|40952|29084|271327
+Java|2201|55508|56650|232511
 JSON|504|15|0|95533
 HTML|734|209|611|54262
 Sass|345|2714|190|14984
-reStructuredText|95|4700|3346|7865
+reStructuredText|95|4701|3344|7855
 XML|90|104|167|6696
 YAML|144|480|1065|6353
 Python|34|501|126|1760
@@ -76,4 +76,4 @@ make|6|34|139|72
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7424|107715|93857|705455
+SUM:|7424|107722|93855|705482
