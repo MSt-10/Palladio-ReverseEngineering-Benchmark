@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202407010739 | Sun Jul  7 02:18:33 UTC 2024 |
+| v5.2.0.202407010739 | Mon Jul  8 02:17:27 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Jul  7 02:18:34 UTC 2024
+Date of execution: Mon Jul  8 02:17:27 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kit-sdq/esda |
@@ -18,15 +18,15 @@ Date of execution: Sun Jul  7 02:18:34 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1022-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.264GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 716MiB / 15981MiB  |
+| Memory | 677MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.29 |
-| User CPU Time | 11.46 |
+| Real CPU Time | 7.70 |
+| User CPU Time | 12.78 |
 | System CPU Time | 0.49 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.05 s (831.4 files/s, 33781.1 lines/s)
+cloc v 1.90  T=0.05 s (835.4 files/s, 33945.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
