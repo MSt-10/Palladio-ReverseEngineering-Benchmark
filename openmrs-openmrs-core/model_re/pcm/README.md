@@ -1,21 +1,21 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202407010739 | Tue Jul  9 02:17:27 UTC 2024 |
+| v5.2.0.202407010739 | Wed Jul 10 02:17:05 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Jul  9 02:17:27 UTC 2024
+Date of execution: Wed Jul 10 02:17:05 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | de6c77f431f9eb767fd7637ef75c644865fe5321 |
+| Commit         | 18b97aec8f8dc12358b9ca72154c3e5def86d65f |
 
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
 | Branch         | master |
-| Commit         | ff78c3ab8adc3ca31485cb1f858ad16496c8475d |
+| Commit         | 57b2e5ed9ce59201a351093ea68e62de408799ff |
 
 
 ## System information
@@ -24,16 +24,16 @@ Date of execution: Tue Jul  9 02:17:27 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1023-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 676MiB / 15981MiB  |
+| Memory | 694MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 26.39 |
-| User CPU Time | 55.72 |
-| System CPU Time | 2.57 |
+| Real CPU Time | 23.17 |
+| User CPU Time | 57.45 |
+| System CPU Time | 2.72 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.40 s (248.2 files/s, 53056.4 lines/s)
+cloc v 1.90  T=9.49 s (245.9 files/s, 52556.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -55,7 +55,7 @@ CSS|13|290|678|2049
 Velocity Template Language|19|109|2|1213
 Markdown|12|352|0|1211
 JSP|7|180|68|921
-YAML|11|107|79|787
+YAML|11|107|79|788
 DTD|8|151|24|667
 XSLT|1|30|48|555
 JSON|6|2|0|503
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2334|53711|96779|348356
+SUM:|2334|53711|96779|348357
