@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202407010739 | Fri Aug  2 02:18:21 UTC 2024 |
+| v5.2.0.202407010739 | Sun Aug  4 06:38:22 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Aug  2 02:18:21 UTC 2024
+Date of execution: Sun Aug  4 06:38:22 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
 | Branch         | main |
-| Commit         | d7805f37ba073cd9523fb8510d570a4a1f2687f8 |
+| Commit         | 09172e93c31b055689a3ecc6707cbfa2eea7c34f |
 
 
 ## System information
@@ -17,17 +17,17 @@ Date of execution: Fri Aug  2 02:18:21 UTC 2024
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1024-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.641GHz  |
+| Kernel | 6.5.0-1025-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 712MiB / 15981MiB  |
+| Memory | 711MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.48 |
-| User CPU Time | 14.32 |
-| System CPU Time | 0.66 |
+| Real CPU Time | 6.69 |
+| User CPU Time | 14.49 |
+| System CPU Time | 0.61 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,14 +36,14 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.35 s (421.8 files/s, 46546.8 lines/s)
+cloc v 1.90  T=0.35 s (427.6 files/s, 46986.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 SVG|2|0|0|9158
 Java|48|326|778|1167
-Maven|8|71|40|878
-JSON|12|0|0|816
+Maven|8|71|41|879
+JSON|13|0|0|849
 XML|3|0|1|579
 YAML|16|42|11|345
 LESS|4|72|16|336
@@ -51,9 +51,9 @@ HTML|11|48|1|303
 Bourne Shell|5|41|63|298
 JavaScript|21|43|5|263
 SQL|12|26|0|207
-Markdown|2|71|0|173
+Markdown|2|72|0|174
 DOS Batch|1|36|0|169
 Dockerfile|3|6|4|24
 INI|1|6|0|21
 --------|--------|--------|--------|--------
-SUM:|149|788|919|14737
+SUM:|150|789|920|14772
