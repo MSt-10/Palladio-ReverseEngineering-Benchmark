@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408041728 | Tue Aug  6 02:17:49 UTC 2024 |
+| v5.2.0.202408041728 | Wed Aug  7 02:18:46 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Aug  6 02:17:49 UTC 2024
+Date of execution: Wed Aug  7 02:18:46 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | f4d8a38bc9203ecbde28bbb1807962b49bf19612 |
+| Commit         | f8232475bb13a912e52dec34d9d344d5506892f5 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Tue Aug  6 02:17:49 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.279GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 705MiB / 15981MiB  |
+| Memory | 711MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 23.03 |
-| User CPU Time | 57.20 |
-| System CPU Time | 2.73 |
+| Real CPU Time | 18.70 |
+| User CPU Time | 53.99 |
+| System CPU Time | 2.90 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.72 s (240.8 files/s, 51448.0 lines/s)
+cloc v 1.90  T=9.80 s (239.0 files/s, 51077.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1882|47525|91081|191506
+Java|1882|47550|91142|191700
 XML|307|3189|2895|134453
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2341|53876|97055|349144
+SUM:|2341|53901|97116|349338
