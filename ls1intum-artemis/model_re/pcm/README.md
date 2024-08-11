@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408070511 | Sat Aug 10 02:18:06 UTC 2024 |
+| v5.2.0.202408070511 | Sun Aug 11 02:21:28 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Aug 10 02:18:06 UTC 2024
+Date of execution: Sun Aug 11 02:21:28 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | c29ca89224027c50b5294665f6377f27156a0e29 |
+| Commit         | edbd61482649d182a9e3646838d0a87329f54f7a |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sat Aug 10 02:18:06 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.994GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.998GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 712MiB / 15981MiB  |
+| Memory | 689MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17605.62 |
-| User CPU Time | 17677.92 |
-| System CPU Time | 75.58 |
+| Real CPU Time | 17739.94 |
+| User CPU Time | 17788.19 |
+| System CPU Time | 49.25 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,13 +36,13 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.79 s (290.3 files/s, 35496.4 lines/s)
+cloc v 1.90  T=25.01 s (299.4 files/s, 36608.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3066|41413|29647|274700
+TypeScript|3065|41422|29701|274825
 Java|2214|55655|57182|233633
-JSON|503|15|0|96574
+JSON|503|15|0|96455
 HTML|742|217|616|54722
 Sass|345|2746|193|15132
 reStructuredText|95|4779|3412|8031
@@ -76,4 +76,4 @@ make|6|34|139|72
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7489|108463|95068|712068
+SUM:|7488|108472|95122|712074
