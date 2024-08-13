@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408070511 | Mon Aug 12 02:19:51 UTC 2024 |
+| v5.2.0.202408070511 | Tue Aug 13 02:19:02 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Aug 12 02:19:51 UTC 2024
+Date of execution: Tue Aug 13 02:19:02 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 1b4a0504cefca99d63f0eec2aee16732fc6da85f |
+| Commit         | 5fda6fa4c319870a4381b1d7e33e882b12dde647 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Mon Aug 12 02:19:51 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
 | Memory | 702MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17613.63 |
-| User CPU Time | 17670.07 |
-| System CPU Time | 62.16 |
+| Real CPU Time | 18236.28 |
+| User CPU Time | 18283.72 |
+| System CPU Time | 52.84 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,18 +36,18 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.39 s (295.7 files/s, 36193.4 lines/s)
+cloc v 1.90  T=25.35 s (296.5 files/s, 36299.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3078|41641|29767|276202
-Java|2215|55867|57385|234739
-JSON|505|15|0|96583
-HTML|745|217|614|54738
+TypeScript|3078|41657|29785|276376
+Java|2220|55970|57537|235146
+JSON|505|15|0|96591
+HTML|745|217|614|54744
 Sass|346|2748|193|15142
 reStructuredText|95|4779|3412|8031
-XML|92|113|173|6796
-YAML|144|476|1098|6330
+XML|93|113|173|6835
+YAML|144|475|1098|6332
 Python|35|511|132|1878
 Pascal|5|480|56|1685
 Bourne Shell|42|316|304|1577
@@ -76,4 +76,4 @@ make|6|34|139|72
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7509|108914|95395|714798
+SUM:|7515|109032|95565|715434
