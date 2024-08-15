@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408070511 | Wed Aug 14 02:18:25 UTC 2024 |
+| v5.2.0.202408070511 | Thu Aug 15 02:15:31 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Aug 14 02:18:25 UTC 2024
+Date of execution: Thu Aug 15 02:15:31 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | d1aae84266a86df7b7dc8cc27ef826c6143bb6e8 |
+| Commit         | 02149b3b950f6d9e5400fdd13cb90141554471bb |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,15 +24,15 @@ Date of execution: Wed Aug 14 02:18:25 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.706GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.239GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 710MiB / 15981MiB  |
+| Memory | 681MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 21.19 |
-| User CPU Time | 53.64 |
+| Real CPU Time | 21.82 |
+| User CPU Time | 54.39 |
 | System CPU Time | 2.79 |
 <!--
 Explainations:
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.56 s (245.0 files/s, 52364.7 lines/s)
+cloc v 1.90  T=9.57 s (244.7 files/s, 52307.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1882|47562|91150|191772
+Java|1882|47562|91150|191777
 XML|307|3189|2895|134453
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -55,7 +55,7 @@ CSS|13|290|678|2049
 Velocity Template Language|19|109|2|1213
 Markdown|12|352|0|1211
 JSP|7|180|68|921
-YAML|11|107|79|788
+YAML|11|107|79|787
 DTD|8|151|24|667
 XSLT|1|30|48|555
 JSON|6|2|0|503
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2341|53913|97124|349410
+SUM:|2341|53913|97124|349414
