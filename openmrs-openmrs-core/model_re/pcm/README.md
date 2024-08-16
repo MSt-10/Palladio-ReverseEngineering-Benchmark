@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408070511 | Thu Aug 15 02:15:31 UTC 2024 |
+| v5.2.0.202408070511 | Fri Aug 16 02:18:10 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Aug 15 02:15:31 UTC 2024
+Date of execution: Fri Aug 16 02:18:10 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 02149b3b950f6d9e5400fdd13cb90141554471bb |
+| Commit         | b479e6dde85ced44473f95503c424e37dfa0da6f |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Thu Aug 15 02:15:31 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.239GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.227GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 681MiB / 15981MiB  |
+| Memory | 700MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 21.82 |
-| User CPU Time | 54.39 |
-| System CPU Time | 2.79 |
+| Real CPU Time | 21.81 |
+| User CPU Time | 54.74 |
+| System CPU Time | 2.94 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.57 s (244.7 files/s, 52307.4 lines/s)
+cloc v 1.90  T=9.76 s (239.9 files/s, 51280.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1882|47562|91150|191777
+Java|1882|47577|91156|191809
 XML|307|3189|2895|134453
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2341|53913|97124|349414
+SUM:|2341|53928|97130|349446
