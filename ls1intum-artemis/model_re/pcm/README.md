@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408070511 | Tue Aug 20 02:18:05 UTC 2024 |
+| v5.2.0.202408070511 | Wed Aug 21 02:18:13 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Aug 20 02:18:05 UTC 2024
+Date of execution: Wed Aug 21 02:18:13 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | f6b45e0fc2203f883d818bc1dd82d511205b64fa |
+| Commit         | f4deff34474c3f07e26f3980960e8c1a1da666be |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Aug 20 02:18:05 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.714GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 689MiB / 15981MiB  |
+| Memory | 702MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 16884.21 |
-| User CPU Time | 16948.13 |
-| System CPU Time | 49.42 |
+| Real CPU Time | 17965.32 |
+| User CPU Time | 18035.34 |
+| System CPU Time | 76.41 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,14 +36,14 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.14 s (299.6 files/s, 36694.7 lines/s)
+cloc v 1.90  T=25.77 s (292.5 files/s, 35799.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3081|41741|30148|276959
+TypeScript|3083|41746|30148|277023
 Java|2230|56049|57658|235454
 JSON|509|15|0|97388
-HTML|745|217|614|54744
+HTML|747|217|614|54732
 Sass|346|2747|193|15142
 reStructuredText|95|4779|3412|8031
 XML|93|113|173|6835
@@ -76,4 +76,4 @@ make|6|34|139|72
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7532|109207|96016|717202
+SUM:|7536|109212|96016|717254
