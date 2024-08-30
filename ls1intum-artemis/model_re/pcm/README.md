@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Thu Aug 29 02:21:15 UTC 2024 |
+| v5.2.0.202408280745 | Fri Aug 30 02:21:45 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Aug 29 02:21:15 UTC 2024
+Date of execution: Fri Aug 30 02:21:45 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | edbc5bdea1314739e1cdc575dc696bc86d16a0f3 |
+| Commit         | c2563018412719b391cb0d9a8f85714fd5ba6dd8 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Thu Aug 29 02:21:15 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.780GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 700MiB / 15981MiB  |
+| Memory | 695MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 18975.24 |
-| User CPU Time | 19034.05 |
-| System CPU Time | 60.17 |
+| Real CPU Time | 18627.34 |
+| User CPU Time | 18697.44 |
+| System CPU Time | 74.92 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,15 +36,15 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.79 s (291.3 files/s, 35685.1 lines/s)
+cloc v 1.90  T=25.42 s (296.2 files/s, 36299.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|3033|41258|29556|274638
+TypeScript|3044|41578|29639|276339
 Java|2233|56046|57705|235457
-JSON|510|15|0|97383
-HTML|745|217|592|54077
-Sass|343|2733|190|15052
+JSON|510|15|0|97409
+HTML|748|227|602|54259
+Sass|346|2746|190|15142
 reStructuredText|96|4861|3483|8096
 XML|93|113|173|6835
 YAML|146|492|1064|6468
@@ -78,4 +78,4 @@ TOML|3|5|0|27
 INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7513|109078|95712|715570
+SUM:|7530|109421|95805|717569
