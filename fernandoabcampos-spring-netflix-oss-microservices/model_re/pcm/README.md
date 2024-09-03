@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Sep  2 02:23:45 UTC 2024 |
+| v5.2.0.202408280745 | Tue Sep  3 02:20:56 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Sep  2 02:23:45 UTC 2024
+Date of execution: Tue Sep  3 02:20:56 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/fernandoabcampos/spring-netflix-oss-microservices |
@@ -18,15 +18,15 @@ Date of execution: Mon Sep  2 02:23:45 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.983GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.969GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 698MiB / 15981MiB  |
+| Memory | 715MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.45 |
-| User CPU Time | 12.78 |
+| Real CPU Time | 4.28 |
+| User CPU Time | 12.63 |
 | System CPU Time | 0.52 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.07 s (819.0 files/s, 32647.2 lines/s)
+cloc v 1.90  T=0.07 s (819.0 files/s, 32648.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
