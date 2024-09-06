@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Thu Sep  5 02:22:12 UTC 2024 |
+| v5.2.0.202408280745 | Fri Sep  6 02:22:07 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Sep  5 02:22:12 UTC 2024
+Date of execution: Fri Sep  6 02:22:07 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 9ccb69cd994b13f063830c1839a50897ac68d2a3 |
+| Commit         | 03a87deca5832dfd3829307de93ecf48bad2ef92 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Thu Sep  5 02:22:12 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.883GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 709MiB / 15981MiB  |
+| Memory | 702MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 21.19 |
-| User CPU Time | 56.09 |
-| System CPU Time | 2.66 |
+| Real CPU Time | 20.07 |
+| User CPU Time | 56.27 |
+| System CPU Time | 2.76 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.71 s (241.3 files/s, 51612.3 lines/s)
+cloc v 1.90  T=9.57 s (244.8 files/s, 52359.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -59,9 +59,9 @@ YAML|11|107|79|787
 DTD|8|151|24|667
 XSLT|1|30|48|555
 JSON|6|2|0|503
-Bourne Shell|7|78|130|387
+Bourne Shell|7|78|130|391
 HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2343|53995|97429|349744
+SUM:|2343|53995|97429|349748
