@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Sep  6 02:22:13 UTC 2024 |
+| v5.2.0.202408280745 | Sat Sep  7 02:20:25 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Sep  6 02:22:13 UTC 2024
+Date of execution: Sat Sep  7 02:20:25 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 1ac30d7067d58d2a42e9e073a04fb514eea163be |
+| Commit         | b7aaf4448a949e902e55d3ac56dfe9f4a0934715 |
 
 
 ## System information
@@ -20,14 +20,14 @@ Date of execution: Fri Sep  6 02:22:13 UTC 2024
 | Kernel | 6.5.0-1025-azure  |
 | CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 710MiB / 15981MiB  |
+| Memory | 695MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19549.40 |
-| User CPU Time | 19617.49 |
-| System CPU Time | 70.19 |
+| Real CPU Time | 19054.66 |
+| User CPU Time | 19130.38 |
+| System CPU Time | 76.67 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,23 +36,23 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.77 s (300.0 files/s, 36808.6 lines/s)
+cloc v 1.90  T=25.23 s (294.8 files/s, 36158.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2953|40467|28249|270007
-Java|2239|56197|57823|235899
-JSON|501|15|0|94629
-HTML|750|232|605|54453
-Sass|346|2761|192|15222
+TypeScript|2956|40536|28285|270319
+Java|2239|56205|57822|235932
+JSON|501|15|0|94633
+HTML|752|232|605|54461
+Sass|345|2760|192|15216
 reStructuredText|97|4870|3495|8114
 XML|93|113|173|6835
 YAML|141|462|1041|6119
-Python|35|511|132|1878
+Python|39|523|148|2072
 Pascal|5|480|56|1689
 Bourne Shell|44|348|422|1670
 CSV|11|4|0|1435
-Markdown|29|415|0|1190
+Markdown|29|437|0|1248
 Rust|18|186|53|992
 Swift|41|229|329|985
 Handlebars|8|86|0|897
@@ -74,8 +74,8 @@ Dockerfile|5|33|64|113
 VHDL|3|42|4|87
 Haskell|4|26|9|80
 make|6|34|139|72
+INI|1|9|2|27
 TOML|3|5|0|27
-INI|1|6|2|15
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7430|108430|94527|708686
+SUM:|7438|108543|94578|709301
