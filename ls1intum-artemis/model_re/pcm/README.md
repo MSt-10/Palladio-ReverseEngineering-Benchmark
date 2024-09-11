@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Sep 10 02:23:23 UTC 2024 |
+| v5.2.0.202408280745 | Wed Sep 11 02:22:18 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Sep 10 02:23:23 UTC 2024
+Date of execution: Wed Sep 11 02:22:18 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 8b80d61ed3e52837b1d2a051fdcf3dee8e3b30ae |
+| Commit         | 2cf010d0783357a5b52737e6b812d52c2fb001e4 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Sep 10 02:23:23 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.892GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 719MiB / 15981MiB  |
+| Memory | 716MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19673.09 |
-| User CPU Time | 19747.88 |
-| System CPU Time | 70.58 |
+| Real CPU Time | 18896.96 |
+| User CPU Time | 18976.38 |
+| System CPU Time | 78.94 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,13 +36,13 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.57 s (303.0 files/s, 37164.2 lines/s)
+cloc v 1.90  T=25.30 s (292.8 files/s, 35926.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2960|40570|28285|270480
-Java|2240|56231|57876|236074
-JSON|501|15|0|94657
+Java|2206|55723|56687|233744
+JSON|501|15|0|94731
 HTML|753|232|606|54512
 Sass|345|2760|192|15216
 reStructuredText|97|4873|3495|8130
@@ -55,9 +55,9 @@ CSV|11|4|0|1435
 Markdown|29|451|0|1294
 Rust|18|186|53|992
 Swift|41|229|329|985
+Gradle|13|162|116|913
 Handlebars|8|86|0|897
 Maven|11|0|95|897
-Gradle|13|161|111|890
 SVG|13|0|3|855
 Groovy|14|133|385|695
 CSS|2|147|1|659
@@ -78,4 +78,4 @@ INI|1|9|2|27
 TOML|3|5|0|27
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7444|108620|94633|709741
+SUM:|7410|108113|93449|707508

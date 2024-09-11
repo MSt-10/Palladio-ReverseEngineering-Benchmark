@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Sep 10 02:23:21 UTC 2024 |
+| v5.2.0.202408280745 | Wed Sep 11 02:22:14 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Sep 10 02:23:21 UTC 2024
+Date of execution: Wed Sep 11 02:22:14 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
@@ -15,7 +15,7 @@ Date of execution: Tue Sep 10 02:23:21 UTC 2024
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
 | Branch         | master |
-| Commit         | 8764f606ae3c4fd11bb95998e0b1fea74cbc3d8b |
+| Commit         | 4a54c44512bb8188dabe45de33bb0ddbae433e11 |
 
 
 ## System information
@@ -24,16 +24,16 @@ Date of execution: Tue Sep 10 02:23:21 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.077GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 695MiB / 15981MiB  |
+| Memory | 707MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 27.66 |
-| User CPU Time | 57.17 |
-| System CPU Time | 2.88 |
+| Real CPU Time | 18.03 |
+| User CPU Time | 54.18 |
+| System CPU Time | 2.84 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.64 s (243.0 files/s, 51982.9 lines/s)
+cloc v 1.90  T=9.50 s (246.6 files/s, 52744.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1884|47644|91455|192102
+Java|1884|47647|91457|192113
 XML|307|3190|2895|134462
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2343|53996|97429|349752
+SUM:|2343|53999|97431|349763
