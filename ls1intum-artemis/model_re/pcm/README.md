@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Wed Sep 11 02:22:18 UTC 2024 |
+| v5.2.0.202408280745 | Thu Sep 12 02:22:58 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Sep 11 02:22:18 UTC 2024
+Date of execution: Thu Sep 12 02:22:58 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 2cf010d0783357a5b52737e6b812d52c2fb001e4 |
+| Commit         | 85dd4abade32c7840be0cf83aaf65145e0f16950 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Wed Sep 11 02:22:18 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 716MiB / 15981MiB  |
+| Memory | 721MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 18896.96 |
-| User CPU Time | 18976.38 |
-| System CPU Time | 78.94 |
+| Real CPU Time | 20084.50 |
+| User CPU Time | 20156.32 |
+| System CPU Time | 74.90 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,17 +36,17 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.30 s (292.8 files/s, 35926.5 lines/s)
+cloc v 1.90  T=25.14 s (295.9 files/s, 36279.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2960|40570|28285|270480
-Java|2206|55723|56687|233744
-JSON|501|15|0|94731
-HTML|753|232|606|54512
-Sass|345|2760|192|15216
+TypeScript|2976|40794|28524|271659
+Java|2215|55933|56814|234506
+JSON|501|15|0|94763
+HTML|755|235|609|54719
+Sass|346|2772|192|15269
 reStructuredText|97|4873|3495|8130
-XML|93|113|173|6835
+XML|94|113|173|6875
 YAML|141|462|1041|6119
 Python|39|523|148|2072
 Pascal|5|480|56|1689
@@ -78,4 +78,4 @@ INI|1|9|2|27
 TOML|3|5|0|27
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7410|108113|93449|707508
+SUM:|7439|108562|93818|709781
