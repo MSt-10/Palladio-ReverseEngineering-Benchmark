@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Thu Sep 12 02:22:53 UTC 2024 |
+| v5.2.0.202408280745 | Fri Sep 13 02:23:38 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Sep 12 02:22:53 UTC 2024
+Date of execution: Fri Sep 13 02:23:38 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/corona-warn-app/cwa-server |
@@ -20,14 +20,14 @@ Date of execution: Thu Sep 12 02:22:53 UTC 2024
 | Kernel | 6.5.0-1025-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 689MiB / 15981MiB  |
+| Memory | 715MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 10.87 |
-| User CPU Time | 30.43 |
-| System CPU Time | 2.05 |
+| Real CPU Time | 10.08 |
+| User CPU Time | 30.57 |
+| System CPU Time | 2.04 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.89 s (322.8 files/s, 125026.3 lines/s)
+cloc v 1.90  T=2.74 s (341.4 files/s, 132203.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
