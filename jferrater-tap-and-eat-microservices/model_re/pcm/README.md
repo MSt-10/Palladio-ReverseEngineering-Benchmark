@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Sep 14 02:21:33 UTC 2024 |
+| v5.2.0.202408280745 | Sun Sep 15 02:27:54 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Sep 14 02:21:33 UTC 2024
+Date of execution: Sun Sep 15 02:27:55 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/jferrater/tap-and-eat-microservices |
@@ -18,15 +18,15 @@ Date of execution: Sat Sep 14 02:21:33 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.168GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.280GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 686MiB / 15981MiB  |
+| Memory | 711MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.23 |
-| User CPU Time | 12.53 |
+| Real CPU Time | 6.21 |
+| User CPU Time | 12.66 |
 | System CPU Time | 0.51 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.12 s (586.4 files/s, 19518.5 lines/s)
+cloc v 1.90  T=0.12 s (588.2 files/s, 19577.1 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
