@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Sep 15 02:27:55 UTC 2024 |
+| v5.2.0.202408280745 | Mon Sep 16 02:28:24 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Sep 15 02:27:55 UTC 2024
+Date of execution: Mon Sep 16 02:28:24 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kbastani/spring-cloud-event-sourcing-example |
@@ -18,15 +18,15 @@ Date of execution: Sun Sep 15 02:27:55 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.4 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.113GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.317GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 716MiB / 15981MiB  |
+| Memory | 699MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 8.74 |
-| User CPU Time | 17.59 |
+| Real CPU Time | 6.76 |
+| User CPU Time | 17.55 |
 | System CPU Time | 0.72 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=3.03 s (173.7 files/s, 50385.3 lines/s)
+cloc v 1.90  T=3.07 s (171.3 files/s, 49689.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
