@@ -1,33 +1,33 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Sep 17 02:16:08 UTC 2024 |
+| v5.2.0.202408280745 | Wed Sep 18 02:23:28 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Sep 17 02:16:08 UTC 2024
+Date of execution: Wed Sep 18 02:23:28 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 8ff819709e907118f8c1550d99d8685f8421a91e |
+| Commit         | c9a210eb4aa646b464274504e310eb270d28b79b |
 
 
 ## System information
 | Attribute | Value |
 | --------- | ----- |
 | OS | Linux  |
-| Distro | Ubuntu 22.04.4 LTS x86_64  |
-| Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| Distro | Ubuntu 22.04.5 LTS x86_64  |
+| Kernel | 6.8.0-1014-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.214GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 680MiB / 15981MiB  |
+| Memory | 755MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20851.39 |
-| User CPU Time | 20928.71 |
-| System CPU Time | 74.97 |
+| Real CPU Time | 20893.39 |
+| User CPU Time | 20966.06 |
+| System CPU Time | 62.89 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=24.61 s (302.2 files/s, 37092.5 lines/s)
+cloc v 1.90  T=25.29 s (294.1 files/s, 36098.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2976|40794|28524|271659
-Java|2210|56036|56828|235021
+Java|2210|56036|56828|235020
 JSON|502|15|0|94756
 HTML|755|235|609|54717
 Sass|346|2772|192|15269
@@ -52,7 +52,7 @@ Python|41|533|151|2127
 Pascal|5|480|56|1689
 Bourne Shell|44|348|422|1670
 CSV|11|4|0|1435
-Markdown|29|455|0|1314
+Markdown|29|457|0|1317
 Rust|18|186|53|992
 Swift|41|229|329|985
 Gradle|13|162|116|914
@@ -78,4 +78,4 @@ INI|1|9|2|27
 TOML|3|5|0|27
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7438|108679|93840|710363
+SUM:|7438|108681|93840|710365
