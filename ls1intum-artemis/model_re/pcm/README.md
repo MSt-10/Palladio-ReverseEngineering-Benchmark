@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Oct  6 02:28:53 UTC 2024 |
+| v5.2.0.202408280745 | Mon Oct  7 02:28:19 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Oct  6 02:28:53 UTC 2024
+Date of execution: Mon Oct  7 02:28:19 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | eee133f1c5668fdab9087cd36b00010d29f6edd0 |
+| Commit         | 2e5ebe518472dbb4b8378b02992e90df26616bba |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Oct  6 02:28:53 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.8.0-1014-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.231GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 783MiB / 15990MiB  |
+| Memory | 847MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20991.96 |
-| User CPU Time | 21069.79 |
-| System CPU Time | 79.21 |
+| Real CPU Time | 20250.30 |
+| User CPU Time | 20336.74 |
+| System CPU Time | 79.41 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=26.54 s (287.0 files/s, 35056.0 lines/s)
+cloc v 1.90  T=25.62 s (297.2 files/s, 36306.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 TypeScript|2997|41170|28604|274231
-Java|2324|56784|57223|238002
+Java|2323|56780|57239|237988
 JSON|508|17|0|102025
 HTML|763|244|609|55268
 Sass|352|2795|206|15357
@@ -78,4 +78,4 @@ INI|1|9|2|27
 TOML|3|5|0|27
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7615|110367|94479|725410
+SUM:|7614|110363|94495|725396
