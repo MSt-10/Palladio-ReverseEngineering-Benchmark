@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Oct  8 02:28:08 UTC 2024 |
+| v5.2.0.202408280745 | Wed Oct  9 02:26:32 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Oct  8 02:28:08 UTC 2024
+Date of execution: Wed Oct  9 02:26:32 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | eb2333a085f4bba0564265a1119c69f4f3520c98 |
+| Commit         | 865047f7ba27d81d6ebb36b6b796bbd9af636ef2 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Tue Oct  8 02:28:08 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.8.0-1014-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.259GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 771MiB / 15990MiB  |
+| Memory | 798MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 22.95 |
-| User CPU Time | 58.23 |
-| System CPU Time | 2.72 |
+| Real CPU Time | 18.44 |
+| User CPU Time | 55.20 |
+| System CPU Time | 2.59 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=10.07 s (233.3 files/s, 50022.6 lines/s)
+cloc v 1.90  T=9.71 s (242.0 files/s, 51889.6 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1891|48021|92050|193734
+Java|1891|48020|92048|193717
 XML|307|3179|2895|134489
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2350|54360|98031|351431
+SUM:|2350|54359|98029|351414
