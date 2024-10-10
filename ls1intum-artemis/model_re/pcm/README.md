@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Oct  8 02:28:12 UTC 2024 |
+| v5.2.0.202408280745 | Thu Oct 10 02:26:51 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Oct  8 02:28:12 UTC 2024
+Date of execution: Thu Oct 10 02:26:51 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/ls1intum/Artemis |
 | Branch         | develop |
-| Commit         | 3779e88aa36dd8f103f38d3adbb7404d40ebf68c |
+| Commit         | b6b47e7f3db8705f7ffcc439c4399e672ba0f62a |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Oct  8 02:28:12 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.072GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.244GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 703MiB / 15981MiB  |
+| Memory | 713MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20553.21 |
-| User CPU Time | 20601.68 |
-| System CPU Time | 62.04 |
+| Real CPU Time | 20529.85 |
+| User CPU Time | 20610.54 |
+| System CPU Time | 83.06 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,11 +36,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=25.30 s (301.1 files/s, 36784.5 lines/s)
+cloc v 1.90  T=26.41 s (288.4 files/s, 35234.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-TypeScript|2998|41174|28636|274473
+TypeScript|2998|41174|28636|274459
 Java|2325|56780|57244|237979
 JSON|508|17|0|102025
 HTML|763|244|609|55268
@@ -78,4 +78,4 @@ INI|1|9|2|27
 TOML|3|5|0|27
 Assembly|2|3|8|9
 --------|--------|--------|--------|--------
-SUM:|7617|110367|94532|725629
+SUM:|7617|110367|94532|725615
