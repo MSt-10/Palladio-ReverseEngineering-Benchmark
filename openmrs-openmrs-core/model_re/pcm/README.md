@@ -1,21 +1,21 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Oct 21 02:28:11 UTC 2024 |
+| v5.2.0.202408280745 | Tue Oct 22 02:27:48 UTC 2024 |
 
 # Git repository information
-Date of execution: Mon Oct 21 02:28:11 UTC 2024
+Date of execution: Tue Oct 22 02:27:48 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 489168f91edaa1f58b3fb18f8fd2e5f528e022dc |
+| Commit         | 10a32e1b50f395df74e02b5eb364d90c94dea939 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
 | Branch         | master |
-| Commit         | 61a27fa711d211d65450b243af59a9dfff1ff4e4 |
+| Commit         | 0933bb614359c4a9b6fb2a8dc70ac81db4733bbf |
 
 
 ## System information
@@ -24,16 +24,16 @@ Date of execution: Mon Oct 21 02:28:11 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.252GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 699MiB / 15981MiB  |
+| Memory | 693MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19.55 |
-| User CPU Time | 56.57 |
-| System CPU Time | 2.94 |
+| Real CPU Time | 25.14 |
+| User CPU Time | 56.67 |
+| System CPU Time | 2.79 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.81 s (239.6 files/s, 51378.7 lines/s)
+cloc v 1.90  T=9.67 s (243.0 files/s, 52113.7 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1891|48021|92047|193787
+Java|1891|48031|92047|193841
 XML|307|3179|2895|134489
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2350|54360|98028|351484
+SUM:|2350|54370|98028|351538
