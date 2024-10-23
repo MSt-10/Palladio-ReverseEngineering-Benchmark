@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Oct 22 02:27:48 UTC 2024 |
+| v5.2.0.202408280745 | Wed Oct 23 02:26:52 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Oct 22 02:27:48 UTC 2024
+Date of execution: Wed Oct 23 02:26:52 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 10a32e1b50f395df74e02b5eb364d90c94dea939 |
+| Commit         | fea9d7c1804444f65f2be698cf363b69624e71dd |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Tue Oct 22 02:27:48 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.222GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 693MiB / 15981MiB  |
+| Memory | 707MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 25.14 |
-| User CPU Time | 56.67 |
-| System CPU Time | 2.79 |
+| Real CPU Time | 19.43 |
+| User CPU Time | 54.97 |
+| System CPU Time | 2.78 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.67 s (243.0 files/s, 52113.7 lines/s)
+cloc v 1.90  T=9.65 s (243.6 files/s, 52244.0 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1891|48031|92047|193841
+Java|1891|48034|92047|193885
 XML|307|3179|2895|134489
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|81
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2350|54370|98028|351538
+SUM:|2350|54373|98028|351582
