@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Oct 27 02:30:10 UTC 2024 |
+| v5.2.0.202408280745 | Mon Oct 28 02:29:42 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Oct 27 02:30:10 UTC 2024
+Date of execution: Mon Oct 28 02:29:42 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | cf5101a633acd205cae9a635387cedf712334127 |
+| Commit         | 4efaf87c7ebfa22eff6161e7f2603133175a2e82 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Oct 27 02:30:10 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.224GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.099GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 693MiB / 15981MiB  |
+| Memory | 711MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 22.92 |
-| User CPU Time | 37.52 |
-| System CPU Time | 2.46 |
+| Real CPU Time | 22.25 |
+| User CPU Time | 35.66 |
+| System CPU Time | 2.21 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,19 +36,19 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.79 s (301.5 files/s, 38888.5 lines/s)
+cloc v 1.90  T=2.76 s (304.8 files/s, 39316.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 JavaScript|90|6708|3436|44101
-Java|358|3067|6601|18109
+Java|358|3068|6601|18113
 CSS|25|1198|161|8393
 HTML|69|658|252|5637
 AsciiDoc|237|1488|19|3672
 SVG|10|0|1|1305
 Maven|1|13|11|800
 XML|5|12|12|598
-Markdown|10|190|0|448
+Markdown|10|194|0|454
 YAML|10|31|11|319
 Bourne Shell|3|35|62|233
 SQL|13|13|16|192
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|8|1|31
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|840|13468|10593|84277
+SUM:|840|13473|10593|84287
