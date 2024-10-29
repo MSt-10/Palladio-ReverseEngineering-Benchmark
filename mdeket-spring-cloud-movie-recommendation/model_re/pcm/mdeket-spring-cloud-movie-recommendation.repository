@@ -1,91 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_bg_GzpTUEe-lZ-M_bLw-Wg">
-  <components__Repository xsi:type="repository:BasicComponent" id="_bgf-mJTUEe-lZ-M_bLw-Wg" entityName="com_example_RecommendationController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bgf-lZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation Provider" providedInterface__OperationProvidedRole="_bgfXhpTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bgf-lpTUEe-lZ-M_bLw-Wg" entityName="com_example_UserRepo Consumer" requiredInterface__OperationRequiredRole="_bgfXiJTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bgf-l5TUEe-lZ-M_bLw-Wg" entityName="com_example_MovieRepo Consumer" requiredInterface__OperationRequiredRole="_bgfXi5TUEe-lZ-M_bLw-Wg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfstUpTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZk3NZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfq4JJTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfq4JZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfq4JZTUEe-lZ-M_bLw-Wg" entityName="this.userRepo.deleteAll()" predecessor_AbstractAction="_bfq4JJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfq4JpTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfq4JpTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.deleteAll()" predecessor_AbstractAction="_bfq4JZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGQJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_bfsGQJTUEe-lZ-M_bLw-Wg" entityName="@position:  from int i=0 to i &lt; 50 with i++" predecessor_AbstractAction="_bfq4JpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGRpTUEe-lZ-M_bLw-Wg">
-        <bodyBehaviour_Loop id="_bfsGQpTUEe-lZ-M_bLw-Wg">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_bfq4J5TUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfrfMJTUEe-lZ-M_bLw-Wg"/>
-          <steps_Behaviour xsi:type="seff:InternalAction" id="_bfrfMJTUEe-lZ-M_bLw-Wg" entityName="this.userRepo.save(new User(new Long(i)))" predecessor_AbstractAction="_bfq4J5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfrfMZTUEe-lZ-M_bLw-Wg"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_bfrfMZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfrfMJTUEe-lZ-M_bLw-Wg"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="50"/>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_bfsGRpTUEe-lZ-M_bLw-Wg" entityName="@position:  from int i=0 to i &lt; 18 with i++" predecessor_AbstractAction="_bfsGQJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGSZTUEe-lZ-M_bLw-Wg">
-        <bodyBehaviour_Loop id="_bfsGSJTUEe-lZ-M_bLw-Wg">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_bfsGQ5TUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfsGRJTUEe-lZ-M_bLw-Wg"/>
-          <steps_Behaviour xsi:type="seff:InternalAction" id="_bfsGRJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(new Long(i)))" predecessor_AbstractAction="_bfsGQ5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGRZTUEe-lZ-M_bLw-Wg"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_bfsGRZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfsGRJTUEe-lZ-M_bLw-Wg"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="18"/>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfsGSZTUEe-lZ-M_bLw-Wg" entityName="this.userRepo.findAll().forEach(u -> {&#xA;  users.add(u);&#xA;}&#xA;)" predecessor_AbstractAction="_bfsGRpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGSpTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfsGSpTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.findAll().forEach(m -> movies.add(m))" predecessor_AbstractAction="_bfsGSZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfsGS5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfsGS5TUEe-lZ-M_bLw-Wg" entityName="users.stream().forEach(user -> {&#xA;  for (int i=1; i &lt; 10; i++) {&#xA;    Movie movie=movies.get(new Random().nextInt(18));&#xA;    if (user.getLikes().contains(movie)) {&#xA;      continue;&#xA;    }&#xA;    user.getLikes().add(movie);&#xA;    movie.getLikes().add(user);&#xA;    userRepo.save(user);&#xA;    movieRepo.save(movie);&#xA;  }&#xA;}&#xA;)" predecessor_AbstractAction="_bfsGSpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfstUJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfstUJTUEe-lZ-M_bLw-Wg" entityName="users.stream().forEach(user -> {&#xA;  for (int i=0; i &lt; 25; i++) {&#xA;    User userToFollow=users.get(new Random().nextInt(50));&#xA;    if (user.getFollowing().contains(userToFollow) || user.getId().longValue() == userToFollow.getId().longValue()) {&#xA;      continue;&#xA;    }&#xA;    user.getFollowing().add(userToFollow);&#xA;    userRepo.save(user);&#xA;  }&#xA;}&#xA;)" predecessor_AbstractAction="_bfsGS5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfstUZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfstUZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfstUJTUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfq4I5TUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZleQZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfob5JTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfq4IJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_bfq4IJTUEe-lZ-M_bLw-Wg" entityName="If Branch" predecessor_AbstractAction="_bfob5JTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfq4IZTUEe-lZ-M_bLw-Wg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_bfpqAJTUEe-lZ-M_bLw-Wg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_bfqREJTUEe-lZ-M_bLw-Wg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_bfob5ZTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfpC8JTUEe-lZ-M_bLw-Wg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_bfpC8JTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfob5ZTUEe-lZ-M_bLw-Wg"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(data == null || data.isEmpty())"/>
-        </branches_Branch>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfq4IZTUEe-lZ-M_bLw-Wg" entityName="data" predecessor_AbstractAction="_bfq4IJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfq4IpTUEe-lZ-M_bLw-Wg">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.data"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="data"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfq4IpTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfq4IZTUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfstVpTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZk3N5TUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfstU5TUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfstVJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfstVJTUEe-lZ-M_bLw-Wg" entityName="this.userRepo.findOne(userId)" predecessor_AbstractAction="_bfstU5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfstVZTUEe-lZ-M_bLw-Wg">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.this_userRepo_findOne(userId)"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_userRepo_findOne(userId)"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfstVZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfstVJTUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfn02JTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZmFUJTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfn01JTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfn01ZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfn01ZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.findAll().forEach(m -> {&#xA;  movies.add(m);&#xA;}&#xA;)" predecessor_AbstractAction="_bfn01JTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfn01pTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfn01pTUEe-lZ-M_bLw-Wg" entityName="movies" predecessor_AbstractAction="_bfn01ZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfn015TUEe-lZ-M_bLw-Wg">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.movies"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="movies"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfn015TUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfn01pTUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfn03ZTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZmFUpTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfn02ZTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfn02pTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfn02pTUEe-lZ-M_bLw-Wg" entityName="this.userRepo.findAll().forEach(u -> {&#xA;  users.add(u);&#xA;}&#xA;)" predecessor_AbstractAction="_bfn02ZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfn025TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfn025TUEe-lZ-M_bLw-Wg" entityName="users" predecessor_AbstractAction="_bfn02pTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfn03JTUEe-lZ-M_bLw-Wg">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_cUbjoJWdEe-KIJ0eJhZNVw">
+  <components__Repository xsi:type="repository:BasicComponent" id="_cT8bapWdEe-KIJ0eJhZNVw" entityName="com_example_service_UserService">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cT8bZ5WdEe-KIJ0eJhZNVw" entityName="com_example_service_UserService Provider" providedInterface__OperationProvidedRole="_cT8bY5WdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cT8baJWdEe-KIJ0eJhZNVw" entityName="user-service/newuser Consumer" requiredInterface__OperationRequiredRole="_cT8bYpWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cT8baZWdEe-KIJ0eJhZNVw" entityName="user-service/user Consumer" requiredInterface__OperationRequiredRole="_cT8bZpWdEe-KIJ0eJhZNVw"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cT8bbJWdEe-KIJ0eJhZNVw" entityName="user-service/user Provider">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cT8ba5WdEe-KIJ0eJhZNVw" entityName="user-service/user Provider" providedInterface__OperationProvidedRole="_cT8bZpWdEe-KIJ0eJhZNVw"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cT8bcJWdEe-KIJ0eJhZNVw" entityName="com_example_RecommendationController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cT8bbZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation Provider" providedInterface__OperationProvidedRole="_cT70W5WdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cT8bbpWdEe-KIJ0eJhZNVw" entityName="com_example_MovieRepo Consumer" requiredInterface__OperationRequiredRole="_cT70WJWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cT8bb5WdEe-KIJ0eJhZNVw" entityName="com_example_UserRepo Consumer" requiredInterface__OperationRequiredRole="_cT8bZZWdEe-KIJ0eJhZNVw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTIjGJWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNCiJZWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTIjFJWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTIjFZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTIjFZWdEe-KIJ0eJhZNVw" entityName="this.userRepo.findAll().forEach(u -> {&#xA;  users.add(u);&#xA;}&#xA;)" predecessor_AbstractAction="_cTIjFJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTIjFpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTIjFpWdEe-KIJ0eJhZNVw" entityName="users" predecessor_AbstractAction="_cTIjFZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTIjF5WdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.users"/>
@@ -95,11 +25,25 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfn03JTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfn025TUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTIjF5WdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTIjFpWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfob45TUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZleQ5TUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfob4JTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfob4ZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfob4ZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.findOne(movieId)" predecessor_AbstractAction="_bfob4JTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfob4pTUEe-lZ-M_bLw-Wg">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTJKIJWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNDJMJWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTIjGZWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTIjGpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTIjGpWdEe-KIJ0eJhZNVw" entityName="this.userRepo.findOne(userId)" predecessor_AbstractAction="_cTIjGZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTIjG5WdEe-KIJ0eJhZNVw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.this_userRepo_findOne(userId)"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_userRepo_findOne(userId)"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTIjG5WdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTIjGpWdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTGt5pWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNAs9JWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTGt45WdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTGt5JWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTGt5JWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.findOne(movieId)" predecessor_AbstractAction="_cTGt45WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTGt5ZWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.this_movieRepo_findOne(movieId)"/>
@@ -109,94 +53,92 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfob4pTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfob4ZTUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTGt5ZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTGt5JWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bgtZ-pTUEe-lZ-M_bLw-Wg" entityName="com_example_MovieController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bgtZ-JTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie Provider" providedInterface__OperationProvidedRole="_bgf-lJTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bgtZ-ZTUEe-lZ-M_bLw-Wg" entityName="com_example_MovieRepo Consumer" requiredInterface__OperationRequiredRole="_bgfXi5TUEe-lZ-M_bLw-Wg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfn00pTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bYzbIZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfnNypTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfn00JTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfn00JTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.findByMovieId(movieId)" predecessor_AbstractAction="_bfnNypTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfn00ZTUEe-lZ-M_bLw-Wg">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTDqlZWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNCiIZWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cNoYAZWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cNq0QJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cNq0QJWdEe-KIJ0eJhZNVw" entityName="this.userRepo.deleteAll()" predecessor_AbstractAction="_cNoYAZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cNrbUJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cNrbUJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.deleteAll()" predecessor_AbstractAction="_cNq0QJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTB1YJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_cTB1YJWdEe-KIJ0eJhZNVw" entityName="@position:  from int i=0 to i &lt; 50 with i++" predecessor_AbstractAction="_cNrbUJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDDhJWdEe-KIJ0eJhZNVw">
+        <bodyBehaviour_Loop id="_cTDDgJWdEe-KIJ0eJhZNVw">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_cTBOUJWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTBOUZWdEe-KIJ0eJhZNVw"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_cTBOUZWdEe-KIJ0eJhZNVw" entityName="this.userRepo.save(new User(new Long(i)))" predecessor_AbstractAction="_cTBOUJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTBOUpWdEe-KIJ0eJhZNVw"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_cTBOUpWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTBOUZWdEe-KIJ0eJhZNVw"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="50"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_cTDDhJWdEe-KIJ0eJhZNVw" entityName="@position:  from int i=0 to i &lt; 18 with i++" predecessor_AbstractAction="_cTB1YJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDqkJWdEe-KIJ0eJhZNVw">
+        <bodyBehaviour_Loop id="_cTDDhpWdEe-KIJ0eJhZNVw">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_cTDDgZWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTDDgpWdEe-KIJ0eJhZNVw"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_cTDDgpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(new Long(i)))" predecessor_AbstractAction="_cTDDgZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDDg5WdEe-KIJ0eJhZNVw"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_cTDDg5WdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTDDgpWdEe-KIJ0eJhZNVw"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="18"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTDqkJWdEe-KIJ0eJhZNVw" entityName="this.userRepo.findAll().forEach(u -> {&#xA;  users.add(u);&#xA;}&#xA;)" predecessor_AbstractAction="_cTDDhJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDqkZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTDqkZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.findAll().forEach(m -> movies.add(m))" predecessor_AbstractAction="_cTDqkJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDqkpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTDqkpWdEe-KIJ0eJhZNVw" entityName="users.stream().forEach(user -> {&#xA;  for (int i=1; i &lt; 10; i++) {&#xA;    Movie movie=movies.get(new Random().nextInt(18));&#xA;    if (user.getLikes().contains(movie)) {&#xA;      continue;&#xA;    }&#xA;    user.getLikes().add(movie);&#xA;    movie.getLikes().add(user);&#xA;    userRepo.save(user);&#xA;    movieRepo.save(movie);&#xA;  }&#xA;}&#xA;)" predecessor_AbstractAction="_cTDqkZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDqk5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTDqk5WdEe-KIJ0eJhZNVw" entityName="users.stream().forEach(user -> {&#xA;  for (int i=0; i &lt; 25; i++) {&#xA;    User userToFollow=users.get(new Random().nextInt(50));&#xA;    if (user.getFollowing().contains(userToFollow) || user.getId().longValue() == userToFollow.getId().longValue()) {&#xA;      continue;&#xA;    }&#xA;    user.getFollowing().add(userToFollow);&#xA;    userRepo.save(user);&#xA;  }&#xA;}&#xA;)" predecessor_AbstractAction="_cTDqkpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTDqlJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTDqlJWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTDqk5WdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTGt4pWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNCiI5WdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTERoJWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTERoZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTERoZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.findAll().forEach(m -> {&#xA;  movies.add(m);&#xA;}&#xA;)" predecessor_AbstractAction="_cTERoJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTGt4JWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTGt4JWdEe-KIJ0eJhZNVw" entityName="movies" predecessor_AbstractAction="_cTERoZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTGt4ZWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.this_movieRepo_findByMovieId(movieId)"/>
+            <specification_VariableCharacterisation specification="PrimitiveType.movies"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_movieRepo_findByMovieId(movieId)"/>
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="movies"/>
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfn00ZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfn00JTUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTGt4ZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTGt4JWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfl_pJTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bYw-4JTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfkxh5TUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfl_oJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfl_oJTUEe-lZ-M_bLw-Wg" entityName="System.out.println(&quot;Somebody found me!&quot;)" predecessor_AbstractAction="_bfkxh5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfl_oZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfl_oZTUEe-lZ-M_bLw-Wg" entityName="idsList.stream().forEach(id -> {&#xA;  MovieDTO dto=new MovieDTO(this.movieRepo.findByMovieId(id.longValue()));&#xA;  retVal.add(dto);&#xA;}&#xA;)" predecessor_AbstractAction="_bfl_oJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfl_opTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfl_opTUEe-lZ-M_bLw-Wg" entityName="retVal" predecessor_AbstractAction="_bfl_oZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfl_o5TUEe-lZ-M_bLw-Wg">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTIjE5WdEe-KIJ0eJhZNVw" describedService__SEFF="_cNBUAZWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTHU8JWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTIjEJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_cTIjEJWdEe-KIJ0eJhZNVw" entityName="If Branch" predecessor_AbstractAction="_cTHU8JWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTIjEZWdEe-KIJ0eJhZNVw">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_cTH8AJWdEe-KIJ0eJhZNVw" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_cTH8ApWdEe-KIJ0eJhZNVw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_cTHU8ZWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTHU8pWdEe-KIJ0eJhZNVw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_cTHU8pWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTHU8ZWdEe-KIJ0eJhZNVw"/>
+          </branchBehaviour_BranchTransition>
+          <branchCondition_GuardedBranchTransition specification="@position: Condition: if(data == null || data.isEmpty())"/>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTIjEZWdEe-KIJ0eJhZNVw" entityName="data" predecessor_AbstractAction="_cTIjEJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTIjEpWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.retVal"/>
+            <specification_VariableCharacterisation specification="PrimitiveType.data"/>
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="retVal"/>
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="data"/>
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfl_o5TUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfl_opTUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfnNxZTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bY0pQZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfl_pZTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfl_ppTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfl_ppTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.deleteAll()" predecessor_AbstractAction="_bfl_pZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfl_p5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfl_p5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Shawshank Redemption&quot;,1l))" predecessor_AbstractAction="_bfl_ppTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmsJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmsJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Godfather&quot;,2l))" predecessor_AbstractAction="_bfl_p5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmsZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmsZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Dark Knight&quot;,3l))" predecessor_AbstractAction="_bfmmsJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmspTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmspTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;12 Angry Men&quot;,4l))" predecessor_AbstractAction="_bfmmsZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmms5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmms5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Schindler's List&quot;,5l))" predecessor_AbstractAction="_bfmmspTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmtJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmtJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Pulp Fiction&quot;,6l))" predecessor_AbstractAction="_bfmms5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmtZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmtZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Return of the King&quot;,7l))" predecessor_AbstractAction="_bfmmtJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmtpTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmtpTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Good, the Bad and the Ugly&quot;,8l))" predecessor_AbstractAction="_bfmmtZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmt5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmt5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Fight Club&quot;,9l))" predecessor_AbstractAction="_bfmmtpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmuJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmuJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Fellowship of the Ring&quot;,10l))" predecessor_AbstractAction="_bfmmt5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmuZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmuZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Star Wars: Episode V - The Empire Strikes Back&quot;,11l))" predecessor_AbstractAction="_bfmmuJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmupTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmupTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Forrest Gump&quot;,12l))" predecessor_AbstractAction="_bfmmuZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmu5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmu5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Two Towers&quot;,13l))" predecessor_AbstractAction="_bfmmupTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmvJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmvJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;One Flew Over the Cuckoo's Nest&quot;,14l))" predecessor_AbstractAction="_bfmmu5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmvZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmvZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Goodfellas&quot;,15l))" predecessor_AbstractAction="_bfmmvJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfmmvpTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfmmvpTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Matrix&quot;,16l))" predecessor_AbstractAction="_bfmmvZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNwJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfnNwJTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Goodfellas&quot;,15l))" predecessor_AbstractAction="_bfmmvpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNwZTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfnNwZTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;The Matrix&quot;,16l))" predecessor_AbstractAction="_bfnNwJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNwpTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfnNwpTUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Rocky&quot;,17l))" predecessor_AbstractAction="_bfnNwZTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNw5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_bfnNw5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.save(new Movie(&quot;Old boy&quot;,18l))" predecessor_AbstractAction="_bfnNwpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNxJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfnNxJTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfnNw5TUEe-lZ-M_bLw-Wg"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfnNyZTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bYzbI5TUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfnNxpTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfnNx5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfnNx5TUEe-lZ-M_bLw-Wg" entityName="this.movieRepo.findAll().stream().map(Movie::toDTO).collect(Collectors.toList())" predecessor_AbstractAction="_bfnNxpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfnNyJTUEe-lZ-M_bLw-Wg">
-        <localVariableUsages_SetVariableAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="PrimitiveType.this_movieRepo_findAll()_stream()_map(Movie::toDTO)_collect(Collectors_toList())"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
-            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_movieRepo_findAll()_stream()_map(Movie::toDTO)_collect(Collectors_toList())"/>
-          </namedReference__VariableUsage>
-        </localVariableUsages_SetVariableAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfnNyJTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfnNx5TUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTIjEpWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTIjEZWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg0uvpTUEe-lZ-M_bLw-Wg" entityName="com_example_MovieRepo">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg0uvZTUEe-lZ-M_bLw-Wg" entityName="com_example_MovieRepo Provider" providedInterface__OperationProvidedRole="_bgfXi5TUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUJ2ypWdEe-KIJ0eJhZNVw" entityName="com_example_service_RestTemplate Provider">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUJ2yZWdEe-KIJ0eJhZNVw" entityName="com_example_service_RestTemplate Provider" providedInterface__OperationProvidedRole="_cT70WZWdEe-KIJ0eJhZNVw"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg0uwJTUEe-lZ-M_bLw-Wg" entityName="com_example_UserRepo">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg0uv5TUEe-lZ-M_bLw-Wg" entityName="com_example_UserRepo Provider" providedInterface__OperationProvidedRole="_bgfXiJTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUJ2zZWdEe-KIJ0eJhZNVw" entityName="com_example_service_RecommendationClientService">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUJ2y5WdEe-KIJ0eJhZNVw" entityName="com_example_service_RecommendationClientService Provider" providedInterface__OperationProvidedRole="_cT8bZJWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUJ2zJWdEe-KIJ0eJhZNVw" entityName="com_example_service_RestTemplate Consumer" requiredInterface__OperationRequiredRole="_cT70WZWdEe-KIJ0eJhZNVw"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg1VwpTUEe-lZ-M_bLw-Wg" entityName="com_example_UserController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg1VwJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/user Provider" providedInterface__OperationProvidedRole="_bgfXiZTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg1VwZTUEe-lZ-M_bLw-Wg" entityName="com_example_UserRepo Consumer" requiredInterface__OperationRequiredRole="_bgfXiJTUEe-lZ-M_bLw-Wg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfkxgZTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZkQJpTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_baL7MJTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfkKcJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfkKcJTUEe-lZ-M_bLw-Wg" entityName="this.customerRepo.findAll()" predecessor_AbstractAction="_baL7MJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfkxgJTUEe-lZ-M_bLw-Wg">
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUJ2z5WdEe-KIJ0eJhZNVw" entityName="com_example_MovieRepo">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUJ2zpWdEe-KIJ0eJhZNVw" entityName="com_example_MovieRepo Provider" providedInterface__OperationProvidedRole="_cT70WJWdEe-KIJ0eJhZNVw"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUJ20ZWdEe-KIJ0eJhZNVw" entityName="com_example_UserRepo">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUJ20JWdEe-KIJ0eJhZNVw" entityName="com_example_UserRepo Provider" providedInterface__OperationProvidedRole="_cT8bZZWdEe-KIJ0eJhZNVw"/>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUKd0pWdEe-KIJ0eJhZNVw" entityName="com_example_UserController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUKd0JWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/user Provider" providedInterface__OperationProvidedRole="_cT8bYZWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUKd0ZWdEe-KIJ0eJhZNVw" entityName="com_example_UserRepo Consumer" requiredInterface__OperationRequiredRole="_cT8bZZWdEe-KIJ0eJhZNVw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTJKJZWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNAs8JWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKIpWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJKI5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTJKI5WdEe-KIJ0eJhZNVw" entityName="this.customerRepo.findAll()" predecessor_AbstractAction="_cTJKIpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJKJJWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.this_customerRepo_findAll()"/>
@@ -206,11 +148,11 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfkxgJTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfkKcJTUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTJKJJWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJKI5WdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bfkxhZTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZk3MZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfkxgpTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfkxg5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bfkxg5TUEe-lZ-M_bLw-Wg" entityName="this.customerRepo.findOne(userId)" predecessor_AbstractAction="_bfkxgpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfkxhJTUEe-lZ-M_bLw-Wg">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTJKKZWdEe-KIJ0eJhZNVw" describedService__SEFF="_cM-QsJWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKJpWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJKJ5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTJKJ5WdEe-KIJ0eJhZNVw" entityName="this.customerRepo.findOne(userId)" predecessor_AbstractAction="_cTJKJpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJKKJWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.this_customerRepo_findOne(userId)"/>
@@ -220,48 +162,106 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bfkxhJTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfkxg5TUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTJKKJWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJKJ5WdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg4ZHpTUEe-lZ-M_bLw-Wg" entityName="user-service/newuser Provider">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg4ZHZTUEe-lZ-M_bLw-Wg" entityName="user-service/newuser Provider" providedInterface__OperationProvidedRole="_bgf-kJTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUOIOZWdEe-KIJ0eJhZNVw" entityName="com_example_MovieController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUOIN5WdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie Provider" providedInterface__OperationProvidedRole="_cT70WpWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUOIOJWdEe-KIJ0eJhZNVw" entityName="com_example_MovieRepo Consumer" requiredInterface__OperationRequiredRole="_cT70WJWdEe-KIJ0eJhZNVw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTKYUJWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNDwQJWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTJxOpWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJxO5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxO5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.deleteAll()" predecessor_AbstractAction="_cTJxOpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxPJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxPJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Shawshank Redemption&quot;,1l))" predecessor_AbstractAction="_cTJxO5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxPZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxPZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Godfather&quot;,2l))" predecessor_AbstractAction="_cTJxPJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxPpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxPpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Dark Knight&quot;,3l))" predecessor_AbstractAction="_cTJxPZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxP5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxP5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;12 Angry Men&quot;,4l))" predecessor_AbstractAction="_cTJxPpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxQJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxQJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Schindler's List&quot;,5l))" predecessor_AbstractAction="_cTJxP5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYQJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYQJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Pulp Fiction&quot;,6l))" predecessor_AbstractAction="_cTJxQJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYQZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYQZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Return of the King&quot;,7l))" predecessor_AbstractAction="_cTKYQJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYQpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYQpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Good, the Bad and the Ugly&quot;,8l))" predecessor_AbstractAction="_cTKYQZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYQ5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYQ5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Fight Club&quot;,9l))" predecessor_AbstractAction="_cTKYQpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYRJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYRJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Fellowship of the Ring&quot;,10l))" predecessor_AbstractAction="_cTKYQ5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYRZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYRZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Star Wars: Episode V - The Empire Strikes Back&quot;,11l))" predecessor_AbstractAction="_cTKYRJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYRpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYRpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Forrest Gump&quot;,12l))" predecessor_AbstractAction="_cTKYRZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYR5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYR5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Lord of the Rings: The Two Towers&quot;,13l))" predecessor_AbstractAction="_cTKYRpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYSJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYSJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;One Flew Over the Cuckoo's Nest&quot;,14l))" predecessor_AbstractAction="_cTKYR5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYSZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYSZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Goodfellas&quot;,15l))" predecessor_AbstractAction="_cTKYSJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYSpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYSpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Matrix&quot;,16l))" predecessor_AbstractAction="_cTKYSZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYS5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYS5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Goodfellas&quot;,15l))" predecessor_AbstractAction="_cTKYSpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYTJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYTJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;The Matrix&quot;,16l))" predecessor_AbstractAction="_cTKYS5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYTZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYTZWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Rocky&quot;,17l))" predecessor_AbstractAction="_cTKYTJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYTpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTKYTpWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.save(new Movie(&quot;Old boy&quot;,18l))" predecessor_AbstractAction="_cTKYTZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTKYT5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTKYT5WdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTKYTpWdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTK_VZWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNDwQpWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTK_UJWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTK_UZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTK_UZWdEe-KIJ0eJhZNVw" entityName="System.out.println(&quot;Somebody found me!&quot;)" predecessor_AbstractAction="_cTK_UJWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTK_UpWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cTK_UpWdEe-KIJ0eJhZNVw" entityName="idsList.stream().forEach(id -> {&#xA;  MovieDTO dto=new MovieDTO(this.movieRepo.findByMovieId(id.longValue()));&#xA;  retVal.add(dto);&#xA;}&#xA;)" predecessor_AbstractAction="_cTK_UZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTK_U5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTK_U5WdEe-KIJ0eJhZNVw" entityName="retVal" predecessor_AbstractAction="_cTK_UpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTK_VJWdEe-KIJ0eJhZNVw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.retVal"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="retVal"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTK_VJWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTK_U5WdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTLmYpWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNDwRJWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTK_WpWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTLmYJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTLmYJWdEe-KIJ0eJhZNVw" entityName="this.movieRepo.findAll().stream().map(Movie::toDTO).collect(Collectors.toList())" predecessor_AbstractAction="_cTK_WpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTLmYZWdEe-KIJ0eJhZNVw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.this_movieRepo_findAll()_stream()_map(Movie::toDTO)_collect(Collectors_toList())"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_movieRepo_findAll()_stream()_map(Movie::toDTO)_collect(Collectors_toList())"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTLmYZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTLmYJWdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTK_WZWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNDJM5WdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTK_VpWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTK_V5WdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTK_V5WdEe-KIJ0eJhZNVw" entityName="this.movieRepo.findByMovieId(movieId)" predecessor_AbstractAction="_cTK_VpWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTK_WJWdEe-KIJ0eJhZNVw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="PrimitiveType.this_movieRepo_findByMovieId(movieId)"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="PrimitiveType">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="this_movieRepo_findByMovieId(movieId)"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTK_WJWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTK_V5WdEe-KIJ0eJhZNVw"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg4ZIZTUEe-lZ-M_bLw-Wg" entityName="com_example_service_RecommendationClientService">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg4ZH5TUEe-lZ-M_bLw-Wg" entityName="com_example_service_RecommendationClientService Provider" providedInterface__OperationProvidedRole="_bgf-kZTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg4ZIJTUEe-lZ-M_bLw-Wg" entityName="com_example_service_RestTemplate Consumer" requiredInterface__OperationRequiredRole="_bgf-k5TUEe-lZ-M_bLw-Wg"/>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg4ZJZTUEe-lZ-M_bLw-Wg" entityName="com_example_service_UserService">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg4ZIpTUEe-lZ-M_bLw-Wg" entityName="com_example_service_UserService Provider" providedInterface__OperationProvidedRole="_bgfXh5TUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg4ZI5TUEe-lZ-M_bLw-Wg" entityName="user-service/user Consumer" requiredInterface__OperationRequiredRole="_bgf-kpTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg4ZJJTUEe-lZ-M_bLw-Wg" entityName="user-service/newuser Consumer" requiredInterface__OperationRequiredRole="_bgf-kJTUEe-lZ-M_bLw-Wg"/>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg5AIZTUEe-lZ-M_bLw-Wg" entityName="com_example_service_RestTemplate Provider">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg5AIJTUEe-lZ-M_bLw-Wg" entityName="com_example_service_RestTemplate Provider" providedInterface__OperationProvidedRole="_bgf-k5TUEe-lZ-M_bLw-Wg"/>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg5AJZTUEe-lZ-M_bLw-Wg" entityName="com_example_MainController">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg5AIpTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/api Provider" providedInterface__OperationProvidedRole="_bgfXipTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg5AI5TUEe-lZ-M_bLw-Wg" entityName="com_example_service_RecommendationClientService Consumer" requiredInterface__OperationRequiredRole="_bgf-kZTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg5AJJTUEe-lZ-M_bLw-Wg" entityName="com_example_service_UserService Consumer" requiredInterface__OperationRequiredRole="_bgfXh5TUEe-lZ-M_bLw-Wg"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bftUZpTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZjpEZTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bfstWJTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bftUY5TUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_bftUY5TUEe-lZ-M_bLw-Wg" entityName="Try Catch Branch" predecessor_AbstractAction="_bfstWJTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bftUZJTUEe-lZ-M_bLw-Wg">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_bfstW5TUEe-lZ-M_bLw-Wg" entityName="Guarded Branch Transition">
-          <branchBehaviour_BranchTransition id="_bfstXZTUEe-lZ-M_bLw-Wg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_bfstWZTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfstWpTUEe-lZ-M_bLw-Wg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_bfstWpTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfstWZTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUVc8pWdEe-KIJ0eJhZNVw" entityName="com_example_MainController">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUU17ZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/api Provider" providedInterface__OperationProvidedRole="_cT8bYJWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUVc8JWdEe-KIJ0eJhZNVw" entityName="com_example_service_UserService Consumer" requiredInterface__OperationRequiredRole="_cT8bY5WdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUVc8ZWdEe-KIJ0eJhZNVw" entityName="com_example_service_RecommendationClientService Consumer" requiredInterface__OperationRequiredRole="_cT8bZJWdEe-KIJ0eJhZNVw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTJxOJWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNEXVZWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKL5WdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJxNZWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_cTJxNZWdEe-KIJ0eJhZNVw" entityName="Try Catch Branch" predecessor_AbstractAction="_cTJKL5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxNpWdEe-KIJ0eJhZNVw">
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_cTJKMpWdEe-KIJ0eJhZNVw" entityName="Guarded Branch Transition">
+          <branchBehaviour_BranchTransition id="_cTJKNJWdEe-KIJ0eJhZNVw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKMJWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJKMZWdEe-KIJ0eJhZNVw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_cTJKMZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJKMJWdEe-KIJ0eJhZNVw"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Try Block"/>
         </branches_Branch>
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_bftUYJTUEe-lZ-M_bLw-Wg" entityName="Try Catch Branch">
-          <branchBehaviour_BranchTransition id="_bftUYpTUEe-lZ-M_bLw-Wg">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_bfstXpTUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bfstX5TUEe-lZ-M_bLw-Wg"/>
-            <steps_Behaviour xsi:type="seff:InternalAction" id="_bfstX5TUEe-lZ-M_bLw-Wg" entityName="Logger.getLogger(MainController.class.getName()).log(Level.SEVERE,null,ex)" predecessor_AbstractAction="_bfstXpTUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bfstYJTUEe-lZ-M_bLw-Wg"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_bfstYJTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bfstX5TUEe-lZ-M_bLw-Wg"/>
+        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_cTJxMpWdEe-KIJ0eJhZNVw" entityName="Try Catch Branch">
+          <branchBehaviour_BranchTransition id="_cTJxNJWdEe-KIJ0eJhZNVw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKNZWdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJxMJWdEe-KIJ0eJhZNVw"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_cTJxMJWdEe-KIJ0eJhZNVw" entityName="Logger.getLogger(MainController.class.getName()).log(Level.SEVERE,null,ex)" predecessor_AbstractAction="_cTJKNZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxMZWdEe-KIJ0eJhZNVw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_cTJxMZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJxMJWdEe-KIJ0eJhZNVw"/>
           </branchBehaviour_BranchTransition>
           <branchCondition_GuardedBranchTransition specification="@position: Condition: catch ExecutionException"/>
         </branches_Branch>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bftUZJTUEe-lZ-M_bLw-Wg" entityName="dto.getMovies()" predecessor_AbstractAction="_bftUY5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bftUZZTUEe-lZ-M_bLw-Wg">
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTJxNpWdEe-KIJ0eJhZNVw" entityName="dto.getMovies()" predecessor_AbstractAction="_cTJxNZWdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJxN5WdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.dto_getMovies()"/>
@@ -271,11 +271,11 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bftUZZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bftUZJTUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTJxN5WdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJxNpWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_bftUapTUEe-lZ-M_bLw-Wg" describedService__SEFF="_bZjpFJTUEe-lZ-M_bLw-Wg">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_bftUZ5TUEe-lZ-M_bLw-Wg" entityName="Start Action" successor_AbstractAction="_bftUaJTUEe-lZ-M_bLw-Wg"/>
-      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bftUaJTUEe-lZ-M_bLw-Wg" entityName="userService.getUser(userId)" predecessor_AbstractAction="_bftUZ5TUEe-lZ-M_bLw-Wg" successor_AbstractAction="_bftUaZTUEe-lZ-M_bLw-Wg">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_cTJKLpWdEe-KIJ0eJhZNVw" describedService__SEFF="_cNE-YZWdEe-KIJ0eJhZNVw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_cTJKK5WdEe-KIJ0eJhZNVw" entityName="Start Action" successor_AbstractAction="_cTJKLJWdEe-KIJ0eJhZNVw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_cTJKLJWdEe-KIJ0eJhZNVw" entityName="userService.getUser(userId)" predecessor_AbstractAction="_cTJKK5WdEe-KIJ0eJhZNVw" successor_AbstractAction="_cTJKLZWdEe-KIJ0eJhZNVw">
         <localVariableUsages_SetVariableAction>
           <variableCharacterisation_VariableUsage type="VALUE">
             <specification_VariableCharacterisation specification="PrimitiveType.userService_getUser(userId)"/>
@@ -285,94 +285,94 @@
           </namedReference__VariableUsage>
         </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_bftUaZTUEe-lZ-M_bLw-Wg" entityName="Stop Action" predecessor_AbstractAction="_bftUaJTUEe-lZ-M_bLw-Wg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_cTJKLZWdEe-KIJ0eJhZNVw" entityName="Stop Action" predecessor_AbstractAction="_cTJKLJWdEe-KIJ0eJhZNVw"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_bg8qhZTUEe-lZ-M_bLw-Wg" entityName="user-service/user Provider">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg8qhJTUEe-lZ-M_bLw-Wg" entityName="user-service/user Provider" providedInterface__OperationProvidedRole="_bgf-kpTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_cUZHWJWdEe-KIJ0eJhZNVw" entityName="user-service/newuser Provider">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUZHV5WdEe-KIJ0eJhZNVw" entityName="user-service/newuser Provider" providedInterface__OperationProvidedRole="_cT8bYpWdEe-KIJ0eJhZNVw"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_bg94o5TUEe-lZ-M_bLw-Wg" entityName="com_example">
-    <assemblyContexts__ComposedStructure id="_bg-ftJTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg5AJZTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GwpTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg4ZJZTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GyJTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg4ZIZTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU4JTUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg-ftJTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GwpTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg4ZIpTUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bg5AJJTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU5JTUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg-ftJTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GyJTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg4ZH5TUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bg5AI5TUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_bhA78ZTUEe-lZ-M_bLw-Wg" innerProvidedRole_ProvidedDelegationConnector="_bg5AIpTUEe-lZ-M_bLw-Wg" outerProvidedRole_ProvidedDelegationConnector="_bg94oJTUEe-lZ-M_bLw-Wg" assemblyContext_ProvidedDelegationConnector="_bg-ftJTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_bhBjAJTUEe-lZ-M_bLw-Wg" innerRequiredRole_RequiredDelegationConnector="_bg4ZJJTUEe-lZ-M_bLw-Wg" outerRequiredRole_RequiredDelegationConnector="_bg94opTUEe-lZ-M_bLw-Wg" assemblyContext_RequiredDelegationConnector="_bg_GwpTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_bhBjAZTUEe-lZ-M_bLw-Wg" innerRequiredRole_RequiredDelegationConnector="_bg4ZI5TUEe-lZ-M_bLw-Wg" outerRequiredRole_RequiredDelegationConnector="_bg94oZTUEe-lZ-M_bLw-Wg" assemblyContext_RequiredDelegationConnector="_bg_GwpTUEe-lZ-M_bLw-Wg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg94oJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/api Provider" providedInterface__OperationProvidedRole="_bgfXipTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg94oZTUEe-lZ-M_bLw-Wg" entityName="user-service/user Consumer" requiredInterface__OperationRequiredRole="_bgf-kpTUEe-lZ-M_bLw-Wg"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_bg94opTUEe-lZ-M_bLw-Wg" entityName="user-service/newuser Consumer" requiredInterface__OperationRequiredRole="_bgf-kJTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_cUa8g5WdEe-KIJ0eJhZNVw" entityName="com_example 2">
+    <assemblyContexts__ComposedStructure id="_cUbjlJWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cT8bapWdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjmJWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUVc8pWdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjnpWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUJ2zZWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUcxtJWdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjmJWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjlJWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cT8bZ5WdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cUVc8JWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUdYwJWdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjmJWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjnpWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cUJ2y5WdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cUVc8ZWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_cUd_0JWdEe-KIJ0eJhZNVw" innerProvidedRole_ProvidedDelegationConnector="_cUU17ZWdEe-KIJ0eJhZNVw" outerProvidedRole_ProvidedDelegationConnector="_cUa8gJWdEe-KIJ0eJhZNVw" assemblyContext_ProvidedDelegationConnector="_cUbjmJWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_cUem4JWdEe-KIJ0eJhZNVw" innerRequiredRole_RequiredDelegationConnector="_cT8baZWdEe-KIJ0eJhZNVw" outerRequiredRole_RequiredDelegationConnector="_cUa8gZWdEe-KIJ0eJhZNVw" assemblyContext_RequiredDelegationConnector="_cUbjlJWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_cUem4ZWdEe-KIJ0eJhZNVw" innerRequiredRole_RequiredDelegationConnector="_cT8baJWdEe-KIJ0eJhZNVw" outerRequiredRole_RequiredDelegationConnector="_cUa8gpWdEe-KIJ0eJhZNVw" assemblyContext_RequiredDelegationConnector="_cUbjlJWdEe-KIJ0eJhZNVw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUa8gJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/api Provider" providedInterface__OperationProvidedRole="_cT8bYJWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUa8gZWdEe-KIJ0eJhZNVw" entityName="user-service/user Consumer" requiredInterface__OperationRequiredRole="_cT8bZpWdEe-KIJ0eJhZNVw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_cUa8gpWdEe-KIJ0eJhZNVw" entityName="user-service/newuser Consumer" requiredInterface__OperationRequiredRole="_cT8bYpWdEe-KIJ0eJhZNVw"/>
   </components__Repository>
-  <components__Repository xsi:type="repository:CompositeComponent" id="_bg-fs5TUEe-lZ-M_bLw-Wg" entityName="com_example 2">
-    <assemblyContexts__ComposedStructure id="_bg_GwJTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg0uvpTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GxJTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg0uwJTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GxpTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bgtZ-pTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GypTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bg1VwpTUEe-lZ-M_bLw-Wg"/>
-    <assemblyContexts__ComposedStructure id="_bg_GzJTUEe-lZ-M_bLw-Wg" encapsulatedComponent__AssemblyContext="_bgf-mJTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU4ZTUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg_GypTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GxJTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg0uv5TUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bg1VwZTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU4pTUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg_GzJTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GxJTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg0uv5TUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bgf-lpTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU45TUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg_GzJTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GwJTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg0uvZTUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bgf-l5TUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bhAU5ZTUEe-lZ-M_bLw-Wg" requiringAssemblyContext_AssemblyConnector="_bg_GxpTUEe-lZ-M_bLw-Wg" providingAssemblyContext_AssemblyConnector="_bg_GwJTUEe-lZ-M_bLw-Wg" providedRole_AssemblyConnector="_bg0uvZTUEe-lZ-M_bLw-Wg" requiredRole_AssemblyConnector="_bgtZ-ZTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_bhA78JTUEe-lZ-M_bLw-Wg" innerProvidedRole_ProvidedDelegationConnector="_bgtZ-JTUEe-lZ-M_bLw-Wg" outerProvidedRole_ProvidedDelegationConnector="_bg-fsJTUEe-lZ-M_bLw-Wg" assemblyContext_ProvidedDelegationConnector="_bg_GxpTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_bhA78pTUEe-lZ-M_bLw-Wg" innerProvidedRole_ProvidedDelegationConnector="_bg1VwJTUEe-lZ-M_bLw-Wg" outerProvidedRole_ProvidedDelegationConnector="_bg-fsZTUEe-lZ-M_bLw-Wg" assemblyContext_ProvidedDelegationConnector="_bg_GypTUEe-lZ-M_bLw-Wg"/>
-    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_bhA785TUEe-lZ-M_bLw-Wg" innerProvidedRole_ProvidedDelegationConnector="_bgf-lZTUEe-lZ-M_bLw-Wg" outerProvidedRole_ProvidedDelegationConnector="_bg-fspTUEe-lZ-M_bLw-Wg" assemblyContext_ProvidedDelegationConnector="_bg_GzJTUEe-lZ-M_bLw-Wg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg-fsJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie Provider" providedInterface__OperationProvidedRole="_bgf-lJTUEe-lZ-M_bLw-Wg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg-fsZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/user Provider" providedInterface__OperationProvidedRole="_bgfXiZTUEe-lZ-M_bLw-Wg"/>
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg-fspTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation Provider" providedInterface__OperationProvidedRole="_bgfXhpTUEe-lZ-M_bLw-Wg"/>
+  <components__Repository xsi:type="repository:CompositeComponent" id="_cUa8h5WdEe-KIJ0eJhZNVw" entityName="com_example">
+    <assemblyContexts__ComposedStructure id="_cUbjkJWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUJ20ZWdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjkpWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cT8bcJWdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjlpWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUOIOZWdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjmpWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUJ2z5WdEe-KIJ0eJhZNVw"/>
+    <assemblyContexts__ComposedStructure id="_cUbjnJWdEe-KIJ0eJhZNVw" encapsulatedComponent__AssemblyContext="_cUKd0pWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUcxsJWdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjkpWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjmpWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cUJ2zpWdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cT8bbpWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUcxsZWdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjlpWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjmpWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cUJ2zpWdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cUOIOJWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUcxspWdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjkpWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjkJWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cUJ20JWdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cT8bb5WdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUcxs5WdEe-KIJ0eJhZNVw" requiringAssemblyContext_AssemblyConnector="_cUbjnJWdEe-KIJ0eJhZNVw" providingAssemblyContext_AssemblyConnector="_cUbjkJWdEe-KIJ0eJhZNVw" providedRole_AssemblyConnector="_cUJ20JWdEe-KIJ0eJhZNVw" requiredRole_AssemblyConnector="_cUKd0ZWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_cUd_0ZWdEe-KIJ0eJhZNVw" innerProvidedRole_ProvidedDelegationConnector="_cUKd0JWdEe-KIJ0eJhZNVw" outerProvidedRole_ProvidedDelegationConnector="_cUa8hpWdEe-KIJ0eJhZNVw" assemblyContext_ProvidedDelegationConnector="_cUbjnJWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_cUd_0pWdEe-KIJ0eJhZNVw" innerProvidedRole_ProvidedDelegationConnector="_cT8bbZWdEe-KIJ0eJhZNVw" outerProvidedRole_ProvidedDelegationConnector="_cUa8hZWdEe-KIJ0eJhZNVw" assemblyContext_ProvidedDelegationConnector="_cUbjkpWdEe-KIJ0eJhZNVw"/>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_cUd_05WdEe-KIJ0eJhZNVw" innerProvidedRole_ProvidedDelegationConnector="_cUOIN5WdEe-KIJ0eJhZNVw" outerProvidedRole_ProvidedDelegationConnector="_cUa8hJWdEe-KIJ0eJhZNVw" assemblyContext_ProvidedDelegationConnector="_cUbjlpWdEe-KIJ0eJhZNVw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUa8hJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie Provider" providedInterface__OperationProvidedRole="_cT70WpWdEe-KIJ0eJhZNVw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUa8hZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation Provider" providedInterface__OperationProvidedRole="_cT70W5WdEe-KIJ0eJhZNVw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_cUa8hpWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/user Provider" providedInterface__OperationProvidedRole="_cT8bYZWdEe-KIJ0eJhZNVw"/>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXhpTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation">
-    <signatures__OperationInterface id="_bZk3NZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/dummyData" returnType__OperationSignature="_bY0pQJTUEe-lZ-M_bLw-Wg"/>
-    <signatures__OperationInterface id="_bZleQZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/recommend/user" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="userId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bZk3N5TUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/user" returnType__OperationSignature="_bZk3MJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="userId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bZmFUJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/movie$2" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg"/>
-    <signatures__OperationInterface id="_bZmFUpTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/user$2" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg"/>
-    <signatures__OperationInterface id="_bZleQ5TUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/recommendation/movie" returnType__OperationSignature="_bYzbIJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="movieId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXh5TUEe-lZ-M_bLw-Wg" entityName="com_example_service_UserService"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXiJTUEe-lZ-M_bLw-Wg" entityName="com_example_UserRepo"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXiZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/user">
-    <signatures__OperationInterface id="_bZkQJpTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/user" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg"/>
-    <signatures__OperationInterface id="_bZk3MZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/user$2" returnType__OperationSignature="_bZk3MJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="userId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXipTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/api">
-    <signatures__OperationInterface id="_bZjpEZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/api/recommendation/user[GET]" returnType__OperationSignature="_bZjpEJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="userId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bZjpFJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/api/userDetails[GET]" returnType__OperationSignature="_bZjpE5TUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="userId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-  </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgfXi5TUEe-lZ-M_bLw-Wg" entityName="com_example_MovieRepo"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgf-kJTUEe-lZ-M_bLw-Wg" entityName="user-service/newuser"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgf-kZTUEe-lZ-M_bLw-Wg" entityName="com_example_service_RecommendationClientService"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgf-kpTUEe-lZ-M_bLw-Wg" entityName="user-service/user"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgf-k5TUEe-lZ-M_bLw-Wg" entityName="com_example_service_RestTemplate"/>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_bgf-lJTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie">
-    <signatures__OperationInterface id="_bYzbIZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie" returnType__OperationSignature="_bYzbIJTUEe-lZ-M_bLw-Wg">
-      <parameters__OperationSignature dataType__Parameter="_bYy0EZTUEe-lZ-M_bLw-Wg" parameterName="movieId" modifier__Parameter="in"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bYw-4JTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie/list" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg">
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT70WJWdEe-KIJ0eJhZNVw" entityName="com_example_MovieRepo"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT70WZWdEe-KIJ0eJhZNVw" entityName="com_example_service_RestTemplate"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT70WpWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie">
+    <signatures__OperationInterface id="_cNDwQJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie/dummyData" returnType__OperationSignature="_cNCiIJWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cNDwQpWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie/list" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw">
       <parameters__OperationSignature parameterName="ids" modifier__Parameter="in">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bY0pQZTUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie/dummyData" returnType__OperationSignature="_bY0pQJTUEe-lZ-M_bLw-Wg"/>
-    <signatures__OperationInterface id="_bYzbI5TUEe-lZ-M_bLw-Wg" entityName="SPRING-APPLICATION/movie$2" returnType__OperationSignature="_bYvwwJTUEe-lZ-M_bLw-Wg"/>
+    <signatures__OperationInterface id="_cNDwRJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie$2" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cNDJM5WdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/movie" returnType__OperationSignature="_cNAs85WdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="movieId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
   </interfaces__Repository>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bYvwwJTUEe-lZ-M_bLw-Wg" entityName="java_util_Collection"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bYy0EZTUEe-lZ-M_bLw-Wg" entityName="java_lang_Long"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bYzbIJTUEe-lZ-M_bLw-Wg" entityName="com_example_Movie"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bY0pQJTUEe-lZ-M_bLw-Wg" entityName="Void"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bZjpEJTUEe-lZ-M_bLw-Wg" entityName="java_util_List"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bZjpE5TUEe-lZ-M_bLw-Wg" entityName="com_example_dto_UserDTO"/>
-  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_bZk3MJTUEe-lZ-M_bLw-Wg" entityName="com_example_User"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT70W5WdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation">
+    <signatures__OperationInterface id="_cNCiJZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/user" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cNDJMJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/user$2" returnType__OperationSignature="_cM9poJWdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="userId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_cNAs9JWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/movie" returnType__OperationSignature="_cNAs85WdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="movieId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_cNCiIZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/dummyData" returnType__OperationSignature="_cNCiIJWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cNCiI5WdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/movie$2" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cNBUAZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/recommendation/recommend/user" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="userId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bYJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/api">
+    <signatures__OperationInterface id="_cNEXVZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/api/recommendation/user[GET]" returnType__OperationSignature="_cNEXVJWdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="userId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_cNE-YZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/api/userDetails[GET]" returnType__OperationSignature="_cNE-YJWdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="userId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bYZWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/user">
+    <signatures__OperationInterface id="_cNAs8JWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/user$2" returnType__OperationSignature="_cNAF4ZWdEe-KIJ0eJhZNVw"/>
+    <signatures__OperationInterface id="_cM-QsJWdEe-KIJ0eJhZNVw" entityName="SPRING-APPLICATION/user" returnType__OperationSignature="_cM9poJWdEe-KIJ0eJhZNVw">
+      <parameters__OperationSignature dataType__Parameter="_cM8bgJWdEe-KIJ0eJhZNVw" parameterName="userId" modifier__Parameter="in"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bYpWdEe-KIJ0eJhZNVw" entityName="user-service/newuser"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bY5WdEe-KIJ0eJhZNVw" entityName="com_example_service_UserService"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bZJWdEe-KIJ0eJhZNVw" entityName="com_example_service_RecommendationClientService"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bZZWdEe-KIJ0eJhZNVw" entityName="com_example_UserRepo"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_cT8bZpWdEe-KIJ0eJhZNVw" entityName="user-service/user"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cM8bgJWdEe-KIJ0eJhZNVw" entityName="java_lang_Long"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cM9poJWdEe-KIJ0eJhZNVw" entityName="com_example_User"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cNAF4ZWdEe-KIJ0eJhZNVw" entityName="java_util_Collection"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cNAs85WdEe-KIJ0eJhZNVw" entityName="com_example_Movie"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cNCiIJWdEe-KIJ0eJhZNVw" entityName="Void"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cNEXVJWdEe-KIJ0eJhZNVw" entityName="java_util_List"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_cNE-YJWdEe-KIJ0eJhZNVw" entityName="com_example_dto_UserDTO"/>
 </repository:Repository>
