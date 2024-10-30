@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Oct 29 02:28:36 UTC 2024 |
+| v5.2.0.202408280745 | Wed Oct 30 02:28:07 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Oct 29 02:28:36 UTC 2024
+Date of execution: Wed Oct 30 02:28:07 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | 3f6a74ad86c755ba99d7fbadf589d7fc41f4ac19 |
+| Commit         | d59153d6d7f4c403042823a0343cd8211b60766a |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Oct 29 02:28:36 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.204GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.236GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
 | Memory | 709MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19.43 |
-| User CPU Time | 36.24 |
-| System CPU Time | 2.42 |
+| Real CPU Time | 16.09 |
+| User CPU Time | 35.92 |
+| System CPU Time | 2.36 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.80 s (299.5 files/s, 38671.8 lines/s)
+cloc v 1.90  T=2.91 s (288.6 files/s, 37263.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -44,7 +44,7 @@ JavaScript|90|6708|3436|44101
 Java|358|3068|6601|18113
 CSS|25|1198|161|8393
 HTML|69|658|252|5637
-AsciiDoc|237|1488|19|3672
+AsciiDoc|237|1488|19|3668
 SVG|10|0|1|1305
 Maven|1|13|11|800
 XML|5|12|12|598
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|8|1|31
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|839|13470|10592|84265
+SUM:|839|13470|10592|84261
