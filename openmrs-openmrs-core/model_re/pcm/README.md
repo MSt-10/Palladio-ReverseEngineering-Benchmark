@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Nov  1 02:31:03 UTC 2024 |
+| v5.2.0.202408280745 | Sat Nov  2 02:25:22 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Nov  1 02:31:03 UTC 2024
+Date of execution: Sat Nov  2 02:25:22 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | df3665a70f5f4a936e1b952f0f7a19f7907e6b6d |
+| Commit         | adcb16aeb7b589f862f3edb1dea5c55c9e6ad5e8 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Fri Nov  1 02:31:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.894GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.887GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 691MiB / 15981MiB  |
+| Memory | 729MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 19.21 |
-| User CPU Time | 55.24 |
-| System CPU Time | 2.65 |
+| Real CPU Time | 19.03 |
+| User CPU Time | 55.63 |
+| System CPU Time | 2.94 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,7 +42,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.65 s (243.0 files/s, 52194.5 lines/s)
+cloc v 1.90  T=10.03 s (233.9 files/s, 50240.5 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
