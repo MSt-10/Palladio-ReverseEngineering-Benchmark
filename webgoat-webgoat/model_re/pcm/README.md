@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Wed Nov 13 02:26:44 UTC 2024 |
+| v5.2.0.202408280745 | Thu Nov 14 02:27:30 UTC 2024 |
 
 # Git repository information
-Date of execution: Wed Nov 13 02:26:44 UTC 2024
+Date of execution: Thu Nov 14 02:27:30 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | e60ca6ce7211cbad0a49d51e50da0e6ca5092ba1 |
+| Commit         | 4880afa0e335b1216062450cf0d4154ef30458e6 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Wed Nov 13 02:26:44 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.239GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.211GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 672MiB / 15981MiB  |
+| Memory | 695MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 15.04 |
-| User CPU Time | 33.41 |
-| System CPU Time | 2.22 |
+| Real CPU Time | 15.75 |
+| User CPU Time | 34.22 |
+| System CPU Time | 2.27 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.78 s (302.3 files/s, 38986.8 lines/s)
+cloc v 1.90  T=2.80 s (300.4 files/s, 38739.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-JavaScript|91|6708|3436|44109
-Java|358|3069|6601|18114
+JavaScript|91|6707|3434|44105
+Java|358|3069|6601|18118
 CSS|25|1198|161|8393
 HTML|69|659|252|5637
 AsciiDoc|237|1488|19|3668
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|8|1|31
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|840|13472|10592|84270
+SUM:|840|13471|10590|84270
