@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Thu Nov 14 02:27:35 UTC 2024 |
+| v5.2.0.202408280745 | Fri Nov 15 02:30:14 UTC 2024 |
 
 # Git repository information
-Date of execution: Thu Nov 14 02:27:35 UTC 2024
+Date of execution: Fri Nov 15 02:30:14 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
 | Branch         | main |
-| Commit         | 06a9bac5cb26584d23826688a5cddcb77fc4bbf3 |
+| Commit         | f2c142215eba561136940be914046a49b5914674 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Thu Nov 14 02:27:35 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.067GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 693MiB / 15981MiB  |
+| Memory | 689MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.69 |
-| User CPU Time | 13.51 |
-| System CPU Time | 0.58 |
+| Real CPU Time | 6.85 |
+| User CPU Time | 14.28 |
+| System CPU Time | 0.56 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,14 +36,14 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.43 s (357.5 files/s, 61111.4 lines/s)
+cloc v 1.90  T=0.43 s (357.2 files/s, 61131.8 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 SVG|2|0|0|9158
 CSS|4|1033|42|8578
 Java|48|326|778|1167
-Maven|8|71|37|892
+Maven|8|73|37|922
 JSON|13|0|0|849
 XML|2|0|1|573
 YAML|16|42|11|345
@@ -57,4 +57,4 @@ DOS Batch|1|36|0|170
 Dockerfile|3|6|4|24
 INI|1|6|0|21
 --------|--------|--------|--------|--------
-SUM:|153|1827|944|23385
+SUM:|153|1829|944|23415
