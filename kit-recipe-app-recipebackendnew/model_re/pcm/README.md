@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Nov 19 02:29:31 UTC 2024 |
+| v5.2.0.202408280745 | Wed Nov 20 02:28:58 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Nov 19 02:29:32 UTC 2024
+Date of execution: Wed Nov 20 02:28:58 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kit-recipe-app/recipebackendnew |
@@ -18,16 +18,16 @@ Date of execution: Tue Nov 19 02:29:32 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.517GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.274GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 708MiB / 15981MiB  |
+| Memory | 705MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.62 |
-| User CPU Time | 14.09 |
-| System CPU Time | 0.57 |
+| Real CPU Time | 4.99 |
+| User CPU Time | 14.57 |
+| System CPU Time | 0.62 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.08 s (861.2 files/s, 49311.7 lines/s)
+cloc v 1.90  T=0.09 s (813.8 files/s, 46596.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
