@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Dec 15 02:33:57 UTC 2024 |
+| v5.2.0.202408280745 | Mon Dec 16 02:33:14 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Dec 15 02:33:57 UTC 2024
+Date of execution: Mon Dec 16 02:33:14 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | 5fc2e0602cbc2e2212e1c419c1794618cc163ed5 |
+| Commit         | 4f8652758c9a787dd18e8a1a2e570befb09421cd |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sun Dec 15 02:33:57 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.240GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.259GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 715MiB / 15981MiB  |
+| Memory | 686MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 15.48 |
-| User CPU Time | 34.73 |
-| System CPU Time | 2.31 |
+| Real CPU Time | 15.13 |
+| User CPU Time | 33.77 |
+| System CPU Time | 2.34 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,12 +36,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.72 s (308.4 files/s, 39793.5 lines/s)
+cloc v 1.90  T=2.67 s (313.7 files/s, 40541.4 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 JavaScript|91|6707|3434|44105
-Java|358|3118|6554|18164
+Java|356|3105|6550|18092
 CSS|25|1198|161|8393
 HTML|69|659|252|5637
 AsciiDoc|237|1488|19|3668
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|8|1|31
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|840|13520|10543|84316
+SUM:|838|13507|10539|84244
