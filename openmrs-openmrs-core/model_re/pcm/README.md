@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Dec 17 02:31:37 UTC 2024 |
+| v5.2.0.202408280745 | Wed Dec 18 02:29:29 UTC 2024 |
 
 # Git repository information
-Date of execution: Tue Dec 17 02:31:37 UTC 2024
+Date of execution: Wed Dec 18 02:29:29 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 32613ab9afacd3ee6026263933075ace1a55f53f |
+| Commit         | 7548e4a8356b08fd0f4112bab1f914bf81695490 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Tue Dec 17 02:31:37 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.877GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 713MiB / 15981MiB  |
+| Memory | 717MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20.35 |
-| User CPU Time | 55.28 |
-| System CPU Time | 2.83 |
+| Real CPU Time | 30.80 |
+| User CPU Time | 56.37 |
+| System CPU Time | 3.03 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,12 +42,12 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.62 s (243.8 files/s, 52399.2 lines/s)
+cloc v 1.90  T=10.15 s (231.3 files/s, 49695.9 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 Java|1890|48109|92046|194207
-XML|304|3118|2871|134399
+XML|304|3118|2871|134398
 SQL|5|918|741|5464
 Maven|22|348|105|4775
 JavaScript|21|540|1185|4366
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|82
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2347|54407|98007|351916
+SUM:|2347|54407|98007|351915
