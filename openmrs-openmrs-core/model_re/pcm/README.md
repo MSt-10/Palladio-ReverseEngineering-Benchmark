@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Dec 20 02:26:43 UTC 2024 |
+| v5.2.0.202408280745 | Sat Dec 21 02:24:22 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Dec 20 02:26:43 UTC 2024
+Date of execution: Sat Dec 21 02:24:22 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-core |
 | Branch         | master |
-| Commit         | 7548e4a8356b08fd0f4112bab1f914bf81695490 |
+| Commit         | 02372e8a06597565ea749150ae6b8c094774ea65 |
 
 |    Attribute   | Value |
 | -------------- | ----- |
@@ -24,16 +24,16 @@ Date of execution: Fri Dec 20 02:26:43 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 2.992GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 717MiB / 15981MiB  |
+| Memory | 705MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 20.16 |
-| User CPU Time | 56.75 |
-| System CPU Time | 2.72 |
+| Real CPU Time | 26.82 |
+| User CPU Time | 56.84 |
+| System CPU Time | 2.90 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -42,11 +42,11 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=9.70 s (241.9 files/s, 51975.6 lines/s)
+cloc v 1.90  T=9.83 s (238.7 files/s, 51294.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Java|1890|48109|92046|194207
+Java|1890|48109|92046|194208
 XML|304|3118|2871|134398
 SQL|5|918|741|5464
 Maven|22|348|105|4775
@@ -64,4 +64,4 @@ HTML|17|17|0|223
 Dockerfile|1|38|26|82
 CSV|2|0|0|2
 --------|--------|--------|--------|--------
-SUM:|2347|54407|98007|351915
+SUM:|2347|54407|98007|351916
