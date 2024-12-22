@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Dec 21 02:25:03 UTC 2024 |
+| v5.2.0.202408280745 | Sun Dec 22 02:29:27 UTC 2024 |
 
 # Git repository information
-Date of execution: Sat Dec 21 02:25:03 UTC 2024
+Date of execution: Sun Dec 22 02:29:27 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | a95213757d7c5219a0b725638c8bc5fdee925bbb |
+| Commit         | 112ca3ab2289033b5f24335c5df749a2aeb14614 |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Sat Dec 21 02:25:03 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.750GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.240GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 742MiB / 15981MiB  |
+| Memory | 725MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 17.84 |
-| User CPU Time | 34.78 |
-| System CPU Time | 2.29 |
+| Real CPU Time | 15.44 |
+| User CPU Time | 35.38 |
+| System CPU Time | 2.31 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,17 +36,17 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=2.69 s (311.2 files/s, 40213.6 lines/s)
+cloc v 1.90  T=2.87 s (292.0 files/s, 37713.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 JavaScript|91|6707|3434|44105
-Java|356|3105|6550|18092
+Java|357|3113|6553|18147
 CSS|25|1198|161|8393
 HTML|69|659|252|5637
 AsciiDoc|237|1488|19|3668
 SVG|10|0|1|1305
-Maven|1|13|11|800
+Maven|1|14|11|802
 XML|5|12|12|598
 Markdown|10|194|0|454
 YAML|9|28|10|297
@@ -58,4 +58,4 @@ RobotFramework|1|12|10|107
 Dockerfile|1|8|1|31
 DTD|1|0|0|4
 --------|--------|--------|--------|--------
-SUM:|838|13507|10539|84244
+SUM:|839|13516|10542|84301
