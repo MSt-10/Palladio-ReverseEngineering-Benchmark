@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Dec 27 02:26:50 UTC 2024 |
+| v5.2.0.202408280745 | Sat Dec 28 02:24:24 UTC 2024 |
 
 # Git repository information
-Date of execution: Fri Dec 27 02:26:50 UTC 2024
+Date of execution: Sat Dec 28 02:24:24 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
 | Branch         | main |
-| Commit         | f2c142215eba561136940be914046a49b5914674 |
+| Commit         | b9c725f67567c5e68654ac8bc896b7c6c031700b |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Fri Dec 27 02:26:50 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.242GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.225GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 732MiB / 15981MiB  |
+| Memory | 734MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.59 |
-| User CPU Time | 13.78 |
-| System CPU Time | 0.56 |
+| Real CPU Time | 4.61 |
+| User CPU Time | 14.41 |
+| System CPU Time | 0.60 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,25 +36,25 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.44 s (350.6 files/s, 60003.3 lines/s)
+cloc v 1.90  T=0.49 s (352.1 files/s, 57069.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
 SVG|2|0|0|9158
-CSS|4|1033|42|8578
-Java|48|326|778|1167
-Maven|8|73|37|922
-JSON|13|0|0|849
+CSS|4|1041|50|8655
+Java|62|455|984|1698
+Maven|9|83|40|1069
+JSON|14|0|0|893
 XML|2|0|1|573
-YAML|16|42|11|345
-Bourne Shell|5|41|63|322
-Sass|4|65|2|321
-HTML|11|54|1|303
-JavaScript|21|43|5|263
+Sass|4|80|2|431
+YAML|17|44|13|428
+HTML|11|62|3|324
+Bourne Shell|5|41|63|323
+JavaScript|22|56|15|321
+Markdown|2|84|0|225
 SQL|12|26|0|207
-Markdown|2|78|0|192
 DOS Batch|1|36|0|170
 Dockerfile|3|6|4|24
 INI|1|6|0|21
 --------|--------|--------|--------|--------
-SUM:|153|1829|944|23415
+SUM:|171|2020|1175|24520
