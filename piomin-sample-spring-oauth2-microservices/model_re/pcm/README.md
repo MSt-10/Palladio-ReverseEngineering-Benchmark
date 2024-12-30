@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Dec 29 02:29:50 UTC 2024 |
+| v5.2.0.202408280745 | Mon Dec 30 02:28:10 UTC 2024 |
 
 # Git repository information
-Date of execution: Sun Dec 29 02:29:50 UTC 2024
+Date of execution: Mon Dec 30 02:28:10 UTC 2024
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/piomin/sample-spring-oauth2-microservices |
@@ -18,15 +18,15 @@ Date of execution: Sun Dec 29 02:29:50 UTC 2024
 | OS | Linux  |
 | Distro | Ubuntu 22.04.5 LTS x86_64  |
 | Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.756GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 695MiB / 15981MiB  |
+| Memory | 715MiB / 15981MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.29 |
-| User CPU Time | 11.26 |
+| Real CPU Time | 5.89 |
+| User CPU Time | 11.80 |
 | System CPU Time | 0.45 |
 <!--
 Explainations:
@@ -36,7 +36,7 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.02 s (903.1 files/s, 29021.9 lines/s)
+cloc v 1.90  T=0.02 s (896.5 files/s, 28810.2 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
