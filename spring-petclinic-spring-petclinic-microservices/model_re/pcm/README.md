@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Jan 10 02:28:29 UTC 2025 |
+| v5.2.0.202408280745 | Sat Jan 11 02:26:39 UTC 2025 |
 
 # Git repository information
-Date of execution: Fri Jan 10 02:28:29 UTC 2025
+Date of execution: Sat Jan 11 02:26:39 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
@@ -16,18 +16,18 @@ Date of execution: Fri Jan 10 02:28:29 UTC 2025
 | Attribute | Value |
 | --------- | ----- |
 | OS | Linux  |
-| Distro | Ubuntu 22.04.5 LTS x86_64  |
-| Kernel | 6.5.0-1025-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
+| Distro | Ubuntu 24.04.1 LTS x86_64  |
+| Kernel | 6.8.0-1017-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.267GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 707MiB / 15981MiB  |
+| Memory | 750MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.16 |
-| User CPU Time | 14.51 |
-| System CPU Time | 0.65 |
+| Real CPU Time | 6.25 |
+| User CPU Time | 15.20 |
+| System CPU Time | 0.61 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
@@ -36,7 +36,6 @@ Explainations:
 -->
 
 ## Cloc analysis
-cloc v 1.90  T=0.49 s (349.4 files/s, 56657.3 lines/s)
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -46,15 +45,16 @@ Java|62|455|984|1698
 Maven|9|83|40|1087
 JSON|14|0|0|893
 XML|2|0|1|573
-Sass|4|80|2|431
 YAML|17|44|14|420
+SCSS|4|80|21|412
 HTML|11|62|3|324
 Bourne Shell|5|41|63|323
 JavaScript|22|56|15|321
 Markdown|2|86|0|227
 SQL|12|26|0|207
 DOS Batch|1|36|0|170
+INI|2|8|0|31
 Dockerfile|3|6|4|24
-INI|1|6|0|21
+Properties|4|0|17|17
 --------|--------|--------|--------|--------
-SUM:|171|2022|1176|24532
+SUM:|176|2024|1212|24540
