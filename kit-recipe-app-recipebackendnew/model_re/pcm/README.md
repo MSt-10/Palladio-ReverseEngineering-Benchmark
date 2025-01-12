@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Jan 11 02:25:46 UTC 2025 |
+| v5.2.0.202408280745 | Sun Jan 12 02:29:53 UTC 2025 |
 
 # Git repository information
-Date of execution: Sat Jan 11 02:25:46 UTC 2025
+Date of execution: Sun Jan 12 02:29:53 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kit-recipe-app/recipebackendnew |
@@ -18,15 +18,15 @@ Date of execution: Sat Jan 11 02:25:46 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.264GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.311GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 750MiB / 15990MiB  |
+| Memory | 711MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.05 |
-| User CPU Time | 15.14 |
+| Real CPU Time | 4.87 |
+| User CPU Time | 15.00 |
 | System CPU Time | 0.52 |
 <!--
 Explainations:

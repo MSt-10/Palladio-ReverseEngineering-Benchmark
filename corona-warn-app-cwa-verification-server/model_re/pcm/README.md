@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Jan 11 02:25:47 UTC 2025 |
+| v5.2.0.202408280745 | Sun Jan 12 02:29:52 UTC 2025 |
 
 # Git repository information
-Date of execution: Sat Jan 11 02:25:47 UTC 2025
+Date of execution: Sun Jan 12 02:29:52 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/corona-warn-app/cwa-verification-server |
@@ -18,15 +18,15 @@ Date of execution: Sat Jan 11 02:25:47 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.185GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 745MiB / 15990MiB  |
+| Memory | 698MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.82 |
-| User CPU Time | 15.29 |
+| Real CPU Time | 4.65 |
+| User CPU Time | 15.09 |
 | System CPU Time | 0.53 |
 <!--
 Explainations:
