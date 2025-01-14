@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Jan 13 02:29:51 UTC 2025 |
+| v5.2.0.202408280745 | Tue Jan 14 02:23:16 UTC 2025 |
 
 # Git repository information
-Date of execution: Mon Jan 13 02:29:51 UTC 2025
+Date of execution: Tue Jan 14 02:23:16 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/spring-petclinic/spring-petclinic-microservices |
@@ -18,16 +18,16 @@ Date of execution: Mon Jan 13 02:29:51 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.210GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.282GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 767MiB / 15990MiB  |
+| Memory | 740MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.01 |
-| User CPU Time | 15.22 |
-| System CPU Time | 0.63 |
+| Real CPU Time | 4.69 |
+| User CPU Time | 14.25 |
+| System CPU Time | 0.58 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)

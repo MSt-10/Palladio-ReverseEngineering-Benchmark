@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Jan 13 02:30:01 UTC 2025 |
+| v5.2.0.202408280745 | Tue Jan 14 02:23:27 UTC 2025 |
 
 # Git repository information
-Date of execution: Mon Jan 13 02:30:01 UTC 2025
+Date of execution: Tue Jan 14 02:23:27 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/yidongnan/spring-cloud-netflix-example |
@@ -18,16 +18,16 @@ Date of execution: Mon Jan 13 02:30:01 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.198GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.250GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15990MiB  |
+| Memory | 683MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 7.67 |
-| User CPU Time | 12.17 |
-| System CPU Time | 0.47 |
+| Real CPU Time | 4.12 |
+| User CPU Time | 12.07 |
+| System CPU Time | 0.44 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)

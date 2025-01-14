@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Jan 13 02:28:51 UTC 2025 |
+| v5.2.0.202408280745 | Tue Jan 14 02:22:19 UTC 2025 |
 
 # Git repository information
-Date of execution: Mon Jan 13 02:28:51 UTC 2025
+Date of execution: Tue Jan 14 02:22:19 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/koushikkothagal/spring-boot-microservices-workshop |
@@ -18,15 +18,15 @@ Date of execution: Mon Jan 13 02:28:51 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 2.445GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.265GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 716MiB / 15990MiB  |
+| Memory | 673MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.25 |
-| User CPU Time | 12.44 |
+| Real CPU Time | 6.92 |
+| User CPU Time | 12.70 |
 | System CPU Time | 0.51 |
 <!--
 Explainations:
