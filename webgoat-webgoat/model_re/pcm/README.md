@@ -1,15 +1,15 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Jan 14 02:23:16 UTC 2025 |
+| v5.2.0.202408280745 | Wed Jan 15 02:25:05 UTC 2025 |
 
 # Git repository information
-Date of execution: Tue Jan 14 02:23:16 UTC 2025
+Date of execution: Wed Jan 15 02:25:05 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/webgoat/webgoat |
 | Branch         | main |
-| Commit         | 06e2fdbd33d0f23014d8634db9b88c849552fdac |
+| Commit         | 9d5ab5fb21921cf1a70de9bfb1d4e0f367bbbd4d |
 
 
 ## System information
@@ -18,16 +18,16 @@ Date of execution: Tue Jan 14 02:23:16 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.232GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.240GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 738MiB / 15990MiB  |
+| Memory | 665MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 14.87 |
-| User CPU Time | 34.44 |
-| System CPU Time | 2.04 |
+| Real CPU Time | 15.16 |
+| User CPU Time | 34.86 |
+| System CPU Time | 2.11 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
