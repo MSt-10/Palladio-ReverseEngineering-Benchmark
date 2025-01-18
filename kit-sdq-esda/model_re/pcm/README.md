@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Fri Jan 17 02:22:43 UTC 2025 |
+| v5.2.0.202408280745 | Sat Jan 18 02:20:19 UTC 2025 |
 
 # Git repository information
-Date of execution: Fri Jan 17 02:22:43 UTC 2025
+Date of execution: Sat Jan 18 02:20:19 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kit-sdq/esda |
@@ -18,15 +18,15 @@ Date of execution: Fri Jan 17 02:22:43 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.048GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.245GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 728MiB / 15990MiB  |
+| Memory | 698MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3.91 |
-| User CPU Time | 11.84 |
+| Real CPU Time | 3.89 |
+| User CPU Time | 11.65 |
 | System CPU Time | 0.44 |
 <!--
 Explainations:
