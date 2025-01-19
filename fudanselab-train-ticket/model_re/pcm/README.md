@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Jan 18 02:20:22 UTC 2025 |
+| v5.2.0.202408280745 | Sun Jan 19 02:26:59 UTC 2025 |
 
 # Git repository information
-Date of execution: Sat Jan 18 02:20:22 UTC 2025
+Date of execution: Sun Jan 19 02:26:59 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/fudanselab/train-ticket |
@@ -18,16 +18,16 @@ Date of execution: Sat Jan 18 02:20:22 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.299GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 684MiB / 15990MiB  |
+| Memory | 738MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 46.03 |
-| User CPU Time | 65.94 |
-| System CPU Time | 3.90 |
+| Real CPU Time | 36.93 |
+| User CPU Time | 61.47 |
+| System CPU Time | 4.00 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)

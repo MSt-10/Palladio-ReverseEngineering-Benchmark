@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sat Jan 18 02:21:14 UTC 2025 |
+| v5.2.0.202408280745 | Sun Jan 19 02:27:56 UTC 2025 |
 
 # Git repository information
-Date of execution: Sat Jan 18 02:21:14 UTC 2025
+Date of execution: Sun Jan 19 02:27:56 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/sqshq/piggymetrics |
@@ -20,14 +20,14 @@ Date of execution: Sat Jan 18 02:21:14 UTC 2025
 | Kernel | 6.8.0-1017-azure  |
 | CPU | AMD EPYC 7763 (4) @ 3.241GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 754MiB / 15990MiB  |
+| Memory | 762MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.27 |
-| User CPU Time | 17.57 |
-| System CPU Time | 0.68 |
+| Real CPU Time | 4.92 |
+| User CPU Time | 15.64 |
+| System CPU Time | 0.64 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
