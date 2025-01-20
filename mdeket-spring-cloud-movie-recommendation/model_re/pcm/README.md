@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Jan 19 02:27:02 UTC 2025 |
+| v5.2.0.202408280745 | Mon Jan 20 02:25:15 UTC 2025 |
 
 # Git repository information
-Date of execution: Sun Jan 19 02:27:02 UTC 2025
+Date of execution: Mon Jan 20 02:25:15 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/mdeket/spring-cloud-movie-recommendation |
@@ -18,15 +18,15 @@ Date of execution: Sun Jan 19 02:27:02 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.249GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.284GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 691MiB / 15990MiB  |
+| Memory | 727MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.72 |
-| User CPU Time | 13.20 |
+| Real CPU Time | 8.06 |
+| User CPU Time | 13.04 |
 | System CPU Time | 0.48 |
 <!--
 Explainations:

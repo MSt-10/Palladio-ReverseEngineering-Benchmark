@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Jan 19 02:26:58 UTC 2025 |
+| v5.2.0.202408280745 | Mon Jan 20 02:25:15 UTC 2025 |
 
 # Git repository information
-Date of execution: Sun Jan 19 02:26:58 UTC 2025
+Date of execution: Mon Jan 20 02:25:15 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/jferrater/tap-and-eat-microservices |
@@ -18,16 +18,16 @@ Date of execution: Sun Jan 19 02:26:58 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.262GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.168GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 799MiB / 15990MiB  |
+| Memory | 675MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 3.76 |
-| User CPU Time | 11.74 |
-| System CPU Time | 0.45 |
+| Real CPU Time | 4.06 |
+| User CPU Time | 12.31 |
+| System CPU Time | 0.50 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
