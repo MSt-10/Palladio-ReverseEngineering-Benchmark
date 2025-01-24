@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Thu Jan 23 02:23:38 UTC 2025 |
+| v5.2.0.202408280745 | Fri Jan 24 02:23:52 UTC 2025 |
 
 # Git repository information
-Date of execution: Thu Jan 23 02:23:38 UTC 2025
+Date of execution: Fri Jan 24 02:23:52 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/kbastani/spring-cloud-event-sourcing-example |
@@ -17,17 +17,17 @@ Date of execution: Thu Jan 23 02:23:38 UTC 2025
 | --------- | ----- |
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
-| Kernel | 6.8.0-1017-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| Kernel | 6.8.0-1020-azure  |
+| CPU | AMD EPYC 7763 (4) @ 3.223GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 696MiB / 15990MiB  |
+| Memory | 695MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.89 |
-| User CPU Time | 18.55 |
-| System CPU Time | 0.81 |
+| Real CPU Time | 10.87 |
+| User CPU Time | 17.79 |
+| System CPU Time | 0.79 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
