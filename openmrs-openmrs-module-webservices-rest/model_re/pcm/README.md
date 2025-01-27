@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Sun Jan 26 02:26:10 UTC 2025 |
+| v5.2.0.202408280745 | Mon Jan 27 02:25:48 UTC 2025 |
 
 # Git repository information
-Date of execution: Sun Jan 26 02:26:10 UTC 2025
+Date of execution: Mon Jan 27 02:25:48 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/openmrs/openmrs-module-webservices.rest |
@@ -18,16 +18,16 @@ Date of execution: Sun Jan 26 02:26:10 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1020-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.271GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.265GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 646MiB / 15990MiB  |
+| Memory | 734MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 9.56 |
-| User CPU Time | 30.42 |
-| System CPU Time | 1.26 |
+| Real CPU Time | 19.26 |
+| User CPU Time | 34.31 |
+| System CPU Time | 1.23 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)
