@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Mon Jan 27 02:24:56 UTC 2025 |
+| v5.2.0.202408280745 | Tue Jan 28 02:23:18 UTC 2025 |
 
 # Git repository information
-Date of execution: Mon Jan 27 02:24:56 UTC 2025
+Date of execution: Tue Jan 28 02:23:18 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/callistaenterprise/blog-microservices |
@@ -18,15 +18,15 @@ Date of execution: Mon Jan 27 02:24:56 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1020-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.252GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.441GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 687MiB / 15990MiB  |
+| Memory | 724MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 4.55 |
-| User CPU Time | 14.02 |
+| Real CPU Time | 5.84 |
+| User CPU Time | 13.95 |
 | System CPU Time | 0.56 |
 <!--
 Explainations:
