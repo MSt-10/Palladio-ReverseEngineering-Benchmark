@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Jan 28 02:23:18 UTC 2025 |
+| v5.2.0.202408280745 | Wed Jan 29 02:23:00 UTC 2025 |
 
 # Git repository information
-Date of execution: Tue Jan 28 02:23:18 UTC 2025
+Date of execution: Wed Jan 29 02:23:00 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/cloudscale-project/cloudstore |
@@ -18,16 +18,16 @@ Date of execution: Tue Jan 28 02:23:18 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1020-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.255GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.272GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 728MiB / 15990MiB  |
+| Memory | 699MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 5.06 |
-| User CPU Time | 15.84 |
-| System CPU Time | 0.59 |
+| Real CPU Time | 8.03 |
+| User CPU Time | 16.07 |
+| System CPU Time | 0.61 |
 <!--
 Explainations:
 - __Real CPU Time__: actual time the command has run (can be less than total time spent in user and system mode for multi-threaded processes)

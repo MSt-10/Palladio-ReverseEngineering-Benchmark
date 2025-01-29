@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Jan 28 02:23:22 UTC 2025 |
+| v5.2.0.202408280745 | Wed Jan 29 02:23:04 UTC 2025 |
 
 # Git repository information
-Date of execution: Tue Jan 28 02:23:22 UTC 2025
+Date of execution: Wed Jan 29 02:23:04 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/meet-eat/meet-eat-server |
@@ -18,15 +18,15 @@ Date of execution: Tue Jan 28 02:23:22 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1020-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.206GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 740MiB / 15990MiB  |
+| Memory | 751MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.13 |
-| User CPU Time | 18.68 |
+| Real CPU Time | 5.70 |
+| User CPU Time | 18.21 |
 | System CPU Time | 0.56 |
 <!--
 Explainations:

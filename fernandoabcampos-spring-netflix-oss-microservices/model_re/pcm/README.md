@@ -1,10 +1,10 @@
 # [Retriever](https://github.com/PalladioSimulator/Palladio-ReverseEngineering-Retriever) Report
 | Version | Date |
 | ------- | ---- |
-| v5.2.0.202408280745 | Tue Jan 28 02:23:18 UTC 2025 |
+| v5.2.0.202408280745 | Wed Jan 29 02:23:03 UTC 2025 |
 
 # Git repository information
-Date of execution: Tue Jan 28 02:23:19 UTC 2025
+Date of execution: Wed Jan 29 02:23:03 UTC 2025
 |    Attribute   | Value |
 | -------------- | ----- |
 | Repository URL | https://github.com/fernandoabcampos/spring-netflix-oss-microservices |
@@ -18,15 +18,15 @@ Date of execution: Tue Jan 28 02:23:19 UTC 2025
 | OS | Linux  |
 | Distro | Ubuntu 24.04.1 LTS x86_64  |
 | Kernel | 6.8.0-1020-azure  |
-| CPU | AMD EPYC 7763 (4) @ 3.243GHz  |
+| CPU | AMD EPYC 7763 (4) @ 3.240GHz  |
 | GPU | 00:08.0 Microsoft Corporation Hyper-V virtual VGA  |
-| Memory | 657MiB / 15990MiB  |
+| Memory | 675MiB / 15990MiB  |
 
 ## Retriever execution time
 | Metric | Time (seconds) |
 | --- | ---: |
-| Real CPU Time | 6.70 |
-| User CPU Time | 12.58 |
+| Real CPU Time | 3.95 |
+| User CPU Time | 12.36 |
 | System CPU Time | 0.48 |
 <!--
 Explainations:
